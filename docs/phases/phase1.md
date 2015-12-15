@@ -1,29 +1,33 @@
-# Phase 1: User Authentication, Note Model and JSON API
+# Phase 1: Auth Cycle, Flux Pattern, and first screen
 
 ## Rails
 ### Models
 * User
-* Note
 
 ### Controllers
 * UsersController (create, new)
 * SessionsController (create, new, destroy)
-* Api::NotesController (create, destroy, index, show, update)
 
 ### Views
-* users/new.html.erb
-* session/new.html.erb
-* notes/index.json.jbuilder
-* notes/show.json.jbuilder
+* users/index.json.jbuilder
+* user/show.json.jbuilder
 
 ## Flux
 ### Views (React Components)
+* Sign_Up component
+* Log_In component
+* Nav_Bar component
 
 ### Stores
+* RoommatesStore
 
 ### Actions
+* recieveAllRoommates
+* createRoommate
 
 ### ApiUtil
+* fetchAllRoommates
+* createRoommate
 
 ## Gems/Libraries
 * BCrypt (Gem)

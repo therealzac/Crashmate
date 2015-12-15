@@ -1,44 +1,32 @@
-# Phase 3: Notebooks and Tags (2 days)
+# Phase 3: User Show Page
 
 ## Rails
 ### Models
-* Notebook
-* Tag
-* Tagging
 
 ### Controllers
-* Api::NotebooksController (create, destroy, index, show, update)
 
 ### Views
-* notebooks/index.json.jbuilder
-* notebooks/show.json.jbuilder
-* tags/show.json.jbuilder
 
 ## Flux
 ### Views (React Components)
-* NotebooksIndex
-  - NotebookIndexItem
-* NotebookForm
-* SearchIndex
+* User_Details_Bar
+  - Profile_Picture
+  - Basic_Info_Section
+  - Location_Section
+  - Term_Section
+  - Amenities_Section
+* Page_Header
+  - Name, age, budget, timeframe info
+  - Message button
+  - Favorite button
+* About_Section
+* Property_Likes_Section
+  - Property_Like_Items
 
 ### Stores
-* Notebook
 
 ### Actions
-* ApiActions.receiveAllNotebooks -> triggered by ApiUtil
-* ApiActions.receiveSingleNotebook
-* ApiActions.deleteNotebook
-* NotebookActions.fetchAllNotebooks -> triggers ApiUtil
-* NotebookActions.fetchSingleNotebook
-* NotebookActions.createNotebook
-* NotebookActions.editNotebook
-* NotebookActions.destroyNotebook
 
 ### ApiUtil
-* ApiUtil.fetchAllNotebooks
-* ApiUtil.fetchSingleNotebook
-* ApiUtil.createNotebook
-* ApiUtil.editNotebook
-* ApiUtil.destroyNotebook
 
 ## Gems/Libraries

@@ -26,14 +26,14 @@ React.js. Crashmate allows users to:
 
 ## Implementation Timeline
 
-### Phase 1: Auth Cycle, Facebook login, and first screen (1.5 days)
+### Phase 1: Auth Cycle, Flux Pattern, and first screen (1.5 days)
 
 Phase 1 will entail getting all of the boilerplate with the backend out of the
 way. Storing and authorizing users in the DB using BCrypt shouldn't take more
 than a couple hours, since it's basically like assessment 04 again.
 
 I will also lay the groundwork for the front end during this phase, and set up
-a Roommates_Store so I can get a full flux cycle in place.
+a RoommatesStore so I can get a full flux cycle in place.
 
 Next I will build the Nav_Bar component, which will be present in all following
 views. This will have a homepage button, a Sign_In button, Log_In button when
@@ -95,10 +95,7 @@ Up until this point we've had a very basic user setup process, but given that
 this service requires a lot of user input to be useful, we'll need a more
 comprehensive user setup interface.
 
-First, I'll build an option for users to sign up outside of Facebook, asking for
-any information that we were previously relying on a Facebook API to resolve.
-
-Then I'll add a detailed user sign up process that gets any situational information
+I'll add a detailed user sign up process that gets any situational information
 that may be pertinent, such as where they're trying to move, when they'll be
 available to move, any deadlines they may have to find a place, etc.
 

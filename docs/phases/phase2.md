@@ -1,4 +1,4 @@
-# Phase 2: Flux Architecture and Note CRUD (2 days)
+# Phase 2: Index Page (1-2 days)
 
 ## Rails
 ### Models
@@ -9,30 +9,23 @@
 
 ## Flux
 ### Views (React Components)
-* NotesIndex
-  - NotesIndexItem
-* NoteForm
+* Filter_Bar
+  - Age_Slider
+  - Monthly_Budget_Slider
+  - Minimum_Stay_Slider
+  - Move_In_Date_Calendar
+  - Gender_Selector
+  - Occupation_Selector
+  - Smoker_Selector
+  - Orientation_Selector
+  - Pets_Selector
 
 ### Stores
-* Note
 
 ### Actions
-* ApiActions.receiveAllNotes -> triggered by ApiUtil
-* ApiActions.receiveSingleNote
-* ApiActions.deleteNote
-* NoteActions.fetchAllNotes -> triggers ApiUtil
-* NoteActions.fetchSingleNote 
-* NoteActions.createNote
-* NoteActions.editNote 
-* NoteActions.destroyNote
+* recieveFilteredRoommates
 
 ### ApiUtil
-* ApiUtil.fetchAllNotes
-* ApiUtil.fetchSingleNote
-* ApiUtil.createNote
-* ApiUtil.editNote
-* ApiUtil.destroyNote
+* fetchFilteredRoommates
 
 ## Gems/Libraries
-* Flux Dispatcher (npm)
-* Twitter Bootstrap
