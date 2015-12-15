@@ -11,7 +11,7 @@ React.js. Crashmate allows users to:
 
 <!-- This is a Markdown checklist. Use it to keep track of your progress! -->
 
-- [ ] Create an account
+- [x] Create an account
 - [ ] Log in / Log out
 - [ ] Browse all roommates
 - [ ] Filter search results

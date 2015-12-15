@@ -5,7 +5,7 @@ class User < ActiveRecord::Base
   after_initialize :ensure_session_token
 
   def self.find_by_credentials(username, password)
-    user = user.find_by(username: username)
+    user = User.find_by(username: username)
     return nil unless user && user.valid_password?(password)
     user
   end
@@ -16,7 +16,7 @@ class User < ActiveRecord::Base
   end
 
   def valid_password?(password)
-    BCrypt::Password.new(self.password_digest).is_password(password)
+    BCrypt::Password.new(self.password_digest).is_password?(password)
   end
 
   def reset_token!

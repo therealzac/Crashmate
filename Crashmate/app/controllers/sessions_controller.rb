@@ -3,17 +3,17 @@ class SessionsController < ApplicationController
   end
 
   def create
-    user = User.find_by_credentials(
+    @user = User.find_by_credentials(
       params[:user][:username],
       params[:user][:password]
     )
 
-    if user
-      sign_in(user)
-      # redirect_do
+    if @user
+      sign_in(@user)
+      render :show
     else
       flash.now[:errors] = ["Invalid username or password"]
-      # render
+      render :show
     end
   end
 

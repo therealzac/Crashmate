@@ -3,7 +3,7 @@ class Api::UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       sign_in(@user)
-      # redirect_to
+      render :show
     else
       flash.now[:errors] = @user.errors.full_messages
       # render

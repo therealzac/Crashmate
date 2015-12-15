@@ -13,3 +13,308 @@
  *= require_tree .
  *= require_self
  */
+
+/*CSS Setup*/
+
+ html, body, header, nav, h1, a,
+ ul, li, strong, main, button, i,
+ section, img, div, h2, p, form,
+ fieldset, label, input, textarea,
+ span, article, footer, time, small {
+   margin: 0;
+   padding: 0;
+   border: 0;
+   outline: 0;
+   font: inherit;
+   color: inherit;
+   text-align: inherit;
+   text-decoration: inherit;
+   vertical-align: inherit;
+   box-sizing: inherit;
+   background: transparent;
+ }
+
+ ul {
+   list-style: none;
+ }
+
+ img {
+   display: block;
+   width: 100%;
+   height: auto;
+ }
+
+ input[type="password"],
+ input[type="email"],
+ input[type="text"],
+ input[type="submit"],
+ textarea,
+ button {
+   -webkit-appearance: none;
+   -moz-appearance: none;
+ }
+
+ button,
+ input[type="submit"] {
+   cursor: pointer;
+ }
+
+ /* Clearfix */
+
+ .group:after {
+   content: "";
+   display: block;
+   clear: both;
+ }
+
+
+/*NavBar*/
+
+ body {
+   font-family: "Roboto", sans-serif;
+   font-size: 16px;
+   font-weight: 400;
+   background: #eee;
+ }
+
+ .header {
+   background: #001f3f;
+   color: #fff;
+   border-bottom: 1px solid #ccc;
+ }
+
+ .header a {
+   display: block;
+   padding: 10px 20px;
+ }
+
+ .header-nav {
+   margin: 0 auto;
+   width: 900px;
+   border-left: 1px solid #ccc;
+   border-right: 1px solid #ccc;
+ }
+
+ .header-logo {
+   float: left;
+   border-right: 1px solid #ccc;
+   padding: 15px;
+   font-weight: 700;
+ }
+
+ .header-logo:hover {
+   background: #0074D9;
+ }
+
+ .header-list {
+   float: right;
+ }
+
+ .header-list > li {
+   font-size: 14px;
+   float: left;
+   padding: 16px;
+   border-left: 1px solid #ccc;
+ }
+
+ .header-list > li:hover {
+   background: #0074D9;
+ }
+
+/*Notifications in NavBar*/
+
+ .badge {
+   display: inline;
+   font-size: 14px;
+   padding: 1px 6px;
+   background: #000;
+   border-radius: 50%;
+ }
+
+ li:hover .badge {
+   background: #f00;
+ }
+
+ .header {
+   position: relative;
+   z-index: 1;
+ }
+
+ .header-list > li {
+   position: relative;
+ }
+
+ .header-notifications {
+   display: none;
+   position: absolute;
+   margin-top: 16px;
+   left: -1px;
+   font-size: 14px;
+   white-space: nowrap;
+   background: #fff;
+   border-left: 1px solid #ccc;
+   border-right: 1px solid #ccc;
+   border-bottom: 1px solid #ccc;
+   border-bottom-left-radius: 5px;
+   border-bottom-right-radius: 5px;
+   overflow: hidden;
+ }
+
+ li:hover .header-notifications {
+   display: block;
+ }
+
+ .header-notifications > li {
+   border-top: 1px solid #ccc;
+   color: #000;
+ }
+
+ .header-notifications > li:hover {
+   background: #eee;
+ }
+
+
+/*Forms*/
+
+.form {
+  margin: 0 0 20px 0;
+}
+
+.form-thumb {
+  float: left;
+}
+
+.form-fieldset {
+  float: left;
+  margin: 0 0 0 20px;
+  padding: 19px;
+  width: 500px;
+  background: #eee;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.input {
+  margin: 0 0 20px 0;
+}
+
+.input > label {
+  display: block;
+  font-weight: 400;
+  padding: 0 0 5px 0;
+}
+
+.input > input,
+.input > textarea {
+  display: block;
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  width: calc(100% - 22px);
+  border-radius: 5px;
+}
+
+.input > input:focus,
+.input > textarea:focus {
+  border-color: #0074D9;
+}
+
+.input > textarea {
+  height: 120px;
+}
+
+.submit {
+  margin: 20px 0 0 0;
+  padding: 0 0 3px 0;
+}
+
+.submit > button {
+  position: relative;
+  padding: 10px 20px;
+  color: #fff;
+  background: #0074D9;
+  font-weight: 400;
+  border-radius: 5px;
+  box-shadow: 0 3px 0 0 #001f3f;
+}
+
+.submit > button:hover {
+  background: #39CCCC;
+}
+
+.submit > button:active {
+  top: 3px;
+  background: #0a0;
+  box-shadow: none;
+}
+
+.button-alternative {
+  padding: 0 0 0 5px;
+}
+
+.button-alternative strong {
+  padding: 0 0 0 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.button-alternative strong:hover {
+  color: #f00;
+}
+
+/*Sign In Modal*/
+
+
+ .modal {
+  display: none;
+}
+
+.modal.is-open {
+  display: block;
+}
+
+.modal-screen {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.7);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+}
+
+.modal-form {
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  margin-left: -280px;
+  width: 480px;
+  padding: 20px;
+  background: #fff;
+  z-index: 3;
+  border-radius: 5px;
+  border: 1px solid #000;
+}
+
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 24px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.modal-close:hover {
+  color: #f00;
+}
+
+.modal-form > h1 {
+  font-size: 36px;
+  line-height: 1;
+  font-weight: 300;
+}
+
+.modal-form > p {
+  margin: 0 0 20px 0;
+}
