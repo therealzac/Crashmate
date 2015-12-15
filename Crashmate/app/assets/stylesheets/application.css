@@ -123,6 +123,10 @@
 
 /*Notifications in NavBar*/
 
+.hidden {
+  display: none;
+}
+
  .badge {
    display: inline;
    font-size: 14px;

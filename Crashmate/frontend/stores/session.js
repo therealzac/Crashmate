@@ -8,7 +8,10 @@ var _session = {};
 SessionStore.__onDispatch = function (payload) {
   switch (payload.actionType) {
     case SessionConstants.SESSION_RECIEVED:
-      setSession(payload.session);
+      SessionStore.setSession(payload.session);
+      break;
+    case SessionConstants.SESSION_DESTROYED:
+      SessionStore.clearSession();
       break;
   }
   SessionStore.__emitChange();
@@ -21,5 +24,9 @@ SessionStore.setSession = function (session) {
 SessionStore.clearSession = function () {
   _session = {};
 };
+
+SessionStore.getSession = function () {
+  return _session;
+}
 
 module.exports = SessionStore;

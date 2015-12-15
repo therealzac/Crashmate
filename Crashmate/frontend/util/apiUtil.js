@@ -6,7 +6,7 @@ module.exports = {
       method: "POST",
       data: {user: user},
       success: function (user) {
-        console.log(user);
+        ApiActions.logIn(user);
       },
       error: function (error) {
         console.log(error);
@@ -20,7 +20,20 @@ module.exports = {
       method: "POST",
       data: {user: user},
       success: function(user){
-          console.log(user);
+        ApiActions.logIn(user);
+      },
+      error: function (error) {
+        console.log(error);
+      }
+    });
+  },
+
+  logOut: function () {
+    $.ajax({
+      url: "session",
+      method: "DELETE",
+      success: function () {
+        ApiActions.logOut();
       },
       error: function (error) {
         console.log(error);

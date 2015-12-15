@@ -19,6 +19,6 @@ class SessionsController < ApplicationController
 
   def destroy
     sign_out
-    # rediect_to
+    render :blank
   end
 end
