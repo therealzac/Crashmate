@@ -13,5 +13,11 @@ module.exports = {
     AppDispatcher.dispatch({
       actionType: SessionConstants.SESSION_DESTROYED,
     });
+  },
+
+  renderSessionModal: function () {
+    AppDispatcher.dispatch({
+      actionType: SessionConstants.RENDER_MODAL
+    });
   }
 }

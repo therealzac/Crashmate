@@ -1,33 +1,47 @@
 var React = require('react');
 var LinkedStateMixin = require('react-addons-linked-state-mixin');
 var ApiUtil = require('../util/apiUtil.js');
+var SessionStore = require('../stores/session.js');
 
 module.exports = React.createClass({
   mixins: [LinkedStateMixin],
 
   getInitialState: function () {
-    return { username: "", password: "", isClosed: false }
+    return { username: "", password: "", modalOpen: false }
+  },
+
+  componentDidMount: function () {
+    this.sessionListener = SessionStore.addListener(this._onChange);
+  },
+
+  _onChange: function () {
+    session = SessionStore.getSession();
+    this.setState({ modalOpen: session.modalOpen })
+  },
+
+  componentWillUnmount: function () {
+    this.sessionListener.remove();
   },
 
   handleLogIn: function () {
     var user = {username: this.state.username, password: this.state.password}
     ApiUtil.logIn(user);
-    this.setState({isClosed: true});
+    this.setState({modalOpen: false});
   },
 
   handleSignUp: function (event) {
     var user = {username: this.state.username, password: this.state.password}
     ApiUtil.createUser(user);
-    this.setState({isClosed: true});
+    this.setState({modalOpen: false});
   },
 
   handleClose: function () {
-    this.setState({isClosed: true});
+    this.setState({modalOpen: false});
   },
 
   render: function () {
     var out;
-    if (this.state.isClosed){
+    if (!this.state.modalOpen){
       return (<div/>);
     } else {
       return(

@@ -1,6 +1,7 @@
 var React = require('react');
 var SessionStore = require('../stores/session.js');
 var ApiUtil = require('../util/apiUtil.js');
+var ApiActions = require('../actions/apiActions.js');
 
 module.exports = React.createClass({
   getInitialState: function () {
@@ -20,9 +21,12 @@ module.exports = React.createClass({
   },
 
   handleClick: function (event) {
-    console.log(event.currentTarget.innerHTML);
     if (event.currentTarget.innerHTML === 'Log Out') {
       ApiUtil.logOut();
+    } else if (event.currentTarget.innerHTML === this.state.session.username) {
+      console.log("Go to " + this.state.session.username + "'s profile...'");
+    } else {
+      ApiActions.renderSessionModal();
     }
   },
 

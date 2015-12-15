@@ -24298,7 +24298,7 @@
 	var React = __webpack_require__(1);
 
 	var NavBar = __webpack_require__(209);
-	var SignInModal = __webpack_require__(210);
+	var SessionModal = __webpack_require__(239);
 
 	module.exports = React.createClass({
 	  displayName: 'exports',
@@ -24308,7 +24308,7 @@
 	      'div',
 	      null,
 	      React.createElement(NavBar, null),
-	      React.createElement(SignInModal, null)
+	      React.createElement(SessionModal, null)
 	    );
 	  }
 	});
@@ -24320,6 +24320,7 @@
 	var React = __webpack_require__(1);
 	var SessionStore = __webpack_require__(222);
 	var ApiUtil = __webpack_require__(215);
+	var ApiActions = __webpack_require__(216);
 
 	module.exports = React.createClass({
 	  displayName: 'exports',
@@ -24341,9 +24342,12 @@
 	  },
 
 	  handleClick: function (event) {
-	    console.log(event.currentTarget.innerHTML);
 	    if (event.currentTarget.innerHTML === 'Log Out') {
 	      ApiUtil.logOut();
+	    } else if (event.currentTarget.innerHTML === this.state.session.username) {
+	      console.log("Go to " + this.state.session.username + "'s profile...'");
+	    } else {
+	      ApiActions.renderSessionModal();
 	    }
 	  },
 
@@ -24428,114 +24432,7 @@
 	});
 
 /***/ },
-/* 210 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var React = __webpack_require__(1);
-	var LinkedStateMixin = __webpack_require__(211);
-	var ApiUtil = __webpack_require__(215);
-
-	module.exports = React.createClass({
-	  displayName: 'exports',
-
-	  mixins: [LinkedStateMixin],
-
-	  getInitialState: function () {
-	    return { username: "", password: "", isClosed: false };
-	  },
-
-	  handleLogIn: function () {
-	    var user = { username: this.state.username, password: this.state.password };
-	    ApiUtil.logIn(user);
-	    this.setState({ isClosed: true });
-	  },
-
-	  handleSignUp: function (event) {
-	    var user = { username: this.state.username, password: this.state.password };
-	    ApiUtil.createUser(user);
-	    this.setState({ isClosed: true });
-	  },
-
-	  handleClose: function () {
-	    this.setState({ isClosed: true });
-	  },
-
-	  render: function () {
-	    var out;
-	    if (this.state.isClosed) {
-	      return React.createElement('div', null);
-	    } else {
-	      return React.createElement(
-	        'div',
-	        { className: 'modal is-open' },
-	        React.createElement(
-	          'form',
-	          { className: 'modal-form' },
-	          React.createElement(
-	            'span',
-	            { className: 'modal-close js-modal-close', onClick: this.handleClose },
-	            '×'
-	          ),
-	          React.createElement(
-	            'h1',
-	            null,
-	            'Welcome to Crashmate'
-	          ),
-	          React.createElement(
-	            'p',
-	            null,
-	            'Please log in or sign up.'
-	          ),
-	          React.createElement(
-	            'div',
-	            { className: 'input' },
-	            React.createElement(
-	              'label',
-	              { 'for': 'form-email' },
-	              'Username'
-	            ),
-	            React.createElement('input', { type: 'text', id: 'form-email',
-	              valueLink: this.linkState("username") })
-	          ),
-	          React.createElement(
-	            'div',
-	            { className: 'input' },
-	            React.createElement(
-	              'label',
-	              { 'for': 'form-password' },
-	              'Password'
-	            ),
-	            React.createElement('input', { type: 'password', id: 'form-password',
-	              valueLink: this.linkState("password") })
-	          ),
-	          React.createElement(
-	            'div',
-	            { className: 'submit' },
-	            React.createElement(
-	              'button',
-	              { onClick: this.handleLogIn },
-	              'Log In'
-	            ),
-	            React.createElement(
-	              'span',
-	              { className: 'button-alternative' },
-	              'or ',
-	              React.createElement(
-	                'strong',
-	                { className: 'button',
-	                  onClick: this.handleSignUp },
-	                'Sign Up'
-	              )
-	            )
-	          )
-	        ),
-	        React.createElement('div', { className: 'modal-screen js-modal-close' })
-	      );
-	    }
-	  }
-	});
-
-/***/ },
+/* 210 */,
 /* 211 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -24831,6 +24728,12 @@
 	  logOut: function () {
 	    AppDispatcher.dispatch({
 	      actionType: SessionConstants.SESSION_DESTROYED
+	    });
+	  },
+
+	  renderSessionModal: function () {
+	    AppDispatcher.dispatch({
+	      actionType: SessionConstants.RENDER_MODAL
 	    });
 	  }
 	};
@@ -25156,7 +25059,8 @@
 
 	module.exports = {
 	  SESSION_RECIEVED: "SESSION_RECIEVED",
-	  SESSION_DESTROYED: "SESSION_DESTROYED"
+	  SESSION_DESTROYED: "SESSION_DESTROYED",
+	  RENDER_MODAL: "RENDER_MODAL"
 	};
 
 /***/ },
@@ -25168,7 +25072,7 @@
 	var SessionStore = new Store(AppDispatcher);
 	var SessionConstants = __webpack_require__(221);
 
-	var _session = {};
+	var _session = { modalOpen: false };
 
 	SessionStore.__onDispatch = function (payload) {
 	  switch (payload.actionType) {
@@ -25178,20 +25082,28 @@
 	    case SessionConstants.SESSION_DESTROYED:
 	      SessionStore.clearSession();
 	      break;
+	    case SessionConstants.RENDER_MODAL:
+	      SessionStore.openModal();
+	      break;
 	  }
 	  SessionStore.__emitChange();
 	};
 
 	SessionStore.setSession = function (session) {
 	  _session = session;
+	  _session.modalOpen = false;
 	};
 
 	SessionStore.clearSession = function () {
-	  _session = {};
+	  _session = { modalOpen: false };
 	};
 
 	SessionStore.getSession = function () {
 	  return _session;
+	};
+
+	SessionStore.openModal = function () {
+	  _session.modalOpen = true;
 	};
 
 	module.exports = SessionStore;
@@ -31562,6 +31474,128 @@
 
 	module.exports = FluxMixinLegacy;
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4)))
+
+/***/ },
+/* 239 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var React = __webpack_require__(1);
+	var LinkedStateMixin = __webpack_require__(211);
+	var ApiUtil = __webpack_require__(215);
+	var SessionStore = __webpack_require__(222);
+
+	module.exports = React.createClass({
+	  displayName: 'exports',
+
+	  mixins: [LinkedStateMixin],
+
+	  getInitialState: function () {
+	    return { username: "", password: "", modalOpen: false };
+	  },
+
+	  componentDidMount: function () {
+	    this.sessionListener = SessionStore.addListener(this._onChange);
+	  },
+
+	  _onChange: function () {
+	    session = SessionStore.getSession();
+	    this.setState({ modalOpen: session.modalOpen });
+	  },
+
+	  componentWillUnmount: function () {
+	    this.sessionListener.remove();
+	  },
+
+	  handleLogIn: function () {
+	    var user = { username: this.state.username, password: this.state.password };
+	    ApiUtil.logIn(user);
+	    this.setState({ modalOpen: false });
+	  },
+
+	  handleSignUp: function (event) {
+	    var user = { username: this.state.username, password: this.state.password };
+	    ApiUtil.createUser(user);
+	    this.setState({ modalOpen: false });
+	  },
+
+	  handleClose: function () {
+	    this.setState({ modalOpen: false });
+	  },
+
+	  render: function () {
+	    var out;
+	    if (!this.state.modalOpen) {
+	      return React.createElement('div', null);
+	    } else {
+	      return React.createElement(
+	        'div',
+	        { className: 'modal is-open' },
+	        React.createElement(
+	          'form',
+	          { className: 'modal-form' },
+	          React.createElement(
+	            'span',
+	            { className: 'modal-close js-modal-close', onClick: this.handleClose },
+	            '×'
+	          ),
+	          React.createElement(
+	            'h1',
+	            null,
+	            'Welcome to Crashmate'
+	          ),
+	          React.createElement(
+	            'p',
+	            null,
+	            'Please log in or sign up.'
+	          ),
+	          React.createElement(
+	            'div',
+	            { className: 'input' },
+	            React.createElement(
+	              'label',
+	              { 'for': 'form-email' },
+	              'Username'
+	            ),
+	            React.createElement('input', { type: 'text', id: 'form-email',
+	              valueLink: this.linkState("username") })
+	          ),
+	          React.createElement(
+	            'div',
+	            { className: 'input' },
+	            React.createElement(
+	              'label',
+	              { 'for': 'form-password' },
+	              'Password'
+	            ),
+	            React.createElement('input', { type: 'password', id: 'form-password',
+	              valueLink: this.linkState("password") })
+	          ),
+	          React.createElement(
+	            'div',
+	            { className: 'submit' },
+	            React.createElement(
+	              'button',
+	              { onClick: this.handleLogIn },
+	              'Log In'
+	            ),
+	            React.createElement(
+	              'span',
+	              { className: 'button-alternative' },
+	              'or ',
+	              React.createElement(
+	                'strong',
+	                { className: 'button',
+	                  onClick: this.handleSignUp },
+	                'Sign Up'
+	              )
+	            )
+	          )
+	        ),
+	        React.createElement('div', { className: 'modal-screen js-modal-close' })
+	      );
+	    }
+	  }
+	});
 
 /***/ }
 /******/ ]);
