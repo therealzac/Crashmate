@@ -6,8 +6,8 @@
 
 ## Minimum Viable Product
 
-FresherNote is a web application inspired by Evernote built using Ruby on Rails
-and React.js. FresherNote allows users to:
+Crashmate is a tool for people to find roommates, built using Ruby on Rails and
+React.js. Crashmate allows users to:
 
 <!-- This is a Markdown checklist. Use it to keep track of your progress! -->
 
