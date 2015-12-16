@@ -104,6 +104,7 @@ p{
    border-right: 1px solid #ccc;
    padding: 15px;
    font-weight: 700;
+   cursor: pointer;
  }
 
  .header-logo:hover {
@@ -112,6 +113,7 @@ p{
 
  .header-list {
    float: right;
+   cursor: pointer;
  }
 
  .header-list > li {
@@ -325,4 +327,62 @@ p{
 
 .modal-form > p {
   margin: 0 0 20px 0;
+}
+
+/*Splash*/
+
+.content {
+  position: relative;
+  margin: 0 auto;
+  background: #AAAAAA;
+  width: 100%;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+
+.content-main {
+  float: left;
+  width: 100%;
+  min-height: 800px;
+  padding: 20px;
+}
+
+
+/*Footer*/
+
+
+.footer {
+  width: 100%;
+  margin: 0 auto 0px auto;
+  background: #fff;
+  color: #aaa;
+  font-size: 14px;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.footer-copy {
+  margin-left: 30%;
+  display: block;
+  padding: 20px;
+  float: left;
+}
+
+.footer-links {
+  margin-right: 30%;
+  padding: 20px;
+  float: right;
+}
+
+.footer-links > li {
+  float: left;
+  padding: 0 0 0 20px;
+}
+
+.footer a:hover {
+  color: #000;
 }

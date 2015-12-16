@@ -24299,6 +24299,8 @@
 
 	var NavBar = __webpack_require__(209);
 	var SessionModal = __webpack_require__(234);
+	var Splash = __webpack_require__(240);
+	var Footer = __webpack_require__(239);
 
 	module.exports = React.createClass({
 	  displayName: 'exports',
@@ -24308,7 +24310,9 @@
 	      'div',
 	      null,
 	      React.createElement(NavBar, null),
-	      React.createElement(SessionModal, null)
+	      React.createElement(SessionModal, null),
+	      React.createElement(Splash, null),
+	      React.createElement(Footer, null)
 	    );
 	  }
 	});
@@ -31627,6 +31631,86 @@
 	};
 
 	module.exports = ReactStateSetters;
+
+/***/ },
+/* 239 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var React = __webpack_require__(1);
+
+	module.exports = React.createClass({
+	  displayName: "exports",
+
+	  render: function () {
+	    return React.createElement(
+	      "footer",
+	      { className: "footer group" },
+	      React.createElement(
+	        "small",
+	        { className: "footer-copy" },
+	        "© Crashmate"
+	      ),
+	      React.createElement(
+	        "ul",
+	        { className: "footer-links group" },
+	        React.createElement(
+	          "li",
+	          null,
+	          React.createElement(
+	            "a",
+	            { href: "#" },
+	            "Home"
+	          )
+	        ),
+	        React.createElement(
+	          "li",
+	          null,
+	          React.createElement(
+	            "a",
+	            { href: "#" },
+	            "About"
+	          )
+	        ),
+	        React.createElement(
+	          "li",
+	          null,
+	          React.createElement(
+	            "a",
+	            { href: "#" },
+	            "Terms"
+	          )
+	        ),
+	        React.createElement(
+	          "li",
+	          null,
+	          React.createElement(
+	            "a",
+	            { href: "#" },
+	            "Privacy"
+	          )
+	        )
+	      )
+	    );
+	  }
+	});
+
+/***/ },
+/* 240 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var React = __webpack_require__(1);
+
+	module.exports = React.createClass({
+	  displayName: "exports",
+
+	  render: function () {
+	    return React.createElement(
+	      "main",
+	      { className: "content group" },
+	      React.createElement("section", { className: "content-main" })
+	    );
+	  }
+	});
 
 /***/ }
 /******/ ]);
