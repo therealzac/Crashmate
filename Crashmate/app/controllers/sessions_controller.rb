@@ -12,8 +12,7 @@ class SessionsController < ApplicationController
       sign_in(@user)
       render :show
     else
-      flash.now[:errors] = ["Invalid username or password"]
-      render :show
+      render json: ["Invalid username or password :("], status: 422
     end
   end
 

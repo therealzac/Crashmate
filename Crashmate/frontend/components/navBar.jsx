@@ -25,8 +25,10 @@ module.exports = React.createClass({
       ApiUtil.logOut();
     } else if (event.currentTarget.innerHTML === this.state.session.username) {
       console.log("Go to " + this.state.session.username + "'s profile...'");
-    } else {
-      ApiActions.renderSessionModal();
+    } else if (event.currentTarget.innerHTML === 'Log In'){
+      ApiActions.renderLogInModal();
+    } else if (event.currentTarget.innerHTML === 'Sign Up'){
+      ApiActions.renderSignUpModal();
     }
   },
 

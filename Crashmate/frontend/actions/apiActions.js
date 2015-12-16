@@ -15,9 +15,22 @@ module.exports = {
     });
   },
 
-  renderSessionModal: function () {
+  renderLogInModal: function () {
     AppDispatcher.dispatch({
-      actionType: SessionConstants.RENDER_MODAL
+      actionType: SessionConstants.RENDER_LOGIN_MODAL
+    });
+  },
+
+  renderSignUpModal: function () {
+    AppDispatcher.dispatch({
+      actionType: SessionConstants.RENDER_SIGNUP_MODAL
+    });
+  },
+
+  invalidEntry: function (error) {
+    AppDispatcher.dispatch({
+      actionType: SessionConstants.INVALID_ENTRY,
+      error: error
     });
   }
 }

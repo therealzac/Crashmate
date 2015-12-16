@@ -6,8 +6,17 @@ var SessionStore = require('../stores/session.js');
 module.exports = React.createClass({
   mixins: [LinkedStateMixin],
 
+  resetState: {
+    username: "",
+    password: "",
+    modalOpen: false,
+    message: "",
+    buttonValue: ""
+  },
+
   getInitialState: function () {
-    return { username: "", password: "", modalOpen: false }
+    return { username: "", password: "", modalOpen: false, message: "",
+             buttonValue: "" }
   },
 
   componentDidMount: function () {
@@ -16,31 +25,30 @@ module.exports = React.createClass({
 
   _onChange: function () {
     session = SessionStore.getSession();
-    this.setState({ modalOpen: session.modalOpen })
+    this.setState({ modalOpen: session.modalOpen, buttonValue: session.buttonValue,
+                    message: session.messageValue })
   },
 
   componentWillUnmount: function () {
     this.sessionListener.remove();
   },
 
-  handleLogIn: function () {
+  handleButton: function (event) {
     var user = {username: this.state.username, password: this.state.password}
-    ApiUtil.logIn(user);
-    this.setState({modalOpen: false});
-  },
-
-  handleSignUp: function (event) {
-    var user = {username: this.state.username, password: this.state.password}
-    ApiUtil.createUser(user);
-    this.setState({modalOpen: false});
+    if (event.currentTarget.innerHTML === "Sign Up"){
+      this.setState(this.resetState);
+      ApiUtil.createUser(user);
+    } else {
+      this.setState(this.resetState);
+      ApiUtil.logIn(user);
+    }
   },
 
   handleClose: function () {
-    this.setState({modalOpen: false});
+    this.setState({ username: "", password: "", modalOpen: false });
   },
 
   render: function () {
-    var out;
     if (!this.state.modalOpen){
       return (<div/>);
     } else {
@@ -52,9 +60,9 @@ module.exports = React.createClass({
               &times;
             </span>
 
-            <h1>Welcome to Crashmate</h1>
+            <h1>Crashmate</h1>
 
-            <p>Please log in or sign up.</p>
+            <p>{this.state.message}</p>
 
             <div className="input">
               <label for="form-email">Username</label>
@@ -71,12 +79,7 @@ module.exports = React.createClass({
             </div>
 
             <div className="submit">
-              <button onClick={this.handleLogIn}>Log In</button>
-              <span className="button-alternative">or <strong className="button"
-                                                        onClick={this.handleSignUp}>
-                                                        Sign Up
-                                                      </strong>
-              </span>
+              <button onClick={this.handleButton}>{this.state.buttonValue}</button>
             </div>
 
           </form>

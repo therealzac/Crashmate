@@ -70,6 +70,10 @@
 
 /*NavBar*/
 
+p{
+  padding: 10px;
+}
+
  body {
    font-family: "Roboto", sans-serif;
    font-size: 16px;
