@@ -5,7 +5,6 @@ module.exports = React.createClass({
     return(
       <main className="content group">
         <section className="content-main">
-          
         </section>
       </main>
     )
