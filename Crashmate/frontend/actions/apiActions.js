@@ -1,5 +1,6 @@
 var AppDispatcher = require('../dispatcher/dispatcher.js');
 var SessionConstants = require('../constants/sessionConstants.js');
+var FilterConstants = require('../constants/filterConstants.js');
 
 module.exports = {
   logIn: function (user) {
@@ -31,6 +32,20 @@ module.exports = {
     AppDispatcher.dispatch({
       actionType: SessionConstants.INVALID_ENTRY,
       error: error
+    });
+  },
+
+  recieveSession: function (session) {
+    AppDispatcher.dispatch({
+      actionType: SessionConstants.SESSION_RECIEVED,
+      session: session
+    });
+  },
+
+  setFilter: function (filter) {
+    AppDispatcher.dispatch({
+      actionType: FilterConstants.FILTER_RECIEVED,
+      filter: filter
     });
   }
 }

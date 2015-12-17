@@ -39,5 +39,15 @@ module.exports = {
         console.log(error);
       }
     });
+  },
+
+  fetchSession: function () {
+    $.ajax({
+      url: "session",
+      method: "GET",
+      success: function (session) {
+        ApiActions.recieveSession(session);
+      }
+    });
   }
 }

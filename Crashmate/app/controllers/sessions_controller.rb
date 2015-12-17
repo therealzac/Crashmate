@@ -16,6 +16,16 @@ class SessionsController < ApplicationController
     end
   end
 
+  def show
+    @user = current_user
+
+    if @user
+      render :show
+    else
+      render :blank
+    end
+  end
+
   def destroy
     sign_out
     render :blank

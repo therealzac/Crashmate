@@ -10,6 +10,7 @@ module.exports = React.createClass({
 
   componentDidMount: function () {
     this.sessionListener = SessionStore.addListener(this._onChange);
+    ApiUtil.fetchSession();
   },
 
   _onChange: function () {
@@ -29,6 +30,8 @@ module.exports = React.createClass({
       ApiActions.renderLogInModal();
     } else if (event.currentTarget.innerHTML === 'Sign Up'){
       ApiActions.renderSignUpModal();
+    } else if (event.currentTarget.innerHTML === 'Crashmate'){
+      this.props.history.push('/');
     }
   },
 
@@ -36,7 +39,7 @@ module.exports = React.createClass({
     var username = this.state.session.username;
     var toggle = "Log Out"
     var hideNotifications = ""
-    if (typeof username === 'undefined') {
+    if (typeof username === "undefined") {
       username = "Sign Up";
       toggle = "Log In";
       hideNotifications = "hidden"
@@ -45,7 +48,7 @@ module.exports = React.createClass({
       <header className="header">
         <nav className="header-nav group">
 
-          <h1 className="header-logo">Crashmate</h1>
+          <h1 className="header-logo" onClick={this.handleClick}>Crashmate</h1>
 
           <ul className="header-list group">
                 <li className={hideNotifications}>

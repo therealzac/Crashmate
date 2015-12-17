@@ -34,6 +34,7 @@ module.exports = React.createClass({
   },
 
   handleButton: function (event) {
+    event.preventDefault();
     var user = {username: this.state.username, password: this.state.password}
     if (event.currentTarget.innerHTML === "Sign Up"){
       this.setState(this.resetState);
@@ -65,17 +66,13 @@ module.exports = React.createClass({
             <p>{this.state.message}</p>
 
             <div className="input">
-              <label for="form-email">Username</label>
-              <input type="text" id="form-email"
-                     valueLink={this.linkState("username")}>
-              </input>
+              <label>Username</label>
+              <input type="text" valueLink={this.linkState("username")}/>
             </div>
 
             <div className="input">
-              <label for="form-password">Password</label>
-              <input type="password" id="form-password"
-                     valueLink={this.linkState("password")}>
-              </input>
+              <label>Password</label>
+              <input type="password" valueLink={this.linkState("password")}/>
             </div>
 
             <div className="submit">

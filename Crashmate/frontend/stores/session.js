@@ -3,35 +3,40 @@ var AppDispatcher = require('../dispatcher/dispatcher.js');
 var SessionStore = new Store(AppDispatcher);
 var SessionConstants = require('../constants/sessionConstants.js');
 
-var _session = { modalOpen: false, buttonValue: "", messageValue: ""};
+
+var _session = {};
 
 SessionStore.__onDispatch = function (payload) {
   switch (payload.actionType) {
     case SessionConstants.SESSION_RECIEVED:
-      SessionStore.setSession(payload.session);
+      setSession(payload.session);
+      SessionStore.__emitChange();
       break;
     case SessionConstants.SESSION_DESTROYED:
-      SessionStore.clearSession();
+      clearSession();
+      SessionStore.__emitChange();
       break;
     case SessionConstants.RENDER_SIGNUP_MODAL:
-      SessionStore.openSignUpModal();
+      openSignUpModal();
+      SessionStore.__emitChange();
       break;
     case SessionConstants.RENDER_LOGIN_MODAL:
-      SessionStore.openLoginModal();
+      openLoginModal();
+      SessionStore.__emitChange();
       break;
     case SessionConstants.INVALID_ENTRY:
-      SessionStore.invalidEntry(payload.error);
+      invalidEntry(payload.error);
+      SessionStore.__emitChange();
       break;
   }
-  SessionStore.__emitChange();
 };
 
-SessionStore.setSession = function (session) {
+setSession = function (session) {
   _session = session;
   _session.modalOpen = false;
 };
 
-SessionStore.clearSession = function () {
+clearSession = function () {
   _session = { modalOpen: false };
 };
 
@@ -39,19 +44,19 @@ SessionStore.getSession = function () {
   return _session;
 };
 
-SessionStore.openLoginModal = function () {
+openLoginModal = function () {
   _session.modalOpen = true;
   _session.messageValue = "Welcome back."
   _session.buttonValue = "Log In";
 };
 
-SessionStore.openSignUpModal = function () {
+openSignUpModal = function () {
   _session.modalOpen = true;
   _session.messageValue = "Need a roommate? We got you."
   _session.buttonValue = "Sign Up";
 };
 
-SessionStore.invalidEntry = function (error) {
+invalidEntry = function (error) {
   _session.messageValue = error.responseJSON[0];
 }
 
