@@ -3,7 +3,7 @@ var AppDispatcher = require('../dispatcher/dispatcher.js');
 var FilterStore = new Store(AppDispatcher);
 var FilterConstants = require('../constants/filterConstants.js');
 
-var _filters = {}
+var _filters = {ageRange: [18, 65], budget: 500, term: 1}
 
 FilterStore.__onDispatch = function (payload) {
   switch (payload.actionType) {
@@ -20,6 +20,7 @@ setFilters = function (newFilters) {
   keys.forEach(function(key){
     _filters[key] = newFilters[key];
   });
+  console.log(_filters);
 }
 
 FilterStore.getFilters = function () {

@@ -421,17 +421,6 @@ p{
   border-bottom: 1px solid #ccc;
 }
 
-/*.index:before {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 23.6%;
-  width: 1px;
-  background: #ccc;
-}*/
-
 .index-filters {
   padding: 2%;
   float: left;
@@ -453,10 +442,10 @@ p{
   color: #AAAAAA;
 }
 
-.age-slider{
+.filter-component{
   width: 240px;
   padding: 20px;
-  background: #fff;
+  padding-bottom: 20%;
   z-index: 3;
   border-top: 1px solid #ccc;
 }

@@ -24,6 +24,7 @@ module.exports = React.createClass({
   handleClick: function (event) {
     if (event.currentTarget.innerHTML === 'Log Out') {
       ApiUtil.logOut();
+      this.props.history.push('/');
     } else if (event.currentTarget.innerHTML === this.state.session.username) {
       console.log("Go to " + this.state.session.username + "'s profile...'");
     } else if (event.currentTarget.innerHTML === 'Log In'){

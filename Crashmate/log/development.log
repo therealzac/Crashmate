@@ -38890,3 +38890,3123 @@ Started GET "/session" for ::1 at 2015-12-16 16:03:05 -0800
 Processing by SessionsController#show as */*
   Rendered sessions/blank.json.jbuilder (0.4ms)
 Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/background.png" for ::1 at 2015-12-16 16:35:42 -0800
+
+
+Started GET "/" for ::1 at 2015-12-16 16:39:52 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html within layouts/application (1.1ms)
+Completed 200 OK in 604ms (Views: 599.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/api/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 16:39:53 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.tooltips.self-a5b327f05bcec2817f4d44f6daaf3cd1b02823d78cc7ddc23ebad25fe3f67813.css?body=1" for ::1 at 2015-12-16 16:39:53 -0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 16:39:53 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.self-ae1fefb167d375042fbb9758283732d779258ccb4f4bad05f39824f613aa902c.css?body=1" for ::1 at 2015-12-16 16:39:53 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.pips.self-bdb1079da096aafa91f67ffb5dd4a99db1ba034175868b952d5cfa5dd236a5ea.css?body=1" for ::1 at 2015-12-16 16:39:53 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.min.self-a85af646e8e5ab88dd8b4eede7f6a638078bd7803a30ef91ba0aaab74c9d2d36.css?body=1" for ::1 at 2015-12-16 16:39:53 -0800
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 16:39:53 -0800
+
+
+Started GET "/assets/application.self-42a5bc28f82341d9b54ce2c706ab5b04a16a029305c28ecc4b54c1ab3fa8285b.css?body=1" for ::1 at 2015-12-16 16:39:53 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-16 16:39:53 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-16 16:39:53 -0800
+
+
+Started GET "/assets/api/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 16:39:53 -0800
+
+
+Started GET "/assets/bundle.self-eb9ae193f1519810c79af334745744a070fb75a5c722deb60efad609bc3c1b4c.js?body=1" for ::1 at 2015-12-16 16:39:53 -0800
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 16:39:53 -0800
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 16:39:53 -0800
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-12-16 16:39:53 -0800
+
+
+Started GET "/" for ::1 at 2015-12-16 16:40:07 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html within layouts/application (0.4ms)
+Completed 200 OK in 318ms (Views: 316.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/api/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 16:40:07 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.self-ae1fefb167d375042fbb9758283732d779258ccb4f4bad05f39824f613aa902c.css?body=1" for ::1 at 2015-12-16 16:40:07 -0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 16:40:07 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.tooltips.self-a5b327f05bcec2817f4d44f6daaf3cd1b02823d78cc7ddc23ebad25fe3f67813.css?body=1" for ::1 at 2015-12-16 16:40:07 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.min.self-a85af646e8e5ab88dd8b4eede7f6a638078bd7803a30ef91ba0aaab74c9d2d36.css?body=1" for ::1 at 2015-12-16 16:40:07 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.pips.self-bdb1079da096aafa91f67ffb5dd4a99db1ba034175868b952d5cfa5dd236a5ea.css?body=1" for ::1 at 2015-12-16 16:40:07 -0800
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 16:40:07 -0800
+
+
+Started GET "/assets/application.self-42a5bc28f82341d9b54ce2c706ab5b04a16a029305c28ecc4b54c1ab3fa8285b.css?body=1" for ::1 at 2015-12-16 16:40:07 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-16 16:40:07 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-16 16:40:07 -0800
+
+
+Started GET "/assets/api/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 16:40:07 -0800
+
+
+Started GET "/assets/bundle.self-eca3eb33928f001c12c437696c2a7a69ebf93b42b020d52753862e51e19d8d57.js?body=1" for ::1 at 2015-12-16 16:40:07 -0800
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 16:40:07 -0800
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 16:40:07 -0800
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-12-16 16:40:07 -0800
+
+
+Started GET "/" for ::1 at 2015-12-16 16:40:34 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html within layouts/application (0.4ms)
+Completed 200 OK in 329ms (Views: 328.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.self-ae1fefb167d375042fbb9758283732d779258ccb4f4bad05f39824f613aa902c.css?body=1" for ::1 at 2015-12-16 16:40:35 -0800
+
+
+Started GET "/assets/api/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 16:40:35 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.min.self-a85af646e8e5ab88dd8b4eede7f6a638078bd7803a30ef91ba0aaab74c9d2d36.css?body=1" for ::1 at 2015-12-16 16:40:35 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.pips.self-bdb1079da096aafa91f67ffb5dd4a99db1ba034175868b952d5cfa5dd236a5ea.css?body=1" for ::1 at 2015-12-16 16:40:35 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.tooltips.self-a5b327f05bcec2817f4d44f6daaf3cd1b02823d78cc7ddc23ebad25fe3f67813.css?body=1" for ::1 at 2015-12-16 16:40:35 -0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 16:40:35 -0800
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 16:40:35 -0800
+
+
+Started GET "/assets/application.self-42a5bc28f82341d9b54ce2c706ab5b04a16a029305c28ecc4b54c1ab3fa8285b.css?body=1" for ::1 at 2015-12-16 16:40:35 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-16 16:40:35 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-16 16:40:35 -0800
+
+
+Started GET "/assets/api/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 16:40:35 -0800
+
+
+Started GET "/assets/bundle.self-9f947ce0708ba79d55da3d9d8c32f1183abb8a2af4877ba724e1a35e92c33322.js?body=1" for ::1 at 2015-12-16 16:40:35 -0800
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 16:40:35 -0800
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 16:40:35 -0800
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-12-16 16:40:35 -0800
+
+
+Started GET "/session" for ::1 at 2015-12-16 16:40:35 -0800
+Processing by SessionsController#show as */*
+  Rendered sessions/blank.json.jbuilder (0.7ms)
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-12-16 16:41:04 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html within layouts/application (0.3ms)
+Completed 200 OK in 328ms (Views: 326.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/api/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 16:41:05 -0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 16:41:05 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.pips.self-bdb1079da096aafa91f67ffb5dd4a99db1ba034175868b952d5cfa5dd236a5ea.css?body=1" for ::1 at 2015-12-16 16:41:05 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.min.self-a85af646e8e5ab88dd8b4eede7f6a638078bd7803a30ef91ba0aaab74c9d2d36.css?body=1" for ::1 at 2015-12-16 16:41:05 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.tooltips.self-a5b327f05bcec2817f4d44f6daaf3cd1b02823d78cc7ddc23ebad25fe3f67813.css?body=1" for ::1 at 2015-12-16 16:41:05 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.self-ae1fefb167d375042fbb9758283732d779258ccb4f4bad05f39824f613aa902c.css?body=1" for ::1 at 2015-12-16 16:41:05 -0800
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 16:41:05 -0800
+
+
+Started GET "/assets/application.self-42a5bc28f82341d9b54ce2c706ab5b04a16a029305c28ecc4b54c1ab3fa8285b.css?body=1" for ::1 at 2015-12-16 16:41:05 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-16 16:41:05 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-16 16:41:05 -0800
+
+
+Started GET "/assets/bundle.self-391bc3b2c3ae3113b807d5c87faba10c4bbc34057a7d60f7927b835116837c44.js?body=1" for ::1 at 2015-12-16 16:41:05 -0800
+
+
+Started GET "/assets/api/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 16:41:05 -0800
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 16:41:05 -0800
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 16:41:05 -0800
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-12-16 16:41:05 -0800
+
+
+Started GET "/session" for ::1 at 2015-12-16 16:41:05 -0800
+Processing by SessionsController#show as */*
+  Rendered sessions/blank.json.jbuilder (0.5ms)
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-12-16 16:43:47 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html within layouts/application (0.4ms)
+Completed 200 OK in 338ms (Views: 336.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/api/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 16:43:47 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.self-ae1fefb167d375042fbb9758283732d779258ccb4f4bad05f39824f613aa902c.css?body=1" for ::1 at 2015-12-16 16:43:47 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.min.self-a85af646e8e5ab88dd8b4eede7f6a638078bd7803a30ef91ba0aaab74c9d2d36.css?body=1" for ::1 at 2015-12-16 16:43:47 -0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 16:43:47 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.pips.self-bdb1079da096aafa91f67ffb5dd4a99db1ba034175868b952d5cfa5dd236a5ea.css?body=1" for ::1 at 2015-12-16 16:43:47 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.tooltips.self-a5b327f05bcec2817f4d44f6daaf3cd1b02823d78cc7ddc23ebad25fe3f67813.css?body=1" for ::1 at 2015-12-16 16:43:47 -0800
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 16:43:47 -0800
+
+
+Started GET "/assets/application.self-42a5bc28f82341d9b54ce2c706ab5b04a16a029305c28ecc4b54c1ab3fa8285b.css?body=1" for ::1 at 2015-12-16 16:43:47 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-16 16:43:47 -0800
+
+
+Started GET "/assets/bundle.self-1e5be0c1c76703d2e064c3d78dae578104b09cfd6fb10dd08f0fddd5005a72b5.js?body=1" for ::1 at 2015-12-16 16:43:47 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-16 16:43:47 -0800
+
+
+Started GET "/assets/api/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 16:43:47 -0800
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 16:43:47 -0800
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 16:43:47 -0800
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-12-16 16:43:47 -0800
+
+
+Started GET "/" for ::1 at 2015-12-16 16:44:01 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html within layouts/application (0.4ms)
+Completed 200 OK in 319ms (Views: 318.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.self-ae1fefb167d375042fbb9758283732d779258ccb4f4bad05f39824f613aa902c.css?body=1" for ::1 at 2015-12-16 16:44:02 -0800
+
+
+Started GET "/assets/api/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 16:44:02 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.tooltips.self-a5b327f05bcec2817f4d44f6daaf3cd1b02823d78cc7ddc23ebad25fe3f67813.css?body=1" for ::1 at 2015-12-16 16:44:02 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.pips.self-bdb1079da096aafa91f67ffb5dd4a99db1ba034175868b952d5cfa5dd236a5ea.css?body=1" for ::1 at 2015-12-16 16:44:02 -0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 16:44:02 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.min.self-a85af646e8e5ab88dd8b4eede7f6a638078bd7803a30ef91ba0aaab74c9d2d36.css?body=1" for ::1 at 2015-12-16 16:44:02 -0800
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 16:44:02 -0800
+
+
+Started GET "/assets/application.self-42a5bc28f82341d9b54ce2c706ab5b04a16a029305c28ecc4b54c1ab3fa8285b.css?body=1" for ::1 at 2015-12-16 16:44:02 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-16 16:44:02 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-16 16:44:02 -0800
+
+
+Started GET "/assets/api/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 16:44:02 -0800
+
+
+Started GET "/assets/bundle.self-2f4af0738a404ea624cdb298a573a8ca28adb12d76aa26760ff130b439a8485b.js?body=1" for ::1 at 2015-12-16 16:44:02 -0800
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 16:44:02 -0800
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 16:44:02 -0800
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-12-16 16:44:02 -0800
+
+
+Started GET "/" for ::1 at 2015-12-16 16:44:23 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html within layouts/application (0.5ms)
+Completed 200 OK in 61ms (Views: 59.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/api/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 16:44:23 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.self-ae1fefb167d375042fbb9758283732d779258ccb4f4bad05f39824f613aa902c.css?body=1" for ::1 at 2015-12-16 16:44:23 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.tooltips.self-a5b327f05bcec2817f4d44f6daaf3cd1b02823d78cc7ddc23ebad25fe3f67813.css?body=1" for ::1 at 2015-12-16 16:44:23 -0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 16:44:23 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.pips.self-bdb1079da096aafa91f67ffb5dd4a99db1ba034175868b952d5cfa5dd236a5ea.css?body=1" for ::1 at 2015-12-16 16:44:23 -0800
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 16:44:23 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.min.self-a85af646e8e5ab88dd8b4eede7f6a638078bd7803a30ef91ba0aaab74c9d2d36.css?body=1" for ::1 at 2015-12-16 16:44:23 -0800
+
+
+Started GET "/assets/application.self-42a5bc28f82341d9b54ce2c706ab5b04a16a029305c28ecc4b54c1ab3fa8285b.css?body=1" for ::1 at 2015-12-16 16:44:23 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-16 16:44:23 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-16 16:44:23 -0800
+
+
+Started GET "/assets/api/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 16:44:23 -0800
+
+
+Started GET "/assets/bundle.self-391bc3b2c3ae3113b807d5c87faba10c4bbc34057a7d60f7927b835116837c44.js?body=1" for ::1 at 2015-12-16 16:44:23 -0800
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 16:44:23 -0800
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 16:44:23 -0800
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-12-16 16:44:23 -0800
+
+
+Started GET "/session" for ::1 at 2015-12-16 16:44:24 -0800
+Processing by SessionsController#show as */*
+  Rendered sessions/blank.json.jbuilder (0.4ms)
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-12-16 16:48:41 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html within layouts/application (0.5ms)
+Completed 200 OK in 361ms (Views: 359.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/api/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 16:48:41 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.self-ae1fefb167d375042fbb9758283732d779258ccb4f4bad05f39824f613aa902c.css?body=1" for ::1 at 2015-12-16 16:48:41 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.min.self-a85af646e8e5ab88dd8b4eede7f6a638078bd7803a30ef91ba0aaab74c9d2d36.css?body=1" for ::1 at 2015-12-16 16:48:41 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.pips.self-bdb1079da096aafa91f67ffb5dd4a99db1ba034175868b952d5cfa5dd236a5ea.css?body=1" for ::1 at 2015-12-16 16:48:41 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.tooltips.self-a5b327f05bcec2817f4d44f6daaf3cd1b02823d78cc7ddc23ebad25fe3f67813.css?body=1" for ::1 at 2015-12-16 16:48:41 -0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 16:48:41 -0800
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 16:48:41 -0800
+
+
+Started GET "/assets/application.self-42a5bc28f82341d9b54ce2c706ab5b04a16a029305c28ecc4b54c1ab3fa8285b.css?body=1" for ::1 at 2015-12-16 16:48:41 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-16 16:48:41 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-16 16:48:41 -0800
+
+
+Started GET "/assets/api/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 16:48:41 -0800
+
+
+Started GET "/assets/bundle.self-1c91ff32c82fab4172021ffe192268a75e49158b14a4cf917c40ce754c072ead.js?body=1" for ::1 at 2015-12-16 16:48:41 -0800
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 16:48:41 -0800
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 16:48:41 -0800
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-12-16 16:48:41 -0800
+
+
+Started GET "/session" for ::1 at 2015-12-16 16:48:41 -0800
+Processing by SessionsController#show as */*
+  Rendered sessions/blank.json.jbuilder (0.4ms)
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-12-16 16:51:19 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html within layouts/application (0.4ms)
+Completed 200 OK in 355ms (Views: 353.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/api/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 16:51:20 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.self-ae1fefb167d375042fbb9758283732d779258ccb4f4bad05f39824f613aa902c.css?body=1" for ::1 at 2015-12-16 16:51:20 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.min.self-a85af646e8e5ab88dd8b4eede7f6a638078bd7803a30ef91ba0aaab74c9d2d36.css?body=1" for ::1 at 2015-12-16 16:51:20 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.pips.self-bdb1079da096aafa91f67ffb5dd4a99db1ba034175868b952d5cfa5dd236a5ea.css?body=1" for ::1 at 2015-12-16 16:51:20 -0800
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 16:51:20 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.tooltips.self-a5b327f05bcec2817f4d44f6daaf3cd1b02823d78cc7ddc23ebad25fe3f67813.css?body=1" for ::1 at 2015-12-16 16:51:20 -0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 16:51:20 -0800
+
+
+Started GET "/assets/application.self-42a5bc28f82341d9b54ce2c706ab5b04a16a029305c28ecc4b54c1ab3fa8285b.css?body=1" for ::1 at 2015-12-16 16:51:20 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-16 16:51:20 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-16 16:51:20 -0800
+
+
+Started GET "/assets/api/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 16:51:20 -0800
+
+
+Started GET "/assets/bundle.self-4ff6dbeb808713a2434d581f03e182adabc412b3f486f134e6ed2467fc3f5ef2.js?body=1" for ::1 at 2015-12-16 16:51:20 -0800
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 16:51:20 -0800
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 16:51:20 -0800
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-12-16 16:51:20 -0800
+
+
+Started GET "/session" for ::1 at 2015-12-16 16:51:20 -0800
+Processing by SessionsController#show as */*
+  Rendered sessions/blank.json.jbuilder (0.4ms)
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-12-16 16:51:46 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html within layouts/application (0.4ms)
+Completed 200 OK in 324ms (Views: 323.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.self-ae1fefb167d375042fbb9758283732d779258ccb4f4bad05f39824f613aa902c.css?body=1" for ::1 at 2015-12-16 16:51:46 -0800
+
+
+Started GET "/assets/api/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 16:51:46 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.pips.self-bdb1079da096aafa91f67ffb5dd4a99db1ba034175868b952d5cfa5dd236a5ea.css?body=1" for ::1 at 2015-12-16 16:51:46 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.min.self-a85af646e8e5ab88dd8b4eede7f6a638078bd7803a30ef91ba0aaab74c9d2d36.css?body=1" for ::1 at 2015-12-16 16:51:46 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.tooltips.self-a5b327f05bcec2817f4d44f6daaf3cd1b02823d78cc7ddc23ebad25fe3f67813.css?body=1" for ::1 at 2015-12-16 16:51:46 -0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 16:51:46 -0800
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 16:51:46 -0800
+
+
+Started GET "/assets/application.self-42a5bc28f82341d9b54ce2c706ab5b04a16a029305c28ecc4b54c1ab3fa8285b.css?body=1" for ::1 at 2015-12-16 16:51:46 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-16 16:51:46 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-16 16:51:46 -0800
+
+
+Started GET "/assets/api/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 16:51:46 -0800
+
+
+Started GET "/assets/bundle.self-8400c58351498ad15cc321f85e307d67931fa256f3fb3eab1bdeaf132baf3ed2.js?body=1" for ::1 at 2015-12-16 16:51:47 -0800
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 16:51:47 -0800
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 16:51:47 -0800
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-12-16 16:51:47 -0800
+
+
+Started GET "/session" for ::1 at 2015-12-16 16:51:47 -0800
+Processing by SessionsController#show as */*
+  Rendered sessions/blank.json.jbuilder (0.6ms)
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-12-16 16:51:59 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html within layouts/application (0.3ms)
+Completed 200 OK in 317ms (Views: 316.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.self-ae1fefb167d375042fbb9758283732d779258ccb4f4bad05f39824f613aa902c.css?body=1" for ::1 at 2015-12-16 16:51:59 -0800
+
+
+Started GET "/assets/api/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 16:51:59 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.pips.self-bdb1079da096aafa91f67ffb5dd4a99db1ba034175868b952d5cfa5dd236a5ea.css?body=1" for ::1 at 2015-12-16 16:51:59 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.min.self-a85af646e8e5ab88dd8b4eede7f6a638078bd7803a30ef91ba0aaab74c9d2d36.css?body=1" for ::1 at 2015-12-16 16:51:59 -0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 16:51:59 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.tooltips.self-a5b327f05bcec2817f4d44f6daaf3cd1b02823d78cc7ddc23ebad25fe3f67813.css?body=1" for ::1 at 2015-12-16 16:51:59 -0800
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 16:51:59 -0800
+
+
+Started GET "/assets/application.self-42a5bc28f82341d9b54ce2c706ab5b04a16a029305c28ecc4b54c1ab3fa8285b.css?body=1" for ::1 at 2015-12-16 16:51:59 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-16 16:51:59 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-16 16:51:59 -0800
+
+
+Started GET "/assets/bundle.self-f5b9af139e1f67e2dfb5cf1d9132726bcefeea8d64b451c293c7ea552752011c.js?body=1" for ::1 at 2015-12-16 16:51:59 -0800
+
+
+Started GET "/assets/api/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 16:51:59 -0800
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 16:51:59 -0800
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 16:51:59 -0800
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-12-16 16:51:59 -0800
+
+
+Started GET "/session" for ::1 at 2015-12-16 16:52:00 -0800
+Processing by SessionsController#show as */*
+  Rendered sessions/blank.json.jbuilder (0.4ms)
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-12-16 16:55:30 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html within layouts/application (0.4ms)
+Completed 200 OK in 325ms (Views: 324.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/api/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 16:55:31 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.self-ae1fefb167d375042fbb9758283732d779258ccb4f4bad05f39824f613aa902c.css?body=1" for ::1 at 2015-12-16 16:55:31 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.pips.self-bdb1079da096aafa91f67ffb5dd4a99db1ba034175868b952d5cfa5dd236a5ea.css?body=1" for ::1 at 2015-12-16 16:55:31 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.min.self-a85af646e8e5ab88dd8b4eede7f6a638078bd7803a30ef91ba0aaab74c9d2d36.css?body=1" for ::1 at 2015-12-16 16:55:31 -0800
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 16:55:31 -0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 16:55:31 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.tooltips.self-a5b327f05bcec2817f4d44f6daaf3cd1b02823d78cc7ddc23ebad25fe3f67813.css?body=1" for ::1 at 2015-12-16 16:55:31 -0800
+
+
+Started GET "/assets/application.self-42a5bc28f82341d9b54ce2c706ab5b04a16a029305c28ecc4b54c1ab3fa8285b.css?body=1" for ::1 at 2015-12-16 16:55:31 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-16 16:55:31 -0800
+
+
+Started GET "/assets/bundle.self-251df85b591a43b1db5ee33a5dabcb9e7a6275d9f9bf5c573e33b607ab517073.js?body=1" for ::1 at 2015-12-16 16:55:31 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-16 16:55:31 -0800
+
+
+Started GET "/assets/api/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 16:55:31 -0800
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 16:55:31 -0800
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 16:55:31 -0800
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-12-16 16:55:31 -0800
+
+
+Started GET "/session" for ::1 at 2015-12-16 16:55:31 -0800
+Processing by SessionsController#show as */*
+  Rendered sessions/blank.json.jbuilder (0.5ms)
+Completed 200 OK in 7ms (Views: 5.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-12-16 16:56:06 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html within layouts/application (0.4ms)
+Completed 200 OK in 318ms (Views: 317.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.self-ae1fefb167d375042fbb9758283732d779258ccb4f4bad05f39824f613aa902c.css?body=1" for ::1 at 2015-12-16 16:56:06 -0800
+
+
+Started GET "/assets/api/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 16:56:06 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.pips.self-bdb1079da096aafa91f67ffb5dd4a99db1ba034175868b952d5cfa5dd236a5ea.css?body=1" for ::1 at 2015-12-16 16:56:06 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.tooltips.self-a5b327f05bcec2817f4d44f6daaf3cd1b02823d78cc7ddc23ebad25fe3f67813.css?body=1" for ::1 at 2015-12-16 16:56:06 -0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 16:56:06 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.min.self-a85af646e8e5ab88dd8b4eede7f6a638078bd7803a30ef91ba0aaab74c9d2d36.css?body=1" for ::1 at 2015-12-16 16:56:06 -0800
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 16:56:06 -0800
+
+
+Started GET "/assets/application.self-42a5bc28f82341d9b54ce2c706ab5b04a16a029305c28ecc4b54c1ab3fa8285b.css?body=1" for ::1 at 2015-12-16 16:56:06 -0800
+
+
+Started GET "/assets/bundle.self-e971a2be9f5248f169e838907eb5b3595fee599e477523397941376c6ee98c02.js?body=1" for ::1 at 2015-12-16 16:56:06 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-16 16:56:06 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-16 16:56:06 -0800
+
+
+Started GET "/assets/api/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 16:56:06 -0800
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 16:56:06 -0800
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 16:56:06 -0800
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-12-16 16:56:06 -0800
+
+
+Started GET "/session" for ::1 at 2015-12-16 16:56:07 -0800
+Processing by SessionsController#show as */*
+  Rendered sessions/blank.json.jbuilder (0.4ms)
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-12-16 16:56:24 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html within layouts/application (0.4ms)
+Completed 200 OK in 387ms (Views: 385.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.min.self-a85af646e8e5ab88dd8b4eede7f6a638078bd7803a30ef91ba0aaab74c9d2d36.css?body=1" for ::1 at 2015-12-16 16:56:25 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.tooltips.self-a5b327f05bcec2817f4d44f6daaf3cd1b02823d78cc7ddc23ebad25fe3f67813.css?body=1" for ::1 at 2015-12-16 16:56:25 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.pips.self-bdb1079da096aafa91f67ffb5dd4a99db1ba034175868b952d5cfa5dd236a5ea.css?body=1" for ::1 at 2015-12-16 16:56:25 -0800
+
+
+Started GET "/assets/api/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 16:56:25 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.self-ae1fefb167d375042fbb9758283732d779258ccb4f4bad05f39824f613aa902c.css?body=1" for ::1 at 2015-12-16 16:56:25 -0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 16:56:25 -0800
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 16:56:25 -0800
+
+
+Started GET "/assets/application.self-42a5bc28f82341d9b54ce2c706ab5b04a16a029305c28ecc4b54c1ab3fa8285b.css?body=1" for ::1 at 2015-12-16 16:56:25 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-16 16:56:25 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-16 16:56:25 -0800
+
+
+Started GET "/assets/api/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 16:56:25 -0800
+
+
+Started GET "/assets/bundle.self-6ea15dc775641f070669b2ae1b72a2c40be7852301fdc22abb637988ba335b3c.js?body=1" for ::1 at 2015-12-16 16:56:25 -0800
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 16:56:25 -0800
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 16:56:25 -0800
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-12-16 16:56:25 -0800
+
+
+Started GET "/session" for ::1 at 2015-12-16 16:56:25 -0800
+Processing by SessionsController#show as */*
+  Rendered sessions/blank.json.jbuilder (0.5ms)
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-12-16 16:57:02 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html within layouts/application (0.4ms)
+Completed 200 OK in 53ms (Views: 52.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/api/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 16:57:02 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.self-ae1fefb167d375042fbb9758283732d779258ccb4f4bad05f39824f613aa902c.css?body=1" for ::1 at 2015-12-16 16:57:02 -0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 16:57:02 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.min.self-a85af646e8e5ab88dd8b4eede7f6a638078bd7803a30ef91ba0aaab74c9d2d36.css?body=1" for ::1 at 2015-12-16 16:57:02 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.tooltips.self-a5b327f05bcec2817f4d44f6daaf3cd1b02823d78cc7ddc23ebad25fe3f67813.css?body=1" for ::1 at 2015-12-16 16:57:02 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.pips.self-bdb1079da096aafa91f67ffb5dd4a99db1ba034175868b952d5cfa5dd236a5ea.css?body=1" for ::1 at 2015-12-16 16:57:02 -0800
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 16:57:02 -0800
+
+
+Started GET "/assets/application.self-42a5bc28f82341d9b54ce2c706ab5b04a16a029305c28ecc4b54c1ab3fa8285b.css?body=1" for ::1 at 2015-12-16 16:57:02 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-16 16:57:02 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-16 16:57:02 -0800
+
+
+Started GET "/assets/api/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 16:57:02 -0800
+
+
+Started GET "/assets/bundle.self-251df85b591a43b1db5ee33a5dabcb9e7a6275d9f9bf5c573e33b607ab517073.js?body=1" for ::1 at 2015-12-16 16:57:02 -0800
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 16:57:02 -0800
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 16:57:02 -0800
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-12-16 16:57:02 -0800
+
+
+Started GET "/session" for ::1 at 2015-12-16 16:57:03 -0800
+Processing by SessionsController#show as */*
+  Rendered sessions/blank.json.jbuilder (0.5ms)
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-12-16 16:59:37 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html within layouts/application (0.5ms)
+Completed 200 OK in 327ms (Views: 325.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/api/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 16:59:37 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.tooltips.self-a5b327f05bcec2817f4d44f6daaf3cd1b02823d78cc7ddc23ebad25fe3f67813.css?body=1" for ::1 at 2015-12-16 16:59:37 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.self-ae1fefb167d375042fbb9758283732d779258ccb4f4bad05f39824f613aa902c.css?body=1" for ::1 at 2015-12-16 16:59:37 -0800
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 16:59:37 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.min.self-a85af646e8e5ab88dd8b4eede7f6a638078bd7803a30ef91ba0aaab74c9d2d36.css?body=1" for ::1 at 2015-12-16 16:59:37 -0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 16:59:37 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.pips.self-bdb1079da096aafa91f67ffb5dd4a99db1ba034175868b952d5cfa5dd236a5ea.css?body=1" for ::1 at 2015-12-16 16:59:37 -0800
+
+
+Started GET "/assets/application.self-42a5bc28f82341d9b54ce2c706ab5b04a16a029305c28ecc4b54c1ab3fa8285b.css?body=1" for ::1 at 2015-12-16 16:59:37 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-16 16:59:37 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-16 16:59:37 -0800
+
+
+Started GET "/assets/api/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 16:59:37 -0800
+
+
+Started GET "/assets/bundle.self-777c865aed4c15d719af2cb23f2b5ac6bb26c6c9abeabc596dd6fd6742fd1487.js?body=1" for ::1 at 2015-12-16 16:59:37 -0800
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 16:59:37 -0800
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 16:59:37 -0800
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-12-16 16:59:37 -0800
+
+
+Started GET "/session" for ::1 at 2015-12-16 16:59:38 -0800
+Processing by SessionsController#show as */*
+  Rendered sessions/blank.json.jbuilder (0.4ms)
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/background.png" for ::1 at 2015-12-16 17:00:35 -0800
+
+
+Started GET "/" for ::1 at 2015-12-16 17:04:53 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html within layouts/application (0.4ms)
+Completed 200 OK in 341ms (Views: 340.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.self-ae1fefb167d375042fbb9758283732d779258ccb4f4bad05f39824f613aa902c.css?body=1" for ::1 at 2015-12-16 17:04:54 -0800
+
+
+Started GET "/assets/api/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 17:04:54 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.min.self-a85af646e8e5ab88dd8b4eede7f6a638078bd7803a30ef91ba0aaab74c9d2d36.css?body=1" for ::1 at 2015-12-16 17:04:54 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.pips.self-bdb1079da096aafa91f67ffb5dd4a99db1ba034175868b952d5cfa5dd236a5ea.css?body=1" for ::1 at 2015-12-16 17:04:54 -0800
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 17:04:54 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.tooltips.self-a5b327f05bcec2817f4d44f6daaf3cd1b02823d78cc7ddc23ebad25fe3f67813.css?body=1" for ::1 at 2015-12-16 17:04:54 -0800
+
+
+Started GET "/assets/application.self-42a5bc28f82341d9b54ce2c706ab5b04a16a029305c28ecc4b54c1ab3fa8285b.css?body=1" for ::1 at 2015-12-16 17:04:54 -0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 17:04:54 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-16 17:04:54 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-16 17:04:54 -0800
+
+
+Started GET "/assets/api/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 17:04:54 -0800
+
+
+Started GET "/assets/bundle.self-9dbdc4224781cd297e59195e42d114e17a76189dc35f32736b92cc8b6f9369d3.js?body=1" for ::1 at 2015-12-16 17:04:54 -0800
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 17:04:54 -0800
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 17:04:54 -0800
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-12-16 17:04:54 -0800
+
+
+Started GET "/session" for ::1 at 2015-12-16 17:04:54 -0800
+Processing by SessionsController#show as */*
+  Rendered sessions/blank.json.jbuilder (0.5ms)
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-12-16 17:08:38 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html within layouts/application (0.4ms)
+Completed 200 OK in 362ms (Views: 361.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/api/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 17:08:39 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.min.self-a85af646e8e5ab88dd8b4eede7f6a638078bd7803a30ef91ba0aaab74c9d2d36.css?body=1" for ::1 at 2015-12-16 17:08:39 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.self-ae1fefb167d375042fbb9758283732d779258ccb4f4bad05f39824f613aa902c.css?body=1" for ::1 at 2015-12-16 17:08:39 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.pips.self-bdb1079da096aafa91f67ffb5dd4a99db1ba034175868b952d5cfa5dd236a5ea.css?body=1" for ::1 at 2015-12-16 17:08:39 -0800
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 17:08:39 -0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 17:08:39 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.tooltips.self-a5b327f05bcec2817f4d44f6daaf3cd1b02823d78cc7ddc23ebad25fe3f67813.css?body=1" for ::1 at 2015-12-16 17:08:39 -0800
+
+
+Started GET "/assets/application.self-63784ec358ea8a33d04e2cc206a56b82deb767f9ba0197b7426f724a9bbbe975.css?body=1" for ::1 at 2015-12-16 17:08:39 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-16 17:08:39 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-16 17:08:39 -0800
+
+
+Started GET "/assets/bundle.self-8c779aaca5aa63513217b6969fccc15828db2274bb404db50ca15add9399252e.js?body=1" for ::1 at 2015-12-16 17:08:39 -0800
+
+
+Started GET "/assets/api/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 17:08:39 -0800
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 17:08:39 -0800
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 17:08:39 -0800
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-12-16 17:08:39 -0800
+
+
+Started GET "/session" for ::1 at 2015-12-16 17:08:39 -0800
+Processing by SessionsController#show as */*
+  Rendered sessions/blank.json.jbuilder (0.5ms)
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-12-16 17:09:02 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html within layouts/application (0.3ms)
+Completed 200 OK in 318ms (Views: 317.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/api/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 17:09:02 -0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 17:09:02 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.tooltips.self-a5b327f05bcec2817f4d44f6daaf3cd1b02823d78cc7ddc23ebad25fe3f67813.css?body=1" for ::1 at 2015-12-16 17:09:02 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.min.self-a85af646e8e5ab88dd8b4eede7f6a638078bd7803a30ef91ba0aaab74c9d2d36.css?body=1" for ::1 at 2015-12-16 17:09:02 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.self-ae1fefb167d375042fbb9758283732d779258ccb4f4bad05f39824f613aa902c.css?body=1" for ::1 at 2015-12-16 17:09:02 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.pips.self-bdb1079da096aafa91f67ffb5dd4a99db1ba034175868b952d5cfa5dd236a5ea.css?body=1" for ::1 at 2015-12-16 17:09:02 -0800
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 17:09:02 -0800
+
+
+Started GET "/assets/application.self-63784ec358ea8a33d04e2cc206a56b82deb767f9ba0197b7426f724a9bbbe975.css?body=1" for ::1 at 2015-12-16 17:09:03 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-16 17:09:03 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-16 17:09:03 -0800
+
+
+Started GET "/assets/api/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 17:09:03 -0800
+
+
+Started GET "/assets/bundle.self-50acb2a6366e1fb9da21c973269dc3ef9ab6cbc1a70a1b17c3996044702e65a6.js?body=1" for ::1 at 2015-12-16 17:09:03 -0800
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 17:09:03 -0800
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 17:09:03 -0800
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-12-16 17:09:03 -0800
+
+
+Started GET "/session" for ::1 at 2015-12-16 17:09:03 -0800
+Processing by SessionsController#show as */*
+  Rendered sessions/blank.json.jbuilder (0.5ms)
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-12-16 17:11:27 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html within layouts/application (0.6ms)
+Completed 200 OK in 365ms (Views: 363.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/api/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 17:11:28 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.self-ae1fefb167d375042fbb9758283732d779258ccb4f4bad05f39824f613aa902c.css?body=1" for ::1 at 2015-12-16 17:11:28 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.min.self-a85af646e8e5ab88dd8b4eede7f6a638078bd7803a30ef91ba0aaab74c9d2d36.css?body=1" for ::1 at 2015-12-16 17:11:28 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.pips.self-bdb1079da096aafa91f67ffb5dd4a99db1ba034175868b952d5cfa5dd236a5ea.css?body=1" for ::1 at 2015-12-16 17:11:28 -0800
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 17:11:28 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.tooltips.self-a5b327f05bcec2817f4d44f6daaf3cd1b02823d78cc7ddc23ebad25fe3f67813.css?body=1" for ::1 at 2015-12-16 17:11:28 -0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 17:11:28 -0800
+
+
+Started GET "/assets/application.self-18b11f6939596547e580150d2ae8429d856f30daf5c1c25420752f7b6a259047.css?body=1" for ::1 at 2015-12-16 17:11:28 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-16 17:11:28 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-16 17:11:28 -0800
+
+
+Started GET "/assets/bundle.self-6bd473047a1619c70c2ed23085ab9af8ee4e5f5def408c220bde171be958cc61.js?body=1" for ::1 at 2015-12-16 17:11:28 -0800
+
+
+Started GET "/assets/api/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 17:11:28 -0800
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 17:11:28 -0800
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 17:11:28 -0800
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-12-16 17:11:28 -0800
+
+
+Started GET "/session" for ::1 at 2015-12-16 17:11:28 -0800
+Processing by SessionsController#show as */*
+  Rendered sessions/blank.json.jbuilder (0.7ms)
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-12-16 17:13:49 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html within layouts/application (0.4ms)
+Completed 200 OK in 345ms (Views: 343.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/api/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 17:13:49 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.min.self-a85af646e8e5ab88dd8b4eede7f6a638078bd7803a30ef91ba0aaab74c9d2d36.css?body=1" for ::1 at 2015-12-16 17:13:49 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.pips.self-bdb1079da096aafa91f67ffb5dd4a99db1ba034175868b952d5cfa5dd236a5ea.css?body=1" for ::1 at 2015-12-16 17:13:49 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.self-ae1fefb167d375042fbb9758283732d779258ccb4f4bad05f39824f613aa902c.css?body=1" for ::1 at 2015-12-16 17:13:49 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.tooltips.self-a5b327f05bcec2817f4d44f6daaf3cd1b02823d78cc7ddc23ebad25fe3f67813.css?body=1" for ::1 at 2015-12-16 17:13:49 -0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 17:13:49 -0800
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 17:13:49 -0800
+
+
+Started GET "/assets/application.self-18b11f6939596547e580150d2ae8429d856f30daf5c1c25420752f7b6a259047.css?body=1" for ::1 at 2015-12-16 17:13:49 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-16 17:13:49 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-16 17:13:49 -0800
+
+
+Started GET "/assets/api/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 17:13:49 -0800
+
+
+Started GET "/assets/bundle.self-259e5bf65f1d2f3a6076dd8cc63c3b1139336a20af9f04544fec751e765e77cf.js?body=1" for ::1 at 2015-12-16 17:13:49 -0800
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 17:13:49 -0800
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 17:13:49 -0800
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-12-16 17:13:49 -0800
+
+
+Started GET "/" for ::1 at 2015-12-16 17:14:27 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html within layouts/application (0.5ms)
+Completed 200 OK in 366ms (Views: 364.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/api/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 17:14:28 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.self-ae1fefb167d375042fbb9758283732d779258ccb4f4bad05f39824f613aa902c.css?body=1" for ::1 at 2015-12-16 17:14:28 -0800
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 17:14:28 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.tooltips.self-a5b327f05bcec2817f4d44f6daaf3cd1b02823d78cc7ddc23ebad25fe3f67813.css?body=1" for ::1 at 2015-12-16 17:14:28 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.pips.self-bdb1079da096aafa91f67ffb5dd4a99db1ba034175868b952d5cfa5dd236a5ea.css?body=1" for ::1 at 2015-12-16 17:14:28 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.min.self-a85af646e8e5ab88dd8b4eede7f6a638078bd7803a30ef91ba0aaab74c9d2d36.css?body=1" for ::1 at 2015-12-16 17:14:28 -0800
+
+
+Started GET "/assets/application.self-18b11f6939596547e580150d2ae8429d856f30daf5c1c25420752f7b6a259047.css?body=1" for ::1 at 2015-12-16 17:14:28 -0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 17:14:28 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-16 17:14:28 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-16 17:14:28 -0800
+
+
+Started GET "/assets/api/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 17:14:28 -0800
+
+
+Started GET "/assets/bundle.self-ddd79d3099bababd529afd9eac9096fe937032389ca72ce945b87f89147e039b.js?body=1" for ::1 at 2015-12-16 17:14:28 -0800
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 17:14:28 -0800
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 17:14:28 -0800
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-12-16 17:14:28 -0800
+
+
+Started GET "/session" for ::1 at 2015-12-16 17:14:28 -0800
+Processing by SessionsController#show as */*
+  Rendered sessions/blank.json.jbuilder (0.4ms)
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/background.png" for ::1 at 2015-12-16 17:14:43 -0800
+
+
+Started GET "/" for ::1 at 2015-12-16 17:15:59 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html within layouts/application (0.4ms)
+Completed 200 OK in 337ms (Views: 335.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/api/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 17:15:59 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.self-ae1fefb167d375042fbb9758283732d779258ccb4f4bad05f39824f613aa902c.css?body=1" for ::1 at 2015-12-16 17:15:59 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.min.self-a85af646e8e5ab88dd8b4eede7f6a638078bd7803a30ef91ba0aaab74c9d2d36.css?body=1" for ::1 at 2015-12-16 17:15:59 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.pips.self-bdb1079da096aafa91f67ffb5dd4a99db1ba034175868b952d5cfa5dd236a5ea.css?body=1" for ::1 at 2015-12-16 17:15:59 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.tooltips.self-a5b327f05bcec2817f4d44f6daaf3cd1b02823d78cc7ddc23ebad25fe3f67813.css?body=1" for ::1 at 2015-12-16 17:15:59 -0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 17:15:59 -0800
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 17:16:00 -0800
+
+
+Started GET "/assets/application.self-18b11f6939596547e580150d2ae8429d856f30daf5c1c25420752f7b6a259047.css?body=1" for ::1 at 2015-12-16 17:16:00 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-16 17:16:00 -0800
+
+
+Started GET "/assets/bundle.self-c7fce5cf2dfb61c666c15caf41982ad938221643fd8e5a1ddcda8f5a54616245.js?body=1" for ::1 at 2015-12-16 17:16:00 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-16 17:16:00 -0800
+
+
+Started GET "/assets/api/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 17:16:00 -0800
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 17:16:00 -0800
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 17:16:00 -0800
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-12-16 17:16:00 -0800
+
+
+Started GET "/session" for ::1 at 2015-12-16 17:16:00 -0800
+Processing by SessionsController#show as */*
+  Rendered sessions/blank.json.jbuilder (0.4ms)
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-12-16 17:16:40 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html within layouts/application (0.4ms)
+Completed 200 OK in 336ms (Views: 335.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/api/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 17:16:41 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.self-ae1fefb167d375042fbb9758283732d779258ccb4f4bad05f39824f613aa902c.css?body=1" for ::1 at 2015-12-16 17:16:41 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.min.self-a85af646e8e5ab88dd8b4eede7f6a638078bd7803a30ef91ba0aaab74c9d2d36.css?body=1" for ::1 at 2015-12-16 17:16:41 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.pips.self-bdb1079da096aafa91f67ffb5dd4a99db1ba034175868b952d5cfa5dd236a5ea.css?body=1" for ::1 at 2015-12-16 17:16:41 -0800
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 17:16:41 -0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 17:16:41 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.tooltips.self-a5b327f05bcec2817f4d44f6daaf3cd1b02823d78cc7ddc23ebad25fe3f67813.css?body=1" for ::1 at 2015-12-16 17:16:41 -0800
+
+
+Started GET "/assets/application.self-18b11f6939596547e580150d2ae8429d856f30daf5c1c25420752f7b6a259047.css?body=1" for ::1 at 2015-12-16 17:16:41 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-16 17:16:41 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-16 17:16:41 -0800
+
+
+Started GET "/assets/bundle.self-51c4e0769bd8aa5d19554347c3e1e7e69f44ee5e0d67a894b8dba0b237e00ba4.js?body=1" for ::1 at 2015-12-16 17:16:41 -0800
+
+
+Started GET "/assets/api/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 17:16:41 -0800
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 17:16:41 -0800
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 17:16:41 -0800
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-12-16 17:16:41 -0800
+
+
+Started GET "/session" for ::1 at 2015-12-16 17:16:41 -0800
+Processing by SessionsController#show as */*
+  Rendered sessions/blank.json.jbuilder (0.4ms)
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-12-16 17:21:56 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html within layouts/application (0.5ms)
+Completed 200 OK in 338ms (Views: 336.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/api/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 17:21:57 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.self-ae1fefb167d375042fbb9758283732d779258ccb4f4bad05f39824f613aa902c.css?body=1" for ::1 at 2015-12-16 17:21:57 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.min.self-a85af646e8e5ab88dd8b4eede7f6a638078bd7803a30ef91ba0aaab74c9d2d36.css?body=1" for ::1 at 2015-12-16 17:21:57 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.pips.self-bdb1079da096aafa91f67ffb5dd4a99db1ba034175868b952d5cfa5dd236a5ea.css?body=1" for ::1 at 2015-12-16 17:21:57 -0800
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 17:21:57 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.tooltips.self-a5b327f05bcec2817f4d44f6daaf3cd1b02823d78cc7ddc23ebad25fe3f67813.css?body=1" for ::1 at 2015-12-16 17:21:57 -0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 17:21:57 -0800
+
+
+Started GET "/assets/application.self-18b11f6939596547e580150d2ae8429d856f30daf5c1c25420752f7b6a259047.css?body=1" for ::1 at 2015-12-16 17:21:57 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-16 17:21:57 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-16 17:21:57 -0800
+
+
+Started GET "/assets/api/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 17:21:57 -0800
+
+
+Started GET "/assets/bundle.self-11dd1c6345af70b49b7ce8dbed210b9102d4cb27397e2930a293ab4cc0615bb3.js?body=1" for ::1 at 2015-12-16 17:21:57 -0800
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 17:21:57 -0800
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 17:21:57 -0800
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-12-16 17:21:57 -0800
+
+
+Started GET "/session" for ::1 at 2015-12-16 17:21:57 -0800
+Processing by SessionsController#show as */*
+  Rendered sessions/blank.json.jbuilder (0.5ms)
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/users" for ::1 at 2015-12-16 17:23:07 -0800
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"andy", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mUser Exists (0.7ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."username" = 'andy' LIMIT 1[0m
+  [1m[35mSQL (2.6ms)[0m  INSERT INTO "users" ("password_digest", "username", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["password_digest", "$2a$10$ZzqnW/XYmGxC/ntAT2K22.AKvtEY2F3JMFypijF2BcC5TnNuLzc.W"], ["username", "andy"], ["session_token", "2oahIY9Oy6MX0VA-kUy10g"], ["created_at", "2015-12-17 01:23:07.594862"], ["updated_at", "2015-12-17 01:23:07.594862"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."username" = 'andy' AND "users"."id" != 35) LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3  [["session_token", "P1daWnv3Zv6wsx0yI3nikQ"], ["updated_at", "2015-12-17 01:23:07.602724"], ["id", 35]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  Rendered api/users/_user.json.jbuilder (0.7ms)
+  Rendered api/users/show.json.jbuilder (2.7ms)
+Completed 200 OK in 86ms (Views: 6.0ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/" for ::1 at 2015-12-16 17:25:01 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html within layouts/application (0.5ms)
+Completed 200 OK in 338ms (Views: 336.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/api/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 17:25:02 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.self-ae1fefb167d375042fbb9758283732d779258ccb4f4bad05f39824f613aa902c.css?body=1" for ::1 at 2015-12-16 17:25:02 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.tooltips.self-a5b327f05bcec2817f4d44f6daaf3cd1b02823d78cc7ddc23ebad25fe3f67813.css?body=1" for ::1 at 2015-12-16 17:25:02 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.min.self-a85af646e8e5ab88dd8b4eede7f6a638078bd7803a30ef91ba0aaab74c9d2d36.css?body=1" for ::1 at 2015-12-16 17:25:02 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.pips.self-bdb1079da096aafa91f67ffb5dd4a99db1ba034175868b952d5cfa5dd236a5ea.css?body=1" for ::1 at 2015-12-16 17:25:02 -0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 17:25:02 -0800
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 17:25:02 -0800
+
+
+Started GET "/assets/application.self-18b11f6939596547e580150d2ae8429d856f30daf5c1c25420752f7b6a259047.css?body=1" for ::1 at 2015-12-16 17:25:02 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-16 17:25:02 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-16 17:25:02 -0800
+
+
+Started GET "/assets/api/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 17:25:02 -0800
+
+
+Started GET "/assets/bundle.self-01ea75c14b88a9067cbaaf64ba1e608c160875b9e8ba6e67b34cb0e11f92429a.js?body=1" for ::1 at 2015-12-16 17:25:02 -0800
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 17:25:02 -0800
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 17:25:02 -0800
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-12-16 17:25:02 -0800
+
+
+Started GET "/session" for ::1 at 2015-12-16 17:25:02 -0800
+Processing by SessionsController#show as */*
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "P1daWnv3Zv6wsx0yI3nikQ"]]
+  Rendered sessions/_user.json.jbuilder (0.4ms)
+  Rendered sessions/show.json.jbuilder (2.5ms)
+Completed 200 OK in 9ms (Views: 7.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/background.png" for ::1 at 2015-12-16 17:25:02 -0800
+
+
+Started GET "/" for ::1 at 2015-12-16 17:27:32 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html within layouts/application (0.4ms)
+Completed 200 OK in 355ms (Views: 354.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/api/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 17:27:32 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.self-ae1fefb167d375042fbb9758283732d779258ccb4f4bad05f39824f613aa902c.css?body=1" for ::1 at 2015-12-16 17:27:32 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.pips.self-bdb1079da096aafa91f67ffb5dd4a99db1ba034175868b952d5cfa5dd236a5ea.css?body=1" for ::1 at 2015-12-16 17:27:32 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.min.self-a85af646e8e5ab88dd8b4eede7f6a638078bd7803a30ef91ba0aaab74c9d2d36.css?body=1" for ::1 at 2015-12-16 17:27:32 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.tooltips.self-a5b327f05bcec2817f4d44f6daaf3cd1b02823d78cc7ddc23ebad25fe3f67813.css?body=1" for ::1 at 2015-12-16 17:27:32 -0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 17:27:32 -0800
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 17:27:32 -0800
+
+
+Started GET "/assets/application.self-18b11f6939596547e580150d2ae8429d856f30daf5c1c25420752f7b6a259047.css?body=1" for ::1 at 2015-12-16 17:27:32 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-16 17:27:32 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-16 17:27:32 -0800
+
+
+Started GET "/assets/api/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 17:27:32 -0800
+
+
+Started GET "/assets/bundle.self-00c4ffbd95a0d17e1f4537c893df042a92e112965f819f4b2856f640f7422f95.js?body=1" for ::1 at 2015-12-16 17:27:32 -0800
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 17:27:33 -0800
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 17:27:33 -0800
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-12-16 17:27:33 -0800
+
+
+Started GET "/" for ::1 at 2015-12-16 17:27:49 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html within layouts/application (0.4ms)
+Completed 200 OK in 339ms (Views: 337.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/api/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 17:27:49 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.tooltips.self-a5b327f05bcec2817f4d44f6daaf3cd1b02823d78cc7ddc23ebad25fe3f67813.css?body=1" for ::1 at 2015-12-16 17:27:49 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.min.self-a85af646e8e5ab88dd8b4eede7f6a638078bd7803a30ef91ba0aaab74c9d2d36.css?body=1" for ::1 at 2015-12-16 17:27:49 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.pips.self-bdb1079da096aafa91f67ffb5dd4a99db1ba034175868b952d5cfa5dd236a5ea.css?body=1" for ::1 at 2015-12-16 17:27:49 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.self-ae1fefb167d375042fbb9758283732d779258ccb4f4bad05f39824f613aa902c.css?body=1" for ::1 at 2015-12-16 17:27:49 -0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 17:27:49 -0800
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 17:27:49 -0800
+
+
+Started GET "/assets/application.self-18b11f6939596547e580150d2ae8429d856f30daf5c1c25420752f7b6a259047.css?body=1" for ::1 at 2015-12-16 17:27:49 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-16 17:27:49 -0800
+
+
+Started GET "/assets/bundle.self-8355289486fad01591458730f7d889ccbe89a5a56f947ad28a91b820c06efd31.js?body=1" for ::1 at 2015-12-16 17:27:49 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-16 17:27:49 -0800
+
+
+Started GET "/assets/api/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 17:27:49 -0800
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 17:27:49 -0800
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 17:27:49 -0800
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-12-16 17:27:49 -0800
+
+
+Started GET "/" for ::1 at 2015-12-16 17:27:59 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html within layouts/application (0.3ms)
+Completed 200 OK in 51ms (Views: 49.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.self-ae1fefb167d375042fbb9758283732d779258ccb4f4bad05f39824f613aa902c.css?body=1" for ::1 at 2015-12-16 17:27:59 -0800
+
+
+Started GET "/assets/api/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 17:27:59 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.min.self-a85af646e8e5ab88dd8b4eede7f6a638078bd7803a30ef91ba0aaab74c9d2d36.css?body=1" for ::1 at 2015-12-16 17:27:59 -0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 17:27:59 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.pips.self-bdb1079da096aafa91f67ffb5dd4a99db1ba034175868b952d5cfa5dd236a5ea.css?body=1" for ::1 at 2015-12-16 17:27:59 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.tooltips.self-a5b327f05bcec2817f4d44f6daaf3cd1b02823d78cc7ddc23ebad25fe3f67813.css?body=1" for ::1 at 2015-12-16 17:27:59 -0800
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 17:27:59 -0800
+
+
+Started GET "/assets/application.self-18b11f6939596547e580150d2ae8429d856f30daf5c1c25420752f7b6a259047.css?body=1" for ::1 at 2015-12-16 17:27:59 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-16 17:27:59 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-16 17:27:59 -0800
+
+
+Started GET "/assets/api/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 17:27:59 -0800
+
+
+Started GET "/assets/bundle.self-01ea75c14b88a9067cbaaf64ba1e608c160875b9e8ba6e67b34cb0e11f92429a.js?body=1" for ::1 at 2015-12-16 17:27:59 -0800
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 17:27:59 -0800
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 17:27:59 -0800
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-12-16 17:27:59 -0800
+
+
+Started GET "/session" for ::1 at 2015-12-16 17:27:59 -0800
+Processing by SessionsController#show as */*
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "P1daWnv3Zv6wsx0yI3nikQ"]]
+  Rendered sessions/_user.json.jbuilder (0.4ms)
+  Rendered sessions/show.json.jbuilder (2.2ms)
+Completed 200 OK in 9ms (Views: 6.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2015-12-16 17:28:10 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html within layouts/application (0.4ms)
+Completed 200 OK in 361ms (Views: 359.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.self-ae1fefb167d375042fbb9758283732d779258ccb4f4bad05f39824f613aa902c.css?body=1" for ::1 at 2015-12-16 17:28:10 -0800
+
+
+Started GET "/assets/api/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 17:28:10 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.tooltips.self-a5b327f05bcec2817f4d44f6daaf3cd1b02823d78cc7ddc23ebad25fe3f67813.css?body=1" for ::1 at 2015-12-16 17:28:10 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.pips.self-bdb1079da096aafa91f67ffb5dd4a99db1ba034175868b952d5cfa5dd236a5ea.css?body=1" for ::1 at 2015-12-16 17:28:10 -0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 17:28:10 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.min.self-a85af646e8e5ab88dd8b4eede7f6a638078bd7803a30ef91ba0aaab74c9d2d36.css?body=1" for ::1 at 2015-12-16 17:28:10 -0800
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 17:28:10 -0800
+
+
+Started GET "/assets/application.self-18b11f6939596547e580150d2ae8429d856f30daf5c1c25420752f7b6a259047.css?body=1" for ::1 at 2015-12-16 17:28:10 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-16 17:28:10 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-16 17:28:10 -0800
+
+
+Started GET "/assets/api/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 17:28:10 -0800
+
+
+Started GET "/assets/bundle.self-17f537a136eb4bc4d5be502a7d47f839da3c627809ecd5d726c76f2f83636041.js?body=1" for ::1 at 2015-12-16 17:28:10 -0800
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 17:28:10 -0800
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 17:28:10 -0800
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-12-16 17:28:10 -0800
+
+
+Started GET "/session" for ::1 at 2015-12-16 17:28:10 -0800
+Processing by SessionsController#show as */*
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "P1daWnv3Zv6wsx0yI3nikQ"]]
+  Rendered sessions/_user.json.jbuilder (0.5ms)
+  Rendered sessions/show.json.jbuilder (2.0ms)
+Completed 200 OK in 7ms (Views: 5.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2015-12-16 17:30:31 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html within layouts/application (0.4ms)
+Completed 200 OK in 372ms (Views: 371.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/api/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 17:30:32 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.self-ae1fefb167d375042fbb9758283732d779258ccb4f4bad05f39824f613aa902c.css?body=1" for ::1 at 2015-12-16 17:30:32 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.min.self-a85af646e8e5ab88dd8b4eede7f6a638078bd7803a30ef91ba0aaab74c9d2d36.css?body=1" for ::1 at 2015-12-16 17:30:32 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.pips.self-bdb1079da096aafa91f67ffb5dd4a99db1ba034175868b952d5cfa5dd236a5ea.css?body=1" for ::1 at 2015-12-16 17:30:32 -0800
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 17:30:32 -0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 17:30:32 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.tooltips.self-a5b327f05bcec2817f4d44f6daaf3cd1b02823d78cc7ddc23ebad25fe3f67813.css?body=1" for ::1 at 2015-12-16 17:30:32 -0800
+
+
+Started GET "/assets/application.self-18b11f6939596547e580150d2ae8429d856f30daf5c1c25420752f7b6a259047.css?body=1" for ::1 at 2015-12-16 17:30:32 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-16 17:30:32 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-16 17:30:32 -0800
+
+
+Started GET "/assets/api/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 17:30:32 -0800
+
+
+Started GET "/assets/bundle.self-73ae6263fedf1e8bf2621807c1a55d5bd3b98296136247706d38225b149e8d32.js?body=1" for ::1 at 2015-12-16 17:30:32 -0800
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 17:30:32 -0800
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 17:30:32 -0800
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-12-16 17:30:32 -0800
+
+
+Started GET "/session" for ::1 at 2015-12-16 17:30:32 -0800
+Processing by SessionsController#show as */*
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "P1daWnv3Zv6wsx0yI3nikQ"]]
+  Rendered sessions/_user.json.jbuilder (0.4ms)
+  Rendered sessions/show.json.jbuilder (1.8ms)
+Completed 200 OK in 7ms (Views: 5.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2015-12-16 17:32:00 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html within layouts/application (0.6ms)
+Completed 200 OK in 379ms (Views: 377.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/api/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 17:32:01 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.self-ae1fefb167d375042fbb9758283732d779258ccb4f4bad05f39824f613aa902c.css?body=1" for ::1 at 2015-12-16 17:32:01 -0800
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 17:32:01 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.min.self-a85af646e8e5ab88dd8b4eede7f6a638078bd7803a30ef91ba0aaab74c9d2d36.css?body=1" for ::1 at 2015-12-16 17:32:01 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.pips.self-bdb1079da096aafa91f67ffb5dd4a99db1ba034175868b952d5cfa5dd236a5ea.css?body=1" for ::1 at 2015-12-16 17:32:01 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.tooltips.self-a5b327f05bcec2817f4d44f6daaf3cd1b02823d78cc7ddc23ebad25fe3f67813.css?body=1" for ::1 at 2015-12-16 17:32:01 -0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 17:32:01 -0800
+
+
+Started GET "/assets/application.self-18b11f6939596547e580150d2ae8429d856f30daf5c1c25420752f7b6a259047.css?body=1" for ::1 at 2015-12-16 17:32:01 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-16 17:32:01 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-16 17:32:01 -0800
+
+
+Started GET "/assets/bundle.self-42974e9e43981d7a94858120e3a32c7e452a16aa78fb011a4f8556921bbe5e8c.js?body=1" for ::1 at 2015-12-16 17:32:01 -0800
+
+
+Started GET "/assets/api/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 17:32:01 -0800
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 17:32:01 -0800
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 17:32:01 -0800
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-12-16 17:32:01 -0800
+
+
+Started GET "/session" for ::1 at 2015-12-16 17:32:01 -0800
+Processing by SessionsController#show as */*
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "P1daWnv3Zv6wsx0yI3nikQ"]]
+  Rendered sessions/_user.json.jbuilder (0.4ms)
+  Rendered sessions/show.json.jbuilder (1.9ms)
+Completed 200 OK in 7ms (Views: 5.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2015-12-16 17:32:12 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html within layouts/application (1.0ms)
+Completed 200 OK in 62ms (Views: 60.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/api/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 17:32:12 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.self-ae1fefb167d375042fbb9758283732d779258ccb4f4bad05f39824f613aa902c.css?body=1" for ::1 at 2015-12-16 17:32:12 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.min.self-a85af646e8e5ab88dd8b4eede7f6a638078bd7803a30ef91ba0aaab74c9d2d36.css?body=1" for ::1 at 2015-12-16 17:32:12 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.tooltips.self-a5b327f05bcec2817f4d44f6daaf3cd1b02823d78cc7ddc23ebad25fe3f67813.css?body=1" for ::1 at 2015-12-16 17:32:12 -0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 17:32:12 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.pips.self-bdb1079da096aafa91f67ffb5dd4a99db1ba034175868b952d5cfa5dd236a5ea.css?body=1" for ::1 at 2015-12-16 17:32:12 -0800
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 17:32:12 -0800
+
+
+Started GET "/assets/application.self-18b11f6939596547e580150d2ae8429d856f30daf5c1c25420752f7b6a259047.css?body=1" for ::1 at 2015-12-16 17:32:12 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-16 17:32:12 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-16 17:32:12 -0800
+
+
+Started GET "/assets/api/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 17:32:12 -0800
+
+
+Started GET "/assets/bundle.self-01ea75c14b88a9067cbaaf64ba1e608c160875b9e8ba6e67b34cb0e11f92429a.js?body=1" for ::1 at 2015-12-16 17:32:12 -0800
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 17:32:12 -0800
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 17:32:12 -0800
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-12-16 17:32:12 -0800
+
+
+Started GET "/session" for ::1 at 2015-12-16 17:32:12 -0800
+Processing by SessionsController#show as */*
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "P1daWnv3Zv6wsx0yI3nikQ"]]
+  Rendered sessions/_user.json.jbuilder (0.5ms)
+  Rendered sessions/show.json.jbuilder (2.4ms)
+Completed 200 OK in 8ms (Views: 6.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2015-12-16 17:32:30 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html within layouts/application (0.3ms)
+Completed 200 OK in 54ms (Views: 53.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/api/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 17:32:30 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.min.self-a85af646e8e5ab88dd8b4eede7f6a638078bd7803a30ef91ba0aaab74c9d2d36.css?body=1" for ::1 at 2015-12-16 17:32:30 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.pips.self-bdb1079da096aafa91f67ffb5dd4a99db1ba034175868b952d5cfa5dd236a5ea.css?body=1" for ::1 at 2015-12-16 17:32:30 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.tooltips.self-a5b327f05bcec2817f4d44f6daaf3cd1b02823d78cc7ddc23ebad25fe3f67813.css?body=1" for ::1 at 2015-12-16 17:32:30 -0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 17:32:30 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.self-ae1fefb167d375042fbb9758283732d779258ccb4f4bad05f39824f613aa902c.css?body=1" for ::1 at 2015-12-16 17:32:30 -0800
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 17:32:30 -0800
+
+
+Started GET "/assets/application.self-18b11f6939596547e580150d2ae8429d856f30daf5c1c25420752f7b6a259047.css?body=1" for ::1 at 2015-12-16 17:32:30 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-16 17:32:30 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-16 17:32:30 -0800
+
+
+Started GET "/assets/api/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 17:32:30 -0800
+
+
+Started GET "/assets/bundle.self-73ae6263fedf1e8bf2621807c1a55d5bd3b98296136247706d38225b149e8d32.js?body=1" for ::1 at 2015-12-16 17:32:30 -0800
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 17:32:30 -0800
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 17:32:30 -0800
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-12-16 17:32:30 -0800
+
+
+Started GET "/session" for ::1 at 2015-12-16 17:32:30 -0800
+Processing by SessionsController#show as */*
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "P1daWnv3Zv6wsx0yI3nikQ"]]
+  Rendered sessions/_user.json.jbuilder (0.5ms)
+  Rendered sessions/show.json.jbuilder (2.2ms)
+Completed 200 OK in 7ms (Views: 5.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2015-12-16 17:33:13 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html within layouts/application (0.4ms)
+Completed 200 OK in 70ms (Views: 68.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/api/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 17:33:13 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.self-ae1fefb167d375042fbb9758283732d779258ccb4f4bad05f39824f613aa902c.css?body=1" for ::1 at 2015-12-16 17:33:13 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.min.self-a85af646e8e5ab88dd8b4eede7f6a638078bd7803a30ef91ba0aaab74c9d2d36.css?body=1" for ::1 at 2015-12-16 17:33:13 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.pips.self-bdb1079da096aafa91f67ffb5dd4a99db1ba034175868b952d5cfa5dd236a5ea.css?body=1" for ::1 at 2015-12-16 17:33:13 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.tooltips.self-a5b327f05bcec2817f4d44f6daaf3cd1b02823d78cc7ddc23ebad25fe3f67813.css?body=1" for ::1 at 2015-12-16 17:33:13 -0800
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 17:33:13 -0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 17:33:13 -0800
+
+
+Started GET "/assets/application.self-18b11f6939596547e580150d2ae8429d856f30daf5c1c25420752f7b6a259047.css?body=1" for ::1 at 2015-12-16 17:33:13 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-16 17:33:13 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-16 17:33:13 -0800
+
+
+Started GET "/assets/api/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 17:33:13 -0800
+
+
+Started GET "/assets/bundle.self-01ea75c14b88a9067cbaaf64ba1e608c160875b9e8ba6e67b34cb0e11f92429a.js?body=1" for ::1 at 2015-12-16 17:33:13 -0800
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 17:33:13 -0800
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 17:33:13 -0800
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-12-16 17:33:13 -0800
+
+
+Started GET "/session" for ::1 at 2015-12-16 17:33:13 -0800
+Processing by SessionsController#show as */*
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "P1daWnv3Zv6wsx0yI3nikQ"]]
+  Rendered sessions/_user.json.jbuilder (0.4ms)
+  Rendered sessions/show.json.jbuilder (2.0ms)
+Completed 200 OK in 8ms (Views: 5.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2015-12-16 17:33:47 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html within layouts/application (0.4ms)
+Completed 200 OK in 373ms (Views: 371.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/api/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 17:33:48 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.min.self-a85af646e8e5ab88dd8b4eede7f6a638078bd7803a30ef91ba0aaab74c9d2d36.css?body=1" for ::1 at 2015-12-16 17:33:48 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.self-ae1fefb167d375042fbb9758283732d779258ccb4f4bad05f39824f613aa902c.css?body=1" for ::1 at 2015-12-16 17:33:48 -0800
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 17:33:48 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.tooltips.self-a5b327f05bcec2817f4d44f6daaf3cd1b02823d78cc7ddc23ebad25fe3f67813.css?body=1" for ::1 at 2015-12-16 17:33:48 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.pips.self-bdb1079da096aafa91f67ffb5dd4a99db1ba034175868b952d5cfa5dd236a5ea.css?body=1" for ::1 at 2015-12-16 17:33:48 -0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 17:33:48 -0800
+
+
+Started GET "/assets/application.self-18b11f6939596547e580150d2ae8429d856f30daf5c1c25420752f7b6a259047.css?body=1" for ::1 at 2015-12-16 17:33:48 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-16 17:33:48 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-16 17:33:48 -0800
+
+
+Started GET "/assets/api/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 17:33:48 -0800
+
+
+Started GET "/assets/bundle.self-e648baff5924f0e5fd702f9d0da83dba8977995e767ff874a0d2c37de9e273aa.js?body=1" for ::1 at 2015-12-16 17:33:48 -0800
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 17:33:48 -0800
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 17:33:48 -0800
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-12-16 17:33:48 -0800
+
+
+Started GET "/session" for ::1 at 2015-12-16 17:33:48 -0800
+Processing by SessionsController#show as */*
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "P1daWnv3Zv6wsx0yI3nikQ"]]
+  Rendered sessions/_user.json.jbuilder (0.4ms)
+  Rendered sessions/show.json.jbuilder (2.0ms)
+Completed 200 OK in 7ms (Views: 5.5ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/session" for ::1 at 2015-12-16 17:34:02 -0800
+Processing by SessionsController#destroy as */*
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "P1daWnv3Zv6wsx0yI3nikQ"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."username" = 'andy' AND "users"."id" != 35) LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3  [["session_token", "ZvBBdFQYqPrfVIYw9TbHBQ"], ["updated_at", "2015-12-17 01:34:02.309406"], ["id", 35]]
+  [1m[36m (1.5ms)[0m  [1mCOMMIT[0m
+  Rendered sessions/blank.json.jbuilder (0.3ms)
+Completed 200 OK in 11ms (Views: 3.6ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/" for ::1 at 2015-12-16 17:34:37 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html within layouts/application (0.5ms)
+Completed 200 OK in 339ms (Views: 337.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/api/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 17:34:38 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.self-ae1fefb167d375042fbb9758283732d779258ccb4f4bad05f39824f613aa902c.css?body=1" for ::1 at 2015-12-16 17:34:38 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.min.self-a85af646e8e5ab88dd8b4eede7f6a638078bd7803a30ef91ba0aaab74c9d2d36.css?body=1" for ::1 at 2015-12-16 17:34:38 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.tooltips.self-a5b327f05bcec2817f4d44f6daaf3cd1b02823d78cc7ddc23ebad25fe3f67813.css?body=1" for ::1 at 2015-12-16 17:34:38 -0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 17:34:38 -0800
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 17:34:38 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.pips.self-bdb1079da096aafa91f67ffb5dd4a99db1ba034175868b952d5cfa5dd236a5ea.css?body=1" for ::1 at 2015-12-16 17:34:38 -0800
+
+
+Started GET "/assets/application.self-18b11f6939596547e580150d2ae8429d856f30daf5c1c25420752f7b6a259047.css?body=1" for ::1 at 2015-12-16 17:34:38 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-16 17:34:38 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-16 17:34:38 -0800
+
+
+Started GET "/assets/api/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 17:34:38 -0800
+
+
+Started GET "/assets/bundle.self-9a6c1d65721acfa6fb74c009bac10308332e480e37034f414ff3bb300f7726c4.js?body=1" for ::1 at 2015-12-16 17:34:38 -0800
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 17:34:38 -0800
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 17:34:38 -0800
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-12-16 17:34:38 -0800
+
+
+Started GET "/session" for ::1 at 2015-12-16 17:34:38 -0800
+Processing by SessionsController#show as */*
+  Rendered sessions/blank.json.jbuilder (0.4ms)
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/background.png" for ::1 at 2015-12-16 17:34:38 -0800
+
+
+Started POST "/session" for ::1 at 2015-12-16 17:35:07 -0800
+Processing by SessionsController#create as */*
+  Parameters: {"user"=>{"username"=>"zac", "password"=>"[FILTERED]"}}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1  [["username", "zac"]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.5ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."username" = 'zac' AND "users"."id" != 32) LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "QRQa1R5n1TxlBw1kAcoNiQ"], ["updated_at", "2015-12-17 01:35:07.846087"], ["id", 32]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  Rendered sessions/_user.json.jbuilder (0.3ms)
+  Rendered sessions/show.json.jbuilder (2.1ms)
+Completed 200 OK in 80ms (Views: 5.8ms | ActiveRecord: 1.4ms)
+
+
+Started DELETE "/session" for ::1 at 2015-12-16 17:35:18 -0800
+Processing by SessionsController#destroy as */*
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "QRQa1R5n1TxlBw1kAcoNiQ"]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mUser Exists (0.6ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."username" = 'zac' AND "users"."id" != 32) LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3  [["session_token", "vMJmYd_D8n_-atG3AhgK0g"], ["updated_at", "2015-12-17 01:35:18.263154"], ["id", 32]]
+  [1m[36m (1.7ms)[0m  [1mCOMMIT[0m
+  Rendered sessions/blank.json.jbuilder (0.5ms)
+Completed 200 OK in 18ms (Views: 4.6ms | ActiveRecord: 3.3ms)
+
+
+Started POST "/session" for ::1 at 2015-12-16 17:39:09 -0800
+Processing by SessionsController#create as */*
+  Parameters: {"user"=>{"username"=>"zac", "password"=>"[FILTERED]"}}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1  [["username", "zac"]]
+Completed 422 Unprocessable Entity in 68ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/session" for ::1 at 2015-12-16 17:39:15 -0800
+Processing by SessionsController#create as */*
+  Parameters: {"user"=>{"username"=>"zac", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1[0m  [["username", "zac"]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."username" = 'zac' AND "users"."id" != 32) LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3  [["session_token", "1yswdzf9IupWETG_Z7vX_w"], ["updated_at", "2015-12-17 01:39:15.332157"], ["id", 32]]
+  [1m[36m (1.8ms)[0m  [1mCOMMIT[0m
+  Rendered sessions/_user.json.jbuilder (0.4ms)
+  Rendered sessions/show.json.jbuilder (1.9ms)
+Completed 200 OK in 84ms (Views: 5.3ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/" for ::1 at 2015-12-16 17:39:24 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html within layouts/application (0.5ms)
+Completed 200 OK in 450ms (Views: 448.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/api/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 17:39:25 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.self-ae1fefb167d375042fbb9758283732d779258ccb4f4bad05f39824f613aa902c.css?body=1" for ::1 at 2015-12-16 17:39:25 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.min.self-a85af646e8e5ab88dd8b4eede7f6a638078bd7803a30ef91ba0aaab74c9d2d36.css?body=1" for ::1 at 2015-12-16 17:39:25 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.pips.self-bdb1079da096aafa91f67ffb5dd4a99db1ba034175868b952d5cfa5dd236a5ea.css?body=1" for ::1 at 2015-12-16 17:39:25 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.tooltips.self-a5b327f05bcec2817f4d44f6daaf3cd1b02823d78cc7ddc23ebad25fe3f67813.css?body=1" for ::1 at 2015-12-16 17:39:25 -0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 17:39:25 -0800
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 17:39:25 -0800
+
+
+Started GET "/assets/application.self-18b11f6939596547e580150d2ae8429d856f30daf5c1c25420752f7b6a259047.css?body=1" for ::1 at 2015-12-16 17:39:25 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-16 17:39:25 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-16 17:39:25 -0800
+
+
+Started GET "/assets/api/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 17:39:25 -0800
+
+
+Started GET "/assets/bundle.self-a208aa3316de3d626b703d130d3332c6abe1ca620eaa820d367b29c1be56db6b.js?body=1" for ::1 at 2015-12-16 17:39:25 -0800
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 17:39:25 -0800
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 17:39:25 -0800
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-12-16 17:39:25 -0800
+
+
+Started GET "/session" for ::1 at 2015-12-16 17:39:25 -0800
+Processing by SessionsController#show as */*
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "1yswdzf9IupWETG_Z7vX_w"]]
+  Rendered sessions/_user.json.jbuilder (0.4ms)
+  Rendered sessions/show.json.jbuilder (1.9ms)
+Completed 200 OK in 7ms (Views: 5.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2015-12-16 17:41:07 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html within layouts/application (0.4ms)
+Completed 200 OK in 277ms (Views: 275.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/api/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 17:41:07 -0800
+
+
+Started GET "/assets/input-calendar.self-5a997c77d512e3d53489eb7a93be8e464d45358d0ebc67261290c1f86f97c12c.css?body=1" for ::1 at 2015-12-16 17:41:07 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.pips.self-bdb1079da096aafa91f67ffb5dd4a99db1ba034175868b952d5cfa5dd236a5ea.css?body=1" for ::1 at 2015-12-16 17:41:07 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.self-ae1fefb167d375042fbb9758283732d779258ccb4f4bad05f39824f613aa902c.css?body=1" for ::1 at 2015-12-16 17:41:07 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.tooltips.self-a5b327f05bcec2817f4d44f6daaf3cd1b02823d78cc7ddc23ebad25fe3f67813.css?body=1" for ::1 at 2015-12-16 17:41:07 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.min.self-a85af646e8e5ab88dd8b4eede7f6a638078bd7803a30ef91ba0aaab74c9d2d36.css?body=1" for ::1 at 2015-12-16 17:41:07 -0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 17:41:07 -0800
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 17:41:07 -0800
+
+
+Started GET "/assets/application.self-18b11f6939596547e580150d2ae8429d856f30daf5c1c25420752f7b6a259047.css?body=1" for ::1 at 2015-12-16 17:41:07 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-16 17:41:07 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-16 17:41:07 -0800
+
+
+Started GET "/assets/api/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 17:41:07 -0800
+
+
+Started GET "/assets/bundle.self-a208aa3316de3d626b703d130d3332c6abe1ca620eaa820d367b29c1be56db6b.js?body=1" for ::1 at 2015-12-16 17:41:07 -0800
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 17:41:07 -0800
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 17:41:07 -0800
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-12-16 17:41:07 -0800
+
+
+Started GET "/session" for ::1 at 2015-12-16 17:41:07 -0800
+Processing by SessionsController#show as */*
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "1yswdzf9IupWETG_Z7vX_w"]]
+  Rendered sessions/_user.json.jbuilder (0.4ms)
+  Rendered sessions/show.json.jbuilder (2.2ms)
+Completed 200 OK in 7ms (Views: 5.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2015-12-16 17:47:06 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html within layouts/application (0.4ms)
+Completed 200 OK in 63ms (Views: 62.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/api/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 17:47:06 -0800
+
+
+Started GET "/assets/input-calendar.self-5a997c77d512e3d53489eb7a93be8e464d45358d0ebc67261290c1f86f97c12c.css?body=1" for ::1 at 2015-12-16 17:47:06 -0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 17:47:06 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.self-ae1fefb167d375042fbb9758283732d779258ccb4f4bad05f39824f613aa902c.css?body=1" for ::1 at 2015-12-16 17:47:06 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.min.self-a85af646e8e5ab88dd8b4eede7f6a638078bd7803a30ef91ba0aaab74c9d2d36.css?body=1" for ::1 at 2015-12-16 17:47:06 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.pips.self-bdb1079da096aafa91f67ffb5dd4a99db1ba034175868b952d5cfa5dd236a5ea.css?body=1" for ::1 at 2015-12-16 17:47:06 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.tooltips.self-a5b327f05bcec2817f4d44f6daaf3cd1b02823d78cc7ddc23ebad25fe3f67813.css?body=1" for ::1 at 2015-12-16 17:47:06 -0800
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 17:47:06 -0800
+
+
+Started GET "/assets/application.self-18b11f6939596547e580150d2ae8429d856f30daf5c1c25420752f7b6a259047.css?body=1" for ::1 at 2015-12-16 17:47:06 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-16 17:47:06 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-16 17:47:06 -0800
+
+
+Started GET "/assets/api/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 17:47:06 -0800
+
+
+Started GET "/assets/bundle.self-a208aa3316de3d626b703d130d3332c6abe1ca620eaa820d367b29c1be56db6b.js?body=1" for ::1 at 2015-12-16 17:47:06 -0800
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 17:47:06 -0800
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 17:47:06 -0800
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-12-16 17:47:06 -0800
+
+
+Started GET "/session" for ::1 at 2015-12-16 17:47:06 -0800
+Processing by SessionsController#show as */*
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "1yswdzf9IupWETG_Z7vX_w"]]
+  Rendered sessions/_user.json.jbuilder (0.5ms)
+  Rendered sessions/show.json.jbuilder (3.0ms)
+Completed 200 OK in 10ms (Views: 8.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2015-12-16 17:47:41 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html within layouts/application (0.4ms)
+Completed 200 OK in 334ms (Views: 333.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/api/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 17:47:41 -0800
+
+
+Started GET "/assets/font-awesome.self-096a1cf4b422c9c89eb905af2ee7bff3a955fc2ceefa7c0047237a0dddb7ce84.css?body=1" for ::1 at 2015-12-16 17:47:42 -0800
+
+
+Started GET "/assets/input-calendar.self-5a997c77d512e3d53489eb7a93be8e464d45358d0ebc67261290c1f86f97c12c.css?body=1" for ::1 at 2015-12-16 17:47:42 -0800
+
+
+Started GET "/assets/font-awesome.min.self-f4d933d4c36f543f6aa6e85d9dd92421d610537abe21223e363b029fefeda8bb.css?body=1" for ::1 at 2015-12-16 17:47:42 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.pips.self-bdb1079da096aafa91f67ffb5dd4a99db1ba034175868b952d5cfa5dd236a5ea.css?body=1" for ::1 at 2015-12-16 17:47:42 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.self-ae1fefb167d375042fbb9758283732d779258ccb4f4bad05f39824f613aa902c.css?body=1" for ::1 at 2015-12-16 17:47:42 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.min.self-a85af646e8e5ab88dd8b4eede7f6a638078bd7803a30ef91ba0aaab74c9d2d36.css?body=1" for ::1 at 2015-12-16 17:47:42 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.tooltips.self-a5b327f05bcec2817f4d44f6daaf3cd1b02823d78cc7ddc23ebad25fe3f67813.css?body=1" for ::1 at 2015-12-16 17:47:42 -0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 17:47:42 -0800
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 17:47:42 -0800
+
+
+Started GET "/assets/application.self-18b11f6939596547e580150d2ae8429d856f30daf5c1c25420752f7b6a259047.css?body=1" for ::1 at 2015-12-16 17:47:42 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-16 17:47:42 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-16 17:47:42 -0800
+
+
+Started GET "/assets/api/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 17:47:42 -0800
+
+
+Started GET "/assets/bundle.self-a208aa3316de3d626b703d130d3332c6abe1ca620eaa820d367b29c1be56db6b.js?body=1" for ::1 at 2015-12-16 17:47:42 -0800
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 17:47:42 -0800
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 17:47:42 -0800
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-12-16 17:47:42 -0800
+
+
+Started GET "/session" for ::1 at 2015-12-16 17:47:42 -0800
+Processing by SessionsController#show as */*
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "1yswdzf9IupWETG_Z7vX_w"]]
+  Rendered sessions/_user.json.jbuilder (0.4ms)
+  Rendered sessions/show.json.jbuilder (2.4ms)
+Completed 200 OK in 12ms (Views: 9.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/fonts/fontawesome-webfont.woff2?v=4.5.0" for ::1 at 2015-12-16 17:47:42 -0800
+
+ActionController::RoutingError (No route matches [GET] "/fonts/fontawesome-webfont.woff2"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  newrelic_rpm (3.14.1.311) lib/new_relic/agent/instrumentation/middleware_tracing.rb:79:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  newrelic_rpm (3.14.1.311) lib/new_relic/agent/instrumentation/middleware_tracing.rb:79:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  newrelic_rpm (3.14.1.311) lib/new_relic/agent/instrumentation/middleware_tracing.rb:79:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  newrelic_rpm (3.14.1.311) lib/new_relic/agent/instrumentation/middleware_tracing.rb:79:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  newrelic_rpm (3.14.1.311) lib/new_relic/agent/instrumentation/middleware_tracing.rb:79:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  newrelic_rpm (3.14.1.311) lib/new_relic/agent/instrumentation/middleware_tracing.rb:79:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  newrelic_rpm (3.14.1.311) lib/new_relic/agent/instrumentation/middleware_tracing.rb:79:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  newrelic_rpm (3.14.1.311) lib/new_relic/agent/instrumentation/middleware_tracing.rb:79:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  newrelic_rpm (3.14.1.311) lib/new_relic/agent/instrumentation/middleware_tracing.rb:79:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  newrelic_rpm (3.14.1.311) lib/new_relic/agent/instrumentation/middleware_tracing.rb:79:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  newrelic_rpm (3.14.1.311) lib/new_relic/agent/instrumentation/middleware_tracing.rb:79:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  newrelic_rpm (3.14.1.311) lib/new_relic/agent/instrumentation/middleware_tracing.rb:79:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/Zac/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/Zac/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/Zac/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/Zac/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /Users/Zac/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.1ms)
+  Rendered /Users/Zac/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (29.2ms)
+  Rendered /Users/Zac/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /Users/Zac/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (62.1ms)
+  Rendered /Users/Zac/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/Zac/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/Zac/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.9ms)
+  Rendered /Users/Zac/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/Zac/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (23.1ms)
+  Rendered /Users/Zac/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/Zac/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/Zac/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (47.2ms)
+
+
+Started GET "/fonts/fontawesome-webfont.woff?v=4.5.0" for ::1 at 2015-12-16 17:47:42 -0800
+
+ActionController::RoutingError (No route matches [GET] "/fonts/fontawesome-webfont.woff"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  newrelic_rpm (3.14.1.311) lib/new_relic/agent/instrumentation/middleware_tracing.rb:79:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  newrelic_rpm (3.14.1.311) lib/new_relic/agent/instrumentation/middleware_tracing.rb:79:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  newrelic_rpm (3.14.1.311) lib/new_relic/agent/instrumentation/middleware_tracing.rb:79:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  newrelic_rpm (3.14.1.311) lib/new_relic/agent/instrumentation/middleware_tracing.rb:79:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  newrelic_rpm (3.14.1.311) lib/new_relic/agent/instrumentation/middleware_tracing.rb:79:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  newrelic_rpm (3.14.1.311) lib/new_relic/agent/instrumentation/middleware_tracing.rb:79:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  newrelic_rpm (3.14.1.311) lib/new_relic/agent/instrumentation/middleware_tracing.rb:79:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  newrelic_rpm (3.14.1.311) lib/new_relic/agent/instrumentation/middleware_tracing.rb:79:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  newrelic_rpm (3.14.1.311) lib/new_relic/agent/instrumentation/middleware_tracing.rb:79:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  newrelic_rpm (3.14.1.311) lib/new_relic/agent/instrumentation/middleware_tracing.rb:79:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  newrelic_rpm (3.14.1.311) lib/new_relic/agent/instrumentation/middleware_tracing.rb:79:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  newrelic_rpm (3.14.1.311) lib/new_relic/agent/instrumentation/middleware_tracing.rb:79:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/Zac/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/Zac/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/Zac/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/Zac/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/Zac/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.1ms)
+  Rendered /Users/Zac/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.4ms)
+  Rendered /Users/Zac/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/Zac/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (25.4ms)
+  Rendered /Users/Zac/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/Zac/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/Zac/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/Zac/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/Zac/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (15.7ms)
+  Rendered /Users/Zac/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/Zac/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/Zac/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (32.6ms)
+
+
+Started GET "/fonts/fontawesome-webfont.ttf?v=4.5.0" for ::1 at 2015-12-16 17:47:42 -0800
+
+ActionController::RoutingError (No route matches [GET] "/fonts/fontawesome-webfont.ttf"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  newrelic_rpm (3.14.1.311) lib/new_relic/agent/instrumentation/middleware_tracing.rb:79:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  newrelic_rpm (3.14.1.311) lib/new_relic/agent/instrumentation/middleware_tracing.rb:79:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  newrelic_rpm (3.14.1.311) lib/new_relic/agent/instrumentation/middleware_tracing.rb:79:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  newrelic_rpm (3.14.1.311) lib/new_relic/agent/instrumentation/middleware_tracing.rb:79:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  newrelic_rpm (3.14.1.311) lib/new_relic/agent/instrumentation/middleware_tracing.rb:79:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  newrelic_rpm (3.14.1.311) lib/new_relic/agent/instrumentation/middleware_tracing.rb:79:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  newrelic_rpm (3.14.1.311) lib/new_relic/agent/instrumentation/middleware_tracing.rb:79:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  newrelic_rpm (3.14.1.311) lib/new_relic/agent/instrumentation/middleware_tracing.rb:79:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  newrelic_rpm (3.14.1.311) lib/new_relic/agent/instrumentation/middleware_tracing.rb:79:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  newrelic_rpm (3.14.1.311) lib/new_relic/agent/instrumentation/middleware_tracing.rb:79:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  newrelic_rpm (3.14.1.311) lib/new_relic/agent/instrumentation/middleware_tracing.rb:79:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  newrelic_rpm (3.14.1.311) lib/new_relic/agent/instrumentation/middleware_tracing.rb:79:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/Zac/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/Zac/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/Zac/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/Zac/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/Zac/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.0ms)
+  Rendered /Users/Zac/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.4ms)
+  Rendered /Users/Zac/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/Zac/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (24.5ms)
+  Rendered /Users/Zac/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/Zac/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/Zac/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/Zac/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/Zac/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (18.9ms)
+  Rendered /Users/Zac/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/Zac/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/Zac/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (35.4ms)
+
+
+Started GET "/" for ::1 at 2015-12-16 17:48:00 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html within layouts/application (0.4ms)
+Completed 500 Internal Server Error in 87ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (Undefined variable: "$fa-css-prefix".):
+    2: <html>
+    3: <head>
+    4:   <title>Crashmate</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all'%>
+    6:   <%= javascript_include_tag 'application' %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+  app/assets/stylesheets/scss/_animated.scss:4
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb___37798707172729342_70323413034020'
+
+
+  Rendered /Users/Zac/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (12.7ms)
+  Rendered /Users/Zac/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered /Users/Zac/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/Zac/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (34.1ms)
+  Rendered /Users/Zac/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/Zac/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Zac/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Zac/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Zac/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (14.7ms)
+  Rendered /Users/Zac/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/Zac/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/Zac/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (33.4ms)
+
+
+Started GET "/" for ::1 at 2015-12-16 17:48:15 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html within layouts/application (0.4ms)
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (Undefined variable: "$fa-css-prefix".):
+    2: <html>
+    3: <head>
+    4:   <title>Crashmate</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all'%>
+    6:   <%= javascript_include_tag 'application' %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+  app/assets/stylesheets/scss/_animated.scss:4
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb___37798707172729342_70323413034020'
+
+
+  Rendered /Users/Zac/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (15.0ms)
+  Rendered /Users/Zac/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.1ms)
+  Rendered /Users/Zac/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/Zac/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (32.6ms)
+  Rendered /Users/Zac/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/Zac/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Zac/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/Zac/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Zac/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (14.9ms)
+  Rendered /Users/Zac/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/Zac/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/Zac/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (31.8ms)
+
+
+Started GET "/" for ::1 at 2015-12-16 17:48:28 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html within layouts/application (0.3ms)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (Undefined variable: "$fa-css-prefix".):
+    2: <html>
+    3: <head>
+    4:   <title>Crashmate</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all'%>
+    6:   <%= javascript_include_tag 'application' %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+  app/assets/stylesheets/scss/_animated.scss:4
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb___37798707172729342_70323413034020'
+
+
+  Rendered /Users/Zac/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.2ms)
+  Rendered /Users/Zac/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.8ms)
+  Rendered /Users/Zac/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/Zac/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (28.0ms)
+  Rendered /Users/Zac/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/Zac/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/Zac/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Zac/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/Zac/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (20.7ms)
+  Rendered /Users/Zac/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/Zac/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/Zac/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (37.9ms)
+
+
+Started GET "/" for ::1 at 2015-12-16 17:48:31 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html within layouts/application (0.3ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (Undefined variable: "$fa-css-prefix".):
+    2: <html>
+    3: <head>
+    4:   <title>Crashmate</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all'%>
+    6:   <%= javascript_include_tag 'application' %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+  app/assets/stylesheets/scss/_animated.scss:4
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb___37798707172729342_70323413034020'
+
+
+  Rendered /Users/Zac/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (12.4ms)
+  Rendered /Users/Zac/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.7ms)
+  Rendered /Users/Zac/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/Zac/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (30.9ms)
+  Rendered /Users/Zac/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/Zac/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/Zac/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Zac/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Zac/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (14.9ms)
+  Rendered /Users/Zac/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/Zac/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/Zac/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (33.4ms)
+
+
+Started GET "/" for ::1 at 2015-12-16 17:49:08 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html within layouts/application (0.4ms)
+Completed 500 Internal Server Error in 63ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (Undefined variable: "$fa-css-prefix".):
+    2: <html>
+    3: <head>
+    4:   <title>Crashmate</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all'%>
+    6:   <%= javascript_include_tag 'application' %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+  app/assets/stylesheets/scss/_animated.scss:4
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb___37798707172729342_70323413034020'
+
+
+  Rendered /Users/Zac/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.7ms)
+  Rendered /Users/Zac/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.9ms)
+  Rendered /Users/Zac/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/Zac/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (29.1ms)
+  Rendered /Users/Zac/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/Zac/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Zac/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Zac/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Zac/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (16.2ms)
+  Rendered /Users/Zac/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/Zac/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/Zac/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (34.6ms)
+
+
+Started GET "/" for ::1 at 2015-12-16 17:49:21 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html within layouts/application (0.5ms)
+Completed 200 OK in 370ms (Views: 368.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/api/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 17:49:21 -0800
+
+
+Started GET "/assets/css/font-awesome.self-096a1cf4b422c9c89eb905af2ee7bff3a955fc2ceefa7c0047237a0dddb7ce84.css?body=1" for ::1 at 2015-12-16 17:49:21 -0800
+
+
+Started GET "/assets/css/font-awesome.min.self-f4d933d4c36f543f6aa6e85d9dd92421d610537abe21223e363b029fefeda8bb.css?body=1" for ::1 at 2015-12-16 17:49:21 -0800
+
+
+Started GET "/assets/css/input-calendar.self-5a997c77d512e3d53489eb7a93be8e464d45358d0ebc67261290c1f86f97c12c.css?body=1" for ::1 at 2015-12-16 17:49:21 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.self-ae1fefb167d375042fbb9758283732d779258ccb4f4bad05f39824f613aa902c.css?body=1" for ::1 at 2015-12-16 17:49:21 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.pips.self-bdb1079da096aafa91f67ffb5dd4a99db1ba034175868b952d5cfa5dd236a5ea.css?body=1" for ::1 at 2015-12-16 17:49:21 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.min.self-a85af646e8e5ab88dd8b4eede7f6a638078bd7803a30ef91ba0aaab74c9d2d36.css?body=1" for ::1 at 2015-12-16 17:49:21 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.tooltips.self-a5b327f05bcec2817f4d44f6daaf3cd1b02823d78cc7ddc23ebad25fe3f67813.css?body=1" for ::1 at 2015-12-16 17:49:21 -0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 17:49:21 -0800
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 17:49:21 -0800
+
+
+Started GET "/assets/application.self-18b11f6939596547e580150d2ae8429d856f30daf5c1c25420752f7b6a259047.css?body=1" for ::1 at 2015-12-16 17:49:21 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-16 17:49:21 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-16 17:49:21 -0800
+
+
+Started GET "/assets/api/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 17:49:21 -0800
+
+
+Started GET "/assets/bundle.self-a208aa3316de3d626b703d130d3332c6abe1ca620eaa820d367b29c1be56db6b.js?body=1" for ::1 at 2015-12-16 17:49:21 -0800
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 17:49:21 -0800
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 17:49:21 -0800
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-12-16 17:49:21 -0800
+
+
+Started GET "/session" for ::1 at 2015-12-16 17:49:21 -0800
+Processing by SessionsController#show as */*
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "1yswdzf9IupWETG_Z7vX_w"]]
+  Rendered sessions/_user.json.jbuilder (0.4ms)
+  Rendered sessions/show.json.jbuilder (2.1ms)
+Completed 200 OK in 8ms (Views: 5.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/background.png" for ::1 at 2015-12-16 17:49:21 -0800
+
+
+Started GET "/" for ::1 at 2015-12-16 17:49:41 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html within layouts/application (0.3ms)
+Completed 200 OK in 271ms (Views: 270.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/api/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 17:49:41 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.min.self-a85af646e8e5ab88dd8b4eede7f6a638078bd7803a30ef91ba0aaab74c9d2d36.css?body=1" for ::1 at 2015-12-16 17:49:41 -0800
+
+
+Started GET "/assets/css/font-awesome.min.self-f4d933d4c36f543f6aa6e85d9dd92421d610537abe21223e363b029fefeda8bb.css?body=1" for ::1 at 2015-12-16 17:49:41 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.self-ae1fefb167d375042fbb9758283732d779258ccb4f4bad05f39824f613aa902c.css?body=1" for ::1 at 2015-12-16 17:49:41 -0800
+
+
+Started GET "/assets/css/input-calendar.self-5a997c77d512e3d53489eb7a93be8e464d45358d0ebc67261290c1f86f97c12c.css?body=1" for ::1 at 2015-12-16 17:49:41 -0800
+
+
+Started GET "/assets/css/font-awesome.self-096a1cf4b422c9c89eb905af2ee7bff3a955fc2ceefa7c0047237a0dddb7ce84.css?body=1" for ::1 at 2015-12-16 17:49:41 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.pips.self-bdb1079da096aafa91f67ffb5dd4a99db1ba034175868b952d5cfa5dd236a5ea.css?body=1" for ::1 at 2015-12-16 17:49:41 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.tooltips.self-a5b327f05bcec2817f4d44f6daaf3cd1b02823d78cc7ddc23ebad25fe3f67813.css?body=1" for ::1 at 2015-12-16 17:49:41 -0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 17:49:41 -0800
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 17:49:41 -0800
+
+
+Started GET "/assets/application.self-18b11f6939596547e580150d2ae8429d856f30daf5c1c25420752f7b6a259047.css?body=1" for ::1 at 2015-12-16 17:49:41 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-16 17:49:41 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-16 17:49:41 -0800
+
+
+Started GET "/assets/api/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 17:49:41 -0800
+
+
+Started GET "/assets/bundle.self-a208aa3316de3d626b703d130d3332c6abe1ca620eaa820d367b29c1be56db6b.js?body=1" for ::1 at 2015-12-16 17:49:41 -0800
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 17:49:41 -0800
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 17:49:41 -0800
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-12-16 17:49:41 -0800
+
+
+Started GET "/session" for ::1 at 2015-12-16 17:49:42 -0800
+Processing by SessionsController#show as */*
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "1yswdzf9IupWETG_Z7vX_w"]]
+  Rendered sessions/_user.json.jbuilder (0.4ms)
+  Rendered sessions/show.json.jbuilder (1.7ms)
+Completed 200 OK in 7ms (Views: 5.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/background.png" for ::1 at 2015-12-16 17:49:42 -0800
+
+
+Started GET "/assets/fonts/fontawesome-webfont.woff2?v=4.5.0" for ::1 at 2015-12-16 17:49:47 -0800
+
+
+Started GET "/" for ::1 at 2015-12-16 17:55:32 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html within layouts/application (0.4ms)
+Completed 200 OK in 451ms (Views: 450.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/css/font-awesome.self-096a1cf4b422c9c89eb905af2ee7bff3a955fc2ceefa7c0047237a0dddb7ce84.css?body=1" for ::1 at 2015-12-16 17:55:32 -0800
+
+
+Started GET "/assets/api/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 17:55:32 -0800
+
+
+Started GET "/assets/css/font-awesome.min.self-f4d933d4c36f543f6aa6e85d9dd92421d610537abe21223e363b029fefeda8bb.css?body=1" for ::1 at 2015-12-16 17:55:32 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.min.self-a85af646e8e5ab88dd8b4eede7f6a638078bd7803a30ef91ba0aaab74c9d2d36.css?body=1" for ::1 at 2015-12-16 17:55:33 -0800
+
+
+Started GET "/assets/css/input-calendar.self-5a997c77d512e3d53489eb7a93be8e464d45358d0ebc67261290c1f86f97c12c.css?body=1" for ::1 at 2015-12-16 17:55:33 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.self-ae1fefb167d375042fbb9758283732d779258ccb4f4bad05f39824f613aa902c.css?body=1" for ::1 at 2015-12-16 17:55:33 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.pips.self-bdb1079da096aafa91f67ffb5dd4a99db1ba034175868b952d5cfa5dd236a5ea.css?body=1" for ::1 at 2015-12-16 17:55:33 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.tooltips.self-a5b327f05bcec2817f4d44f6daaf3cd1b02823d78cc7ddc23ebad25fe3f67813.css?body=1" for ::1 at 2015-12-16 17:55:33 -0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 17:55:33 -0800
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 17:55:33 -0800
+
+
+Started GET "/assets/application.self-18b11f6939596547e580150d2ae8429d856f30daf5c1c25420752f7b6a259047.css?body=1" for ::1 at 2015-12-16 17:55:33 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-16 17:55:33 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-16 17:55:33 -0800
+
+
+Started GET "/assets/api/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 17:55:33 -0800
+
+
+Started GET "/assets/bundle.self-a7cb1eb3e06802e0f645cb64aa31e42e40495ae6d7187c4bdc52de34b34f85c7.js?body=1" for ::1 at 2015-12-16 17:55:33 -0800
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 17:55:33 -0800
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 17:55:33 -0800
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-12-16 17:55:33 -0800
+
+
+Started GET "/session" for ::1 at 2015-12-16 17:55:33 -0800
+Processing by SessionsController#show as */*
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "1yswdzf9IupWETG_Z7vX_w"]]
+  Rendered sessions/_user.json.jbuilder (0.5ms)
+  Rendered sessions/show.json.jbuilder (4.1ms)
+Completed 200 OK in 10ms (Views: 8.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/fonts/fontawesome-webfont.woff2?v=4.5.0" for ::1 at 2015-12-16 17:55:33 -0800
+
+
+Started GET "/assets/background.png" for ::1 at 2015-12-16 17:56:29 -0800
+
+
+Started GET "/" for ::1 at 2015-12-16 18:00:18 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html within layouts/application (0.5ms)
+Completed 200 OK in 424ms (Views: 422.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/api/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 18:00:18 -0800
+
+
+Started GET "/assets/css/font-awesome.self-096a1cf4b422c9c89eb905af2ee7bff3a955fc2ceefa7c0047237a0dddb7ce84.css?body=1" for ::1 at 2015-12-16 18:00:18 -0800
+
+
+Started GET "/assets/css/font-awesome.min.self-f4d933d4c36f543f6aa6e85d9dd92421d610537abe21223e363b029fefeda8bb.css?body=1" for ::1 at 2015-12-16 18:00:18 -0800
+
+
+Started GET "/assets/css/input-calendar.self-5a997c77d512e3d53489eb7a93be8e464d45358d0ebc67261290c1f86f97c12c.css?body=1" for ::1 at 2015-12-16 18:00:18 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.self-ae1fefb167d375042fbb9758283732d779258ccb4f4bad05f39824f613aa902c.css?body=1" for ::1 at 2015-12-16 18:00:18 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.pips.self-bdb1079da096aafa91f67ffb5dd4a99db1ba034175868b952d5cfa5dd236a5ea.css?body=1" for ::1 at 2015-12-16 18:00:18 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.min.self-a85af646e8e5ab88dd8b4eede7f6a638078bd7803a30ef91ba0aaab74c9d2d36.css?body=1" for ::1 at 2015-12-16 18:00:18 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.tooltips.self-a5b327f05bcec2817f4d44f6daaf3cd1b02823d78cc7ddc23ebad25fe3f67813.css?body=1" for ::1 at 2015-12-16 18:00:18 -0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 18:00:18 -0800
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 18:00:18 -0800
+
+
+Started GET "/assets/application.self-18b11f6939596547e580150d2ae8429d856f30daf5c1c25420752f7b6a259047.css?body=1" for ::1 at 2015-12-16 18:00:18 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-16 18:00:18 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-16 18:00:18 -0800
+
+
+Started GET "/assets/api/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 18:00:18 -0800
+
+
+Started GET "/assets/bundle.self-a9c3503a4a0b8ce3a2530648b5ba1fd95849fd073eeaddd4bf9a32c6b0b3ad8a.js?body=1" for ::1 at 2015-12-16 18:00:18 -0800
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 18:00:18 -0800
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 18:00:19 -0800
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-12-16 18:00:19 -0800
+
+
+Started GET "/session" for ::1 at 2015-12-16 18:00:19 -0800
+Processing by SessionsController#show as */*
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "1yswdzf9IupWETG_Z7vX_w"]]
+  Rendered sessions/_user.json.jbuilder (0.4ms)
+  Rendered sessions/show.json.jbuilder (2.4ms)
+Completed 200 OK in 11ms (Views: 9.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/fonts/fontawesome-webfont.woff2?v=4.5.0" for ::1 at 2015-12-16 18:00:19 -0800
+
+
+Started GET "/" for ::1 at 2015-12-16 18:01:15 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html within layouts/application (0.4ms)
+Completed 200 OK in 425ms (Views: 424.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/api/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 18:01:15 -0800
+
+
+Started GET "/assets/css/font-awesome.self-096a1cf4b422c9c89eb905af2ee7bff3a955fc2ceefa7c0047237a0dddb7ce84.css?body=1" for ::1 at 2015-12-16 18:01:15 -0800
+
+
+Started GET "/assets/css/font-awesome.min.self-f4d933d4c36f543f6aa6e85d9dd92421d610537abe21223e363b029fefeda8bb.css?body=1" for ::1 at 2015-12-16 18:01:15 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.pips.self-bdb1079da096aafa91f67ffb5dd4a99db1ba034175868b952d5cfa5dd236a5ea.css?body=1" for ::1 at 2015-12-16 18:01:15 -0800
+
+
+Started GET "/assets/css/input-calendar.self-5a997c77d512e3d53489eb7a93be8e464d45358d0ebc67261290c1f86f97c12c.css?body=1" for ::1 at 2015-12-16 18:01:15 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.self-ae1fefb167d375042fbb9758283732d779258ccb4f4bad05f39824f613aa902c.css?body=1" for ::1 at 2015-12-16 18:01:15 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.min.self-a85af646e8e5ab88dd8b4eede7f6a638078bd7803a30ef91ba0aaab74c9d2d36.css?body=1" for ::1 at 2015-12-16 18:01:15 -0800
+
+
+Started GET "/assets/noUiSlider.8.2.1/nouislider.tooltips.self-a5b327f05bcec2817f4d44f6daaf3cd1b02823d78cc7ddc23ebad25fe3f67813.css?body=1" for ::1 at 2015-12-16 18:01:15 -0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 18:01:15 -0800
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 18:01:15 -0800
+
+
+Started GET "/assets/application.self-18b11f6939596547e580150d2ae8429d856f30daf5c1c25420752f7b6a259047.css?body=1" for ::1 at 2015-12-16 18:01:15 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-16 18:01:15 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-16 18:01:15 -0800
+
+
+Started GET "/assets/api/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 18:01:15 -0800
+
+
+Started GET "/assets/bundle.self-af662fdf378618b56e1e8fa987f51a88cbdc86d0096510770fad0bb744602d6d.js?body=1" for ::1 at 2015-12-16 18:01:15 -0800
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 18:01:15 -0800
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 18:01:15 -0800
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-12-16 18:01:15 -0800
+
+
+Started GET "/session" for ::1 at 2015-12-16 18:01:15 -0800
+Processing by SessionsController#show as */*
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "1yswdzf9IupWETG_Z7vX_w"]]
+  Rendered sessions/_user.json.jbuilder (0.6ms)
+  Rendered sessions/show.json.jbuilder (2.6ms)
+Completed 200 OK in 8ms (Views: 6.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/fonts/fontawesome-webfont.woff2?v=4.5.0" for ::1 at 2015-12-16 18:01:15 -0800
+
+
+Started GET "/assets/background.png" for ::1 at 2015-12-16 18:02:38 -0800
+
+
+Started DELETE "/session" for ::1 at 2015-12-16 18:03:01 -0800
+Processing by SessionsController#destroy as */*
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "1yswdzf9IupWETG_Z7vX_w"]]
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mUser Exists (1.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."username" = 'zac' AND "users"."id" != 32) LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3  [["session_token", "BAzS5hzbYZU398zFk2u7_g"], ["updated_at", "2015-12-17 02:03:01.551759"], ["id", 32]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  Rendered sessions/blank.json.jbuilder (0.5ms)
+Completed 200 OK in 20ms (Views: 4.4ms | ActiveRecord: 2.6ms)
