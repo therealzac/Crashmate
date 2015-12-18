@@ -33,11 +33,12 @@ SessionStore.__onDispatch = function (payload) {
 
 setSession = function (session) {
   _session = session;
-  _session.modalOpen = false;
+  _session.logInModalOpen = false;
+  _session.signUpModalOpen = false;
 };
 
 clearSession = function () {
-  _session = { modalOpen: false };
+  _session = { logInModalOpen: false, signUpModalOpen: false };
 };
 
 SessionStore.getSession = function () {
@@ -45,15 +46,13 @@ SessionStore.getSession = function () {
 };
 
 openLoginModal = function () {
-  _session.modalOpen = true;
+  _session.logInModalOpen = true;
   _session.messageValue = "Welcome back."
   _session.buttonValue = "Log In";
 };
 
 openSignUpModal = function () {
-  _session.modalOpen = true;
-  _session.messageValue = "Need a roommate? We got you."
-  _session.buttonValue = "Sign Up";
+  _session.signUpModalOpen = true;
 };
 
 invalidEntry = function (error) {

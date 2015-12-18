@@ -215,3 +215,35 @@
 [2015-12-16 13:43:23 -0800 Zacharys-MacBook-Pro.local (76330)] INFO : Finished instrumentation
 [2015-12-16 13:43:23 -0800 Zacharys-MacBook-Pro.local (76330)] INFO : Doing deferred dependency-detection before Rack startup
 [2015-12-16 13:43:24 -0800 Zacharys-MacBook-Pro.local (76330)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1182867/applications/13229347
+[2015-12-17 08:26:37 -0800 Zacharys-MacBook-Pro.local (76330)] ERROR : 1 error(s) running task for event 'report_event_data' in Agent Event Loop:
+[2015-12-17 08:26:37 -0800 Zacharys-MacBook-Pro.local (76330)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-103.newrelic.com:443 after 0.001113 seconds: getaddrinfo: nodename nor servname provided, or not known
+[2015-12-17 09:10:24 -0800 Zacharys-MacBook-Pro.local (76330)] ERROR : 1 error(s) running task for event 'report_event_data' in Agent Event Loop:
+[2015-12-17 09:10:24 -0800 Zacharys-MacBook-Pro.local (76330)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-103.newrelic.com:443 after 30.028336 seconds: getaddrinfo: nodename nor servname provided, or not known
+[2015-12-17 21:27:42 -0800 Zacharys-MacBook-Pro.local (76330)] ERROR : 1 error(s) running task for event 'report_event_data' in Agent Event Loop:
+[2015-12-17 21:27:42 -0800 Zacharys-MacBook-Pro.local (76330)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-103.newrelic.com:443 after 0.00196 seconds: getaddrinfo: nodename nor servname provided, or not known
+[2015-12-18 09:10:56 -0800 Zacharys-MacBook-Pro.local (76330)] ERROR : 1 error(s) running task for event 'report_event_data' in Agent Event Loop:
+[2015-12-18 09:10:56 -0800 Zacharys-MacBook-Pro.local (76330)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-103.newrelic.com:443 after 30.001678 seconds: getaddrinfo: nodename nor servname provided, or not known
+[2015-12-18 09:11:38 -0800 Zacharys-MacBook-Pro.local (76330)] ERROR : 1 error(s) running task for event 'report_data' in Agent Event Loop:
+[2015-12-18 09:11:38 -0800 Zacharys-MacBook-Pro.local (76330)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-103.newrelic.com:443 after 30.073271 seconds: getaddrinfo: nodename nor servname provided, or not known
+[2015-12-18 09:11:47 -0800 Zacharys-MacBook-Pro.local (76330)] INFO : Starting Agent shutdown
+[2015-12-18 09:12:08 -0800 Zacharys-MacBook-Pro.local (76330)] ERROR : 1 error(s) running task for event 'report_event_data' in Agent Event Loop:
+[2015-12-18 09:12:08 -0800 Zacharys-MacBook-Pro.local (76330)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-103.newrelic.com:443 after 30.070315 seconds: getaddrinfo: nodename nor servname provided, or not known
+[2015-12-18 09:13:43 -0800 Zacharys-MacBook-Pro.local (88888)] INFO : Starting the New Relic agent in "development" environment.
+[2015-12-18 09:13:43 -0800 Zacharys-MacBook-Pro.local (88888)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[2015-12-18 09:13:43 -0800 Zacharys-MacBook-Pro.local (88888)] INFO : Reading configuration from config/newrelic.yml (/Users/Zac/Desktop/Crashmate)
+[2015-12-18 09:13:43 -0800 Zacharys-MacBook-Pro.local (88888)] INFO : New Relic Agent Developer Mode enabled.
+[2015-12-18 09:13:43 -0800 Zacharys-MacBook-Pro.local (88888)] INFO : Environment: development
+[2015-12-18 09:13:43 -0800 Zacharys-MacBook-Pro.local (88888)] INFO : Dispatcher: webrick
+[2015-12-18 09:13:43 -0800 Zacharys-MacBook-Pro.local (88888)] INFO : Application: My Application (Development)
+[2015-12-18 09:13:44 -0800 Zacharys-MacBook-Pro.local (88888)] INFO : Installing ActiveJob instrumentation
+[2015-12-18 09:13:44 -0800 Zacharys-MacBook-Pro.local (88888)] INFO : Installing ActiveRecord 4 instrumentation
+[2015-12-18 09:13:44 -0800 Zacharys-MacBook-Pro.local (88888)] INFO : Installing Net instrumentation
+[2015-12-18 09:13:44 -0800 Zacharys-MacBook-Pro.local (88888)] INFO : Installing deferred Rack::Builder instrumentation
+[2015-12-18 09:13:44 -0800 Zacharys-MacBook-Pro.local (88888)] INFO : Installing Rack::Builder middleware instrumentation
+[2015-12-18 09:13:44 -0800 Zacharys-MacBook-Pro.local (88888)] INFO : Installing Rails 3+ middleware instrumentation
+[2015-12-18 09:13:44 -0800 Zacharys-MacBook-Pro.local (88888)] INFO : Installing Rails 4 Controller instrumentation
+[2015-12-18 09:13:44 -0800 Zacharys-MacBook-Pro.local (88888)] INFO : Installing Rails 4 view instrumentation
+[2015-12-18 09:13:44 -0800 Zacharys-MacBook-Pro.local (88888)] INFO : Installing Rails 4 Error instrumentation
+[2015-12-18 09:13:44 -0800 Zacharys-MacBook-Pro.local (88888)] INFO : Finished instrumentation
+[2015-12-18 09:13:44 -0800 Zacharys-MacBook-Pro.local (88888)] INFO : Doing deferred dependency-detection before Rack startup
+[2015-12-18 09:13:45 -0800 Zacharys-MacBook-Pro.local (88888)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1182867/applications/13229347

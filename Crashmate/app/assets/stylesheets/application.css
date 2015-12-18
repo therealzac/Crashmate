@@ -205,12 +205,12 @@ p{
 }
 
 .input {
-  margin: 0 0 20px 0;
+  margin: 10px 0 20px 0;
 }
 
 .input > label {
   display: block;
-  font-weight: 400;
+  font-weight: 300;
   padding: 0 0 5px 0;
 }
 
@@ -272,6 +272,10 @@ p{
   color: #f00;
 }
 
+.signup-label{
+  font-weight: 300;
+}
+
 /*Splash*/
 
 .content {
@@ -294,7 +298,7 @@ p{
 
 .city-input {
   display: block;
-  margin-top: 28%;
+  margin-top: 37%;
   width: 100%;
   height: 40px;
   background: rgba(0, 0, 0, 0.7);
@@ -314,7 +318,7 @@ p{
   display: block;
   float: left;
   background: #fff;
-  margin-left: calc(50% - 265px);
+  margin-left: calc(50% - 262px);
   border: 1px solid #ccc;
   padding: 10px;
   width: 300px;
@@ -424,7 +428,7 @@ p{
 .index-filters {
   padding: 2%;
   float: left;
-  width: 23.6%;
+  width: 20%;
   min-height: 600px;
   border-right: 1px solid #ccc;
 }
@@ -435,19 +439,190 @@ p{
   min-height: 600px;
 }
 
+.index-main > h2 {
+  font-size: 24px;
+  font-weight: 300;
+  margin: 5%;
+  text-align: center;
+  border-bottom: 1px solid #ccc;
+}
+
 .filter-label{
   position: relative;
   font-size: 16px;
-  font-weight: 700;
+  font-weight: 300;
+  color: #AAAAAA;
+}
+
+.signup-filter-label{
+  position: relative;
+  font-size: 16px;
+  margin: 9%;
+  font-weight: 300;
   color: #AAAAAA;
 }
 
 .filter-component{
-  width: 240px;
-  padding: 20px;
-  padding-bottom: 20%;
-  z-index: 3;
+  width: 85.4%;
+  padding: 10px;
+  padding-bottom: 30%;
+  z-index: 1;
   border-top: 1px solid #ccc;
+}
+
+.toggleButtonLeft{
+  margin: 20px 0 0 0;
+  padding: 0 0 3px 0;
+  float: left;
+}
+
+.toggleButtonRight{
+  margin: 20px 0 0 0;
+  padding: 0 0 3px 0;
+  float: left;
+}
+
+.toggleButtonLeft > button {
+  position: relative;
+  padding: 10px 20px;
+  color: #ccc;
+  font-weight: 400;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  border-right: 1px solid #ccc;
+}
+
+.toggleButtonRight > button {
+  position: relative;
+  padding: 10px 20px;
+  color: #ccc;
+  font-weight: 400;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  border-left: 1px solid #ccc;
+}
+
+/*Show*/
+
+.show {
+  position: relative;
+  margin: 0 auto;
+  background: #fff;
+  width: 100%;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+
+.show-header {
+  position: relative;
+  height: 200px;
+  background: url(background.png);
+  background-size: cover;
+  border-bottom: 1px solid #ccc;
+}
+
+.show-header > p {
+  position: relative;
+  padding: 0.2%;
+  top: 72%;
+  left: 18.5%;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.show-header > h1 {
+  position: absolute;
+  bottom: 28%;
+  left: 18%;
+  font-size: 40px;
+  line-height: 1;
+  font-weight: 300;
+  text-shadow: #000 0 0 10px;
+}
+
+.show-header-message-button {
+  position: absolute;
+  bottom: 20px;
+  right: 14.6%;
+  color: #000;
+  background: #fff;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: 1px solid #000;
+  border-radius: 5px;
+}
+
+.show-header-message-button:hover {
+  background: #eee;
+}
+
+.show-sidebar {
+  padding: 2%;
+  float: left;
+  width: 14.6%;
+  min-height: 600px;
+  border-right: 1px solid #ccc;
+}
+
+.show-main {
+  float: left;
+  width: 61.8%;
+  min-height: 600px;
+}
+
+.show-main > h2 {
+  font-size: 24px;
+  font-weight: 300;
+  margin: 5%;
+  text-align: center;
+  border-bottom: 1px solid #ccc;
+}
+
+.profile-picture {
+  display: block;
+  margin-top: -120px;
+  border: 1px solid #000;
+  background: #000;
+  border-radius: 5px;
+  position: relative;
+}
+
+.profile-info {
+  margin: 20px 0;
+}
+
+.profile-info > h2 {
+  font-weight: 300;
+  font-size: 24px;
+}
+
+.profile-info > p {
+  margin: 20px 0;
+}
+
+.profile-nav {
+  margin: 20px 0;
+}
+
+.profile-nav > li {
+  border-bottom: 1px solid #ccc;
+  padding: 4%;
+}
+
+.profile-nav > li:first-child {
+  border-top: 1px solid #ccc;
+  padding: 4%;
+}
+
+.profile-nav a {
+  display: block;
+  padding: 5px;
+  font-weight: 300;
+}
+
+.profile-nav a:hover {
+  background: #eee;
 }
 
 /*Footer*/

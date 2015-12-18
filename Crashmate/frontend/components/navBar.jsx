@@ -5,7 +5,7 @@ var ApiActions = require('../actions/apiActions.js');
 
 module.exports = React.createClass({
   getInitialState: function () {
-    return { session: SessionStore.getSession() }
+    return {session: SessionStore.getSession()}
   },
 
   componentDidMount: function () {
@@ -14,7 +14,7 @@ module.exports = React.createClass({
   },
 
   _onChange: function () {
-    this.setState({ session: SessionStore.getSession() });
+    this.setState({session: SessionStore.getSession()});
   },
 
   componentWillUnmount: function () {
@@ -26,10 +26,12 @@ module.exports = React.createClass({
       ApiUtil.logOut();
       this.props.history.push('/');
     } else if (event.currentTarget.innerHTML === this.state.session.username) {
-      console.log("Go to " + this.state.session.username + "'s profile...'");
+      var userUrl = "/users/" + this.state.session.id;
+      this.props.history.push(userUrl);
     } else if (event.currentTarget.innerHTML === 'Log In'){
       ApiActions.renderLogInModal();
     } else if (event.currentTarget.innerHTML === 'Sign Up'){
+      this.props.history.push('/');
       ApiActions.renderSignUpModal();
     } else if (event.currentTarget.innerHTML === 'Crashmate'){
       this.props.history.push('/');
@@ -39,11 +41,11 @@ module.exports = React.createClass({
   render: function () {
     var username = this.state.session.username;
     var toggle = "Log Out"
-    var hideNotifications = ""
+    var messageClass = ""
     if (typeof username === "undefined") {
       username = "Sign Up";
       toggle = "Log In";
-      hideNotifications = "hidden"
+      messageClass = "hidden"
     }
     return (
       <header className="header">
@@ -52,8 +54,8 @@ module.exports = React.createClass({
           <h1 className="header-logo" onClick={this.handleClick}>Crashmate</h1>
 
           <ul className="header-list group">
-                <li className={hideNotifications}>
-                  Notifications <strong className="badge">3</strong>
+                <li className={messageClass}>
+                  Messages <strong className="badge">3</strong>
                   <ul className="header-notifications">
                     <li><a href="#">Example...</a></li>
                     <li><a href="#">Example...</a></li>

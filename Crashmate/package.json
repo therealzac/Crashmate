@@ -20,11 +20,14 @@
     "history": "1.13.x",
     "react": "^0.14.3",
     "react-addons-linked-state-mixin": "^0.14.3",
+    "react-bootstrap": "^0.28.1",
     "react-dom": "^0.14.3",
     "react-input-calendar": "^0.1.19",
     "react-nouislider": "^1.6.0",
     "react-router": "^1.0.2",
     "react-slider": "^0.6.0",
+    "react-toggle": "^2.0.1",
+    "react-toggle-switch": "^1.0.8",
     "webpack": "^1.12.9"
   },
   "engines": {

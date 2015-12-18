@@ -6,13 +6,15 @@ var Route = require('react-router').Route;
 var IndexRoute = require('react-router').IndexRoute;
 
 var App = require('./components/App.jsx');
+var Splash = require('./components/splash.jsx');
 var Index = require('./components/index.jsx');
-var Splash = require('./components/splash.jsx')
+var Profile = require('./components/profile.jsx');
 
 var routes = (
   <Route path="/" component={App}>
     <IndexRoute component={Splash}/>
     <Route path="/index" component={Index}/>
+    <Route path="/users/:id" component={Profile}/>
   </Route>
 )
 

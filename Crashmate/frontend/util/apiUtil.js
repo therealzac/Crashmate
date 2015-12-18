@@ -49,5 +49,20 @@ module.exports = {
         ApiActions.recieveSession(session);
       }
     });
+  },
+
+  fetchCity: function () {
+    var geocoder = new google.maps.Geocoder();
+
+    navigator.geolocation.getCurrentPosition(function (position) {
+      getCity(position.coords.latitude, position.coords.longitude)
+    });
+
+    function getCity(lat, lng) {
+      var latlng = new google.maps.LatLng(lat, lng);
+      geocoder.geocode({'latLng': latlng}, function(results) {
+        ApiActions.setFilter({city: results[4].formatted_address});
+      });
+    }
   }
 }
