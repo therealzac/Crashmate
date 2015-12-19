@@ -1,4 +1,4 @@
 json.extract!(
   user,
-  :username
+  :id, :username
 )

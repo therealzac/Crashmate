@@ -31,7 +31,7 @@ module.exports = React.createClass({
     } else if (event.currentTarget.innerHTML === 'Log In'){
       ApiActions.renderLogInModal();
     } else if (event.currentTarget.innerHTML === 'Sign Up'){
-      this.props.history.push('/');
+      ApiUtil.fetchUsers();
       ApiActions.renderSignUpModal();
     } else if (event.currentTarget.innerHTML === 'Crashmate'){
       this.props.history.push('/');

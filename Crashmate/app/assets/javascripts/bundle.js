@@ -24367,7 +24367,7 @@
 	    } else if (event.currentTarget.innerHTML === 'Log In') {
 	      ApiActions.renderLogInModal();
 	    } else if (event.currentTarget.innerHTML === 'Sign Up') {
-	      this.props.history.push('/');
+	      ApiUtil.fetchUsers();
 	      ApiActions.renderSignUpModal();
 	    } else if (event.currentTarget.innerHTML === 'Crashmate') {
 	      this.props.history.push('/');
@@ -24463,10 +24463,14 @@
 	var SessionStore = new Store(AppDispatcher);
 	var SessionConstants = __webpack_require__(231);
 
-	var _session = {};
+	var _session = { logInModalOpen: false, signUpModalOpen: false };
 
 	SessionStore.__onDispatch = function (payload) {
 	  switch (payload.actionType) {
+	    case SessionConstants.USERS_RECIEVED:
+	      setUsernames(payload.users);
+	      SessionStore.__emitChange();
+	      break;
 	    case SessionConstants.SESSION_RECIEVED:
 	      setSession(payload.session);
 	      SessionStore.__emitChange();
@@ -24490,14 +24494,23 @@
 	  }
 	};
 
+	setUsernames = function (users) {
+	  _session.usernames = [];
+	  users.forEach(function (user) {
+	    _session.usernames.push(user.username);
+	  });
+	};
+
 	setSession = function (session) {
-	  _session = session;
-	  _session.logInModalOpen = false;
-	  _session.signUpModalOpen = false;
+	  _session.username = session.username;
+	  _session.id = session.id;
 	};
 
 	clearSession = function () {
-	  _session = { logInModalOpen: false, signUpModalOpen: false };
+	  _session = {
+	    logInModalOpen: false,
+	    signUpModalOpen: false
+	  };
 	};
 
 	SessionStore.getSession = function () {
@@ -24506,8 +24519,7 @@
 
 	openLoginModal = function () {
 	  _session.logInModalOpen = true;
-	  _session.messageValue = "Welcome back.";
-	  _session.buttonValue = "Log In";
+	  _session.message = "Welcome back.";
 	};
 
 	openSignUpModal = function () {
@@ -24515,7 +24527,7 @@
 	};
 
 	invalidEntry = function (error) {
-	  _session.messageValue = error.responseJSON[0];
+	  _session.message = error.responseJSON[0];
 	};
 
 	module.exports = SessionStore;
@@ -31207,6 +31219,7 @@
 /***/ function(module, exports) {
 
 	module.exports = {
+	  USERS_RECIEVED: "USERS_RECIEVED",
 	  SESSION_RECIEVED: "SESSION_RECIEVED",
 	  SESSION_DESTROYED: "SESSION_DESTROYED",
 	  RENDER_SIGNUP_MODAL: "RENDER_SIGNUP_MODAL",
@@ -31220,6 +31233,19 @@
 
 	var ApiActions = __webpack_require__(233);
 	module.exports = {
+	  fetchUsers: function () {
+	    $.ajax({
+	      url: "api/users",
+	      method: "GET",
+	      success: function (users) {
+	        ApiActions.recieveUsers(users);
+	      },
+	      error: function (error) {
+	        console.log(error);
+	      }
+	    });
+	  },
+
 	  createUser: function (user) {
 	    $.ajax({
 	      url: "api/users",
@@ -31296,6 +31322,13 @@
 	var FilterConstants = __webpack_require__(234);
 
 	module.exports = {
+	  recieveUsers: function (users) {
+	    AppDispatcher.dispatch({
+	      actionType: SessionConstants.USERS_RECIEVED,
+	      users: users
+	    });
+	  },
+
 	  logIn: function (user) {
 	    AppDispatcher.dispatch({
 	      actionType: SessionConstants.SESSION_RECIEVED,
@@ -31369,12 +31402,11 @@
 	    username: "",
 	    password: "",
 	    logInModalOpen: false,
-	    message: "",
-	    buttonValue: ""
+	    message: "Welcome back."
 	  },
 
 	  getInitialState: function () {
-	    return { username: "", password: "", message: "", buttonValue: "" };
+	    return { username: "", password: "", message: "Welcome back." };
 	  },
 
 	  componentDidMount: function () {
@@ -31383,12 +31415,12 @@
 
 	  _onChange: function () {
 	    session = SessionStore.getSession();
-	    this.setState({
-	      logInModalOpen: session.logInModalOpen,
-	      buttonValue: session.buttonValue,
-	      message: session.messageValue,
-	      id: session.id
-	    });
+	    this.setState({ logInModalOpen: session.logInModalOpen, message: session.message });
+	    if (session.id) {
+	      var userUrl = "/users/" + this.state.id;
+	      this.setState(this.resetState);
+	      this.props.history.push(userUrl);
+	    }
 	  },
 
 	  componentWillUnmount: function () {
@@ -31399,10 +31431,6 @@
 	    event.preventDefault();
 	    var user = { username: this.state.username, password: this.state.password };
 	    ApiUtil.logIn(user);
-
-	    var userUrl = "/users/" + this.state.id;
-	    this.setState(this.resetState);
-	    this.props.history.push(userUrl);
 	  },
 
 	  handleClose: function () {
@@ -31460,7 +31488,7 @@
 	            React.createElement(
 	              'button',
 	              { onClick: this.handleButton },
-	              this.state.buttonValue
+	              'Log In'
 	            )
 	          )
 	        ),
@@ -31707,6 +31735,7 @@
 	var React = __webpack_require__(1);
 	var LinkedStateMixin = __webpack_require__(236);
 	var ApiUtil = __webpack_require__(232);
+	var ApiActions = __webpack_require__(233);
 	var SessionStore = __webpack_require__(210);
 	var FilterStore = __webpack_require__(242);
 	var Slider = __webpack_require__(245);
@@ -31727,8 +31756,11 @@
 	    buttonValue: "Next",
 	    username: "",
 	    usernameInput: "input",
+	    usernames: [],
 	    password: "",
 	    passwordInput: "input",
+	    age: 25,
+	    ageInput: "hidden",
 	    city: "",
 	    cityInput: "hidden",
 	    cityPlaceholder: "",
@@ -31757,8 +31789,10 @@
 	  },
 
 	  _onChange: function () {
+	    var session = SessionStore.getSession();
 	    this.setState({
-	      signUpModalOpen: SessionStore.getSession().signUpModalOpen,
+	      signUpModalOpen: session.signUpModalOpen,
+	      usernames: session.usernames,
 	      cityPlaceholder: FilterStore.getFilters().city
 	    });
 	  },
@@ -31772,24 +31806,53 @@
 	    this.nextMessage();
 	  },
 
-	  nextMessage: function () {
-	    if (this.state.label === "") {
-	      if (this.state.username === "") {
-	        this.setState({ message: "What's your name?" });
-	        return;
-	      }
-	      if (this.state.password.length < 6) {
-	        this.setState({ message: "Your password must be at least 6 characters." });
-	        return;
-	      }
+	  usernameTaken: function (username) {
+	    console.log(this.state.usernames);
+	    if (this.state.usernames.indexOf(username) === -1) {
+	      return false;
+	    } else {
+	      return true;
+	    }
+	  },
 
-	      newHeader = "Welcome, " + this.state.username + "!";
+	  nextMessage: function () {
+	    if (this.state.username === "") {
+	      this.setState({ message: "What's your name?", password: "" });
+	      return;
+	    }
+
+	    if (this.usernameTaken(this.state.username)) {
+	      var newMessage = "Sorry, '" + this.state.username + "' has already been taken as a username.";
+	      this.setState({
+	        message: newMessage,
+	        username: "",
+	        password: ""
+	      });
+	      return;
+	    }
+
+	    if (this.state.password.length < 6) {
+	      this.setState({
+	        message: "Your password must be at least 6 characters.",
+	        password: ""
+	      });
+	      return;
+	    }
+
+	    if (this.state.label === "") {
+	      newHeader = "Hey, " + this.state.username + ".";
 	      this.setState({
 	        header: newHeader,
 	        message: "",
-	        label: "Where are you moving?",
+	        label: "How old are you?",
 	        usernameInput: "hidden",
 	        passwordInput: "hidden",
+	        ageInput: "signup-filter-label"
+	      });
+	    } else if (this.state.label === "How old are you?") {
+	      this.setState({
+	        label: "Where are you moving?",
+	        ageInput: "hidden",
 	        cityInput: "input"
 	      });
 	    } else if (this.state.label === "Where are you moving?") {
@@ -31855,7 +31918,7 @@
 	      });
 	    } else if (this.state.label === "Tell your future roommates about yourself.") {
 	      if (this.state.about === "") {
-	        this.setState({ message: "Don't be shy! You can't leave this blank." });
+	        this.setState({ message: "You can't leave this blank." });
 	        return;
 	      }
 	      var user = {
@@ -31870,9 +31933,14 @@
 	        amenities: this.state.amenities,
 	        about: this.state.about
 	      };
+	      ApiUtil.createUser(user);
 	      console.log(user);
-	      this.setState({ signUpModalOpen: false });
+	      this.setState(this.resetState);
 	    }
+	  },
+
+	  ageChange: function (ages) {
+	    this.setState({ age: parseInt(age) });
 	  },
 
 	  dateChange: function (date) {
@@ -31900,8 +31968,8 @@
 	  },
 
 	  handleClose: function () {
-	    var closedHeader = "Hey " + this.state.username + ".";
-	    this.setState({ signUpModalOpen: false, header: closedHeader });
+	    this.setState(this.resetState);
+	    ApiActions.logOut();
 	  },
 
 	  render: function () {
@@ -31953,6 +32021,18 @@
 	              'Password'
 	            ),
 	            React.createElement('input', { type: 'password', valueLink: this.linkState("password") })
+	          ),
+	          React.createElement(
+	            'div',
+	            { className: this.state.ageInput },
+	            React.createElement(Slider, { range: { min: 18, max: 65 },
+	              start: [this.state.age],
+	              step: 1,
+	              connect: 'lower',
+	              tooltips: true,
+	              format: wNumb({ decimals: 0 }),
+	              onChange: this.ageChange
+	            })
 	          ),
 	          React.createElement(
 	            'div',
@@ -32383,7 +32463,7 @@
 	      React.createElement(
 	        'div',
 	        { className: 'filter-component' },
-	        React.createElement(Slider, { range: { min: 18, max: 40 },
+	        React.createElement(Slider, { range: { min: 18, max: 65 },
 	          start: this.state.ageRange,
 	          step: 1,
 	          connect: true,

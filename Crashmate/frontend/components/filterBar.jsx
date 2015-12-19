@@ -134,7 +134,7 @@ module.exports = React.createClass({
 
           <label className="filter-label">Age</label>
           <div className="filter-component">
-            <Slider range={{min: 18, max: 40}}
+            <Slider range={{min: 18, max: 65}}
                     start={this.state.ageRange}
                     step={1}
                     connect={true}

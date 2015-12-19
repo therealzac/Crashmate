@@ -4,10 +4,14 @@ var SessionStore = new Store(AppDispatcher);
 var SessionConstants = require('../constants/sessionConstants.js');
 
 
-var _session = {};
+var _session = {logInModalOpen: false, signUpModalOpen: false};
 
 SessionStore.__onDispatch = function (payload) {
   switch (payload.actionType) {
+    case SessionConstants.USERS_RECIEVED:
+      setUsernames(payload.users);
+      SessionStore.__emitChange();
+      break;
     case SessionConstants.SESSION_RECIEVED:
       setSession(payload.session);
       SessionStore.__emitChange();
@@ -31,14 +35,23 @@ SessionStore.__onDispatch = function (payload) {
   }
 };
 
+setUsernames = function (users) {
+  _session.usernames = [];
+  users.forEach(function(user){
+    _session.usernames.push(user.username)
+  });
+};
+
 setSession = function (session) {
-  _session = session;
-  _session.logInModalOpen = false;
-  _session.signUpModalOpen = false;
+  _session.username = session.username;
+  _session.id = session.id;
 };
 
 clearSession = function () {
-  _session = { logInModalOpen: false, signUpModalOpen: false };
+  _session = {
+    logInModalOpen: false,
+    signUpModalOpen: false
+  };
 };
 
 SessionStore.getSession = function () {
@@ -47,8 +60,7 @@ SessionStore.getSession = function () {
 
 openLoginModal = function () {
   _session.logInModalOpen = true;
-  _session.messageValue = "Welcome back."
-  _session.buttonValue = "Log In";
+  _session.message = "Welcome back."
 };
 
 openSignUpModal = function () {
@@ -56,7 +68,7 @@ openSignUpModal = function () {
 };
 
 invalidEntry = function (error) {
-  _session.messageValue = error.responseJSON[0];
+  _session.message = error.responseJSON[0];
 }
 
 

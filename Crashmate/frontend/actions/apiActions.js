@@ -3,6 +3,13 @@ var SessionConstants = require('../constants/sessionConstants.js');
 var FilterConstants = require('../constants/filterConstants.js');
 
 module.exports = {
+  recieveUsers: function (users) {
+    AppDispatcher.dispatch({
+      actionType: SessionConstants.USERS_RECIEVED,
+      users: users
+    });
+  },
+
   logIn: function (user) {
     AppDispatcher.dispatch({
       actionType: SessionConstants.SESSION_RECIEVED,

@@ -1,5 +1,18 @@
 var ApiActions = require('../actions/apiActions.js');
 module.exports = {
+  fetchUsers: function () {
+    $.ajax({
+      url: "api/users",
+      method: "GET",
+      success: function (users) {
+        ApiActions.recieveUsers(users);
+      },
+      error: function (error) {
+        console.log(error);
+      }
+    });
+  },
+
   createUser: function (user) {
     $.ajax({
       url: "api/users",

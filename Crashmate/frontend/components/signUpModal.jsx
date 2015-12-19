@@ -1,6 +1,7 @@
 var React = require('react');
 var LinkedStateMixin = require('react-addons-linked-state-mixin');
 var ApiUtil = require('../util/apiUtil.js');
+var ApiActions = require("../actions/apiActions.js");
 var SessionStore = require('../stores/session.js');
 var FilterStore = require('../stores/filters.js');
 var Slider = require('react-nouislider');
@@ -20,8 +21,11 @@ module.exports = React.createClass({
     buttonValue: "Next",
     username: "",
     usernameInput: "input",
+    usernames: [],
     password: "",
     passwordInput: "input",
+    age: 25,
+    ageInput: "hidden",
     city: "",
     cityInput: "hidden",
     cityPlaceholder: "",
@@ -50,8 +54,10 @@ module.exports = React.createClass({
   },
 
   _onChange: function () {
+    var session = SessionStore.getSession();
     this.setState({
-      signUpModalOpen: SessionStore.getSession().signUpModalOpen,
+      signUpModalOpen: session.signUpModalOpen,
+      usernames: session.usernames,
       cityPlaceholder: FilterStore.getFilters().city
     });
   },
@@ -65,24 +71,54 @@ module.exports = React.createClass({
     this.nextMessage();
   },
 
-  nextMessage: function () {
-    if (this.state.label === ""){
-      if (this.state.username === ""){
-        this.setState({message: "What's your name?"});
-        return;
-      }
-      if (this.state.password.length < 6){
-        this.setState({message: "Your password must be at least 6 characters."});
-        return;
-      }
+  usernameTaken: function (username) {
+    console.log(this.state.usernames);
+    if (this.state.usernames.indexOf(username) === -1){
+      return false;
+    } else {
+      return true;
+    }
+  },
 
-      newHeader = "Welcome, " + this.state.username + "!";
+  nextMessage: function () {
+    if (this.state.username === ""){
+      this.setState({message: "What's your name?", password: ""});
+      return;
+    }
+
+    if (this.usernameTaken(this.state.username)){
+      var newMessage = "Sorry, '" + this.state.username + "' has already been taken as a username.";
+      this.setState({
+        message: newMessage,
+        username: "",
+        password: ""
+      });
+      return;
+    }
+
+    if (this.state.password.length < 6){
+      this.setState({
+        message: "Your password must be at least 6 characters.",
+        password: ""
+      });
+      return;
+    }
+
+    if (this.state.label === ""){
+      newHeader = "Hey, " + this.state.username + ".";
       this.setState({
         header: newHeader,
         message: "",
-        label: "Where are you moving?",
+        label: "How old are you?",
         usernameInput: "hidden",
         passwordInput: "hidden",
+        ageInput: "signup-filter-label"
+      });
+
+    } else if (this.state.label === "How old are you?"){
+      this.setState({
+        label: "Where are you moving?",
+        ageInput: "hidden",
         cityInput: "input"
       });
 
@@ -155,7 +191,7 @@ module.exports = React.createClass({
 
     } else if (this.state.label === "Tell your future roommates about yourself."){
       if (this.state.about === ""){
-        this.setState({message: "Don't be shy! You can't leave this blank."});
+        this.setState({message: "You can't leave this blank."});
         return;
       }
       var user = {
@@ -170,9 +206,14 @@ module.exports = React.createClass({
         amenities: this.state.amenities,
         about: this.state.about
       };
+      ApiUtil.createUser(user);
       console.log(user);
-      this.setState({signUpModalOpen: false});
+      this.setState(this.resetState);
     }
+  },
+
+  ageChange: function (ages) {
+    this.setState({age: parseInt(age)});
   },
 
   dateChange: function (date) {
@@ -200,8 +241,8 @@ module.exports = React.createClass({
   },
 
   handleClose: function () {
-    var closedHeader = "Hey " + this.state.username + ".";
-    this.setState({ signUpModalOpen: false, header: closedHeader});
+    this.setState(this.resetState);
+    ApiActions.logOut();
   },
 
   render: function () {
@@ -230,6 +271,17 @@ module.exports = React.createClass({
           <div className={this.state.passwordInput}>
             <label>Password</label>
             <input type="password" valueLink={this.linkState("password")}/>
+          </div>
+
+          <div className={this.state.ageInput}>
+            <Slider range={{min: 18, max: 65}}
+                    start={[this.state.age]}
+                    step={1}
+                    connect="lower"
+                    tooltips
+                    format={wNumb({decimals: 0})}
+                    onChange={this.ageChange}
+            />
           </div>
 
           <div className={this.state.cityInput}>

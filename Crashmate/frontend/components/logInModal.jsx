@@ -10,12 +10,11 @@ module.exports = React.createClass({
     username: "",
     password: "",
     logInModalOpen: false,
-    message: "",
-    buttonValue: ""
+    message: "Welcome back."
   },
 
   getInitialState: function () {
-    return { username: "", password: "", message: "", buttonValue: ""}
+    return { username: "", password: "", message: "Welcome back."}
   },
 
   componentDidMount: function () {
@@ -24,12 +23,12 @@ module.exports = React.createClass({
 
   _onChange: function () {
     session = SessionStore.getSession();
-    this.setState({
-      logInModalOpen: session.logInModalOpen,
-      buttonValue: session.buttonValue,
-      message: session.messageValue,
-      id: session.id
-    });
+    this.setState({logInModalOpen: session.logInModalOpen, message: session.message});
+    if (session.id){
+      var userUrl = "/users/" + this.state.id;
+      this.setState(this.resetState);
+      this.props.history.push(userUrl);
+    }
   },
 
   componentWillUnmount: function () {
@@ -40,10 +39,6 @@ module.exports = React.createClass({
     event.preventDefault();
     var user = {username: this.state.username, password: this.state.password}
     ApiUtil.logIn(user);
-
-    var userUrl = "/users/" + this.state.id;
-    this.setState(this.resetState);
-    this.props.history.push(userUrl);
   },
 
   handleClose: function () {
@@ -77,7 +72,7 @@ module.exports = React.createClass({
           </div>
 
           <div className="submit">
-            <button onClick={this.handleButton}>{this.state.buttonValue}</button>
+            <button onClick={this.handleButton}>Log In</button>
           </div>
 
         </form>

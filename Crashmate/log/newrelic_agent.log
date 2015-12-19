@@ -247,3 +247,23 @@
 [2015-12-18 09:13:44 -0800 Zacharys-MacBook-Pro.local (88888)] INFO : Finished instrumentation
 [2015-12-18 09:13:44 -0800 Zacharys-MacBook-Pro.local (88888)] INFO : Doing deferred dependency-detection before Rack startup
 [2015-12-18 09:13:45 -0800 Zacharys-MacBook-Pro.local (88888)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1182867/applications/13229347
+[2015-12-18 15:40:44 -0800 Zacharys-MacBook-Pro.local (88888)] INFO : Starting Agent shutdown
+[2015-12-18 15:40:49 -0800 Zacharys-MacBook-Pro.local (92192)] INFO : Starting the New Relic agent in "development" environment.
+[2015-12-18 15:40:49 -0800 Zacharys-MacBook-Pro.local (92192)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[2015-12-18 15:40:49 -0800 Zacharys-MacBook-Pro.local (92192)] INFO : Reading configuration from config/newrelic.yml (/Users/Zac/Desktop/Crashmate)
+[2015-12-18 15:40:49 -0800 Zacharys-MacBook-Pro.local (92192)] INFO : New Relic Agent Developer Mode enabled.
+[2015-12-18 15:40:49 -0800 Zacharys-MacBook-Pro.local (92192)] INFO : Environment: development
+[2015-12-18 15:40:49 -0800 Zacharys-MacBook-Pro.local (92192)] INFO : Dispatcher: webrick
+[2015-12-18 15:40:49 -0800 Zacharys-MacBook-Pro.local (92192)] INFO : Application: My Application (Development)
+[2015-12-18 15:40:49 -0800 Zacharys-MacBook-Pro.local (92192)] INFO : Installing ActiveJob instrumentation
+[2015-12-18 15:40:49 -0800 Zacharys-MacBook-Pro.local (92192)] INFO : Installing ActiveRecord 4 instrumentation
+[2015-12-18 15:40:49 -0800 Zacharys-MacBook-Pro.local (92192)] INFO : Installing Net instrumentation
+[2015-12-18 15:40:49 -0800 Zacharys-MacBook-Pro.local (92192)] INFO : Installing deferred Rack::Builder instrumentation
+[2015-12-18 15:40:49 -0800 Zacharys-MacBook-Pro.local (92192)] INFO : Installing Rack::Builder middleware instrumentation
+[2015-12-18 15:40:49 -0800 Zacharys-MacBook-Pro.local (92192)] INFO : Installing Rails 3+ middleware instrumentation
+[2015-12-18 15:40:49 -0800 Zacharys-MacBook-Pro.local (92192)] INFO : Installing Rails 4 Controller instrumentation
+[2015-12-18 15:40:49 -0800 Zacharys-MacBook-Pro.local (92192)] INFO : Installing Rails 4 view instrumentation
+[2015-12-18 15:40:49 -0800 Zacharys-MacBook-Pro.local (92192)] INFO : Installing Rails 4 Error instrumentation
+[2015-12-18 15:40:49 -0800 Zacharys-MacBook-Pro.local (92192)] INFO : Finished instrumentation
+[2015-12-18 15:40:50 -0800 Zacharys-MacBook-Pro.local (92192)] INFO : Doing deferred dependency-detection before Rack startup
+[2015-12-18 15:40:51 -0800 Zacharys-MacBook-Pro.local (92192)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1182867/applications/13229347
