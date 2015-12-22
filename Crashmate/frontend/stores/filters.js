@@ -26,7 +26,7 @@ var _filters = {
   gender: "Both",
   cats: true,
   dogs: true,
-  groupSize: 6
+  groupSize: 6,
 }
 
 FilterStore.__onDispatch = function (payload) {
@@ -48,6 +48,13 @@ setFilters = function (newFilters) {
 
 FilterStore.getFilters = function () {
   return _filters;
-}
+};
+
+setUsers = function (users) {
+  _filters.users = [];
+  users.forEach(function (user) {
+    _filters.users.push(user);
+  });
+};
 
 module.exports = FilterStore;

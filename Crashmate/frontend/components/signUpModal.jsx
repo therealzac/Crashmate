@@ -4,6 +4,7 @@ var ApiUtil = require('../util/apiUtil.js');
 var ApiActions = require("../actions/apiActions.js");
 var SessionStore = require('../stores/session.js');
 var FilterStore = require('../stores/filters.js');
+var RoommatesStore = require('../stores/roommates.js');
 var Slider = require('react-nouislider');
 var Calendar = require('react-input-calendar');
 var Button = require('react-bootstrap').Button;
@@ -26,9 +27,13 @@ module.exports = React.createClass({
     passwordInput: "input",
     age: 25,
     ageInput: "hidden",
+    gender: "Female",
+    genderInput: "hidden",
+    occupation: "Student",
+    occupationInput: "hidden",
     city: "",
     cityInput: "hidden",
-    cityPlaceholder: "",
+    cityPlaceholder: "Where are you moving?",
     calendarInput: "hidden",
     date: FilterStore.getFilters().date,
     budgetInput: "hidden",
@@ -41,7 +46,8 @@ module.exports = React.createClass({
     amenitiesInput: "hidden",
     amenities: "",
     aboutInput: "hidden",
-    about: ""
+    about: "",
+    loggingIn: false
   },
 
   getInitialState: function () {
@@ -51,19 +57,27 @@ module.exports = React.createClass({
   componentDidMount: function () {
     this.sessionListener = SessionStore.addListener(this._onChange);
     this.filtersListener = FilterStore.addListener(this._onChange);
+    this.roommatesListener = RoommatesStore.addListener(this._onChange);
   },
 
   _onChange: function () {
     var session = SessionStore.getSession();
-    this.setState({
-      signUpModalOpen: session.signUpModalOpen,
-      usernames: session.usernames,
-      cityPlaceholder: FilterStore.getFilters().city
-    });
+    var roommates = RoommatesStore.getRoommates();
+    var filters = FilterStore.getFilters();
+    this.setState(session);
+    this.setState({roommates: roommates});
+    this.setState({city: filters.city});
+    if (this.state.id && this.state.loggingIn){
+      var userUrl = "/users/" + this.state.id;
+      this.props.history.push(userUrl);
+      this.setState(this.resetState)
+    }
   },
 
   componentWillUnmount: function () {
     this.sessionListener.remove();
+    this.filtersListener.remove();
+    this.roommatesListener.remove();
   },
 
   handleButton: function (event) {
@@ -72,148 +86,25 @@ module.exports = React.createClass({
   },
 
   usernameTaken: function (username) {
-    console.log(this.state.usernames);
-    if (this.state.usernames.indexOf(username) === -1){
-      return false;
-    } else {
-      return true;
-    }
+    isTaken = false;
+    this.state.roommates.forEach(function (roommate) {
+      if (roommate.username === username) { isTaken = true}
+    });
+    return isTaken;
   },
 
-  nextMessage: function () {
-    if (this.state.username === ""){
-      this.setState({message: "What's your name?", password: ""});
-      return;
-    }
-
-    if (this.usernameTaken(this.state.username)){
-      var newMessage = "Sorry, '" + this.state.username + "' has already been taken as a username.";
-      this.setState({
-        message: newMessage,
-        username: "",
-        password: ""
-      });
-      return;
-    }
-
-    if (this.state.password.length < 6){
-      this.setState({
-        message: "Your password must be at least 6 characters.",
-        password: ""
-      });
-      return;
-    }
-
-    if (this.state.label === ""){
-      newHeader = "Hey, " + this.state.username + ".";
-      this.setState({
-        header: newHeader,
-        message: "",
-        label: "How old are you?",
-        usernameInput: "hidden",
-        passwordInput: "hidden",
-        ageInput: "signup-filter-label"
-      });
-
-    } else if (this.state.label === "How old are you?"){
-      this.setState({
-        label: "Where are you moving?",
-        ageInput: "hidden",
-        cityInput: "input"
-      });
-
-    } else if (this.state.label === "Where are you moving?"){
-      if (this.state.city === ""){
-        if (this.state.cityPlaceholder !== ""){
-          this.setState({city: this.state.cityPlaceholder});
-        } else {
-          this.setState({
-            label: "",
-            message: "Please enter a city to continue."
-          })
-          this.nextMessage();
-        }
-      }
-
-      this.setState({
-        header: "Cool.",
-        label: "When will you be available to move?",
-        cityInput: "hidden",
-        calendarInput: "signup-filter-label",
-      });
-
-    } else if (this.state.label === "When will you be available to move?"){
-
-      this.setState({
-        header: "Just a few more questions...",
-        label: "What's your budget for rent?",
-        calendarInput: "hidden",
-        budgetInput: "signup-filter-label"
-      });
-
-    } else if (this.state.label === "What's your budget for rent?"){
-
-      this.setState({
-        header: "Just a few more questions...",
-        label: "How many months can you commit to?",
-        budgetInput: "hidden",
-        termInput: "signup-filter-label"
-      });
-
-    } else if (this.state.label === "How many months can you commit to?"){
-
-      this.setState({
-        header: "Just a few more questions...",
-        label: "Do you have any pets?",
-        termInput: "hidden",
-        petInput: "signup-filter-label"
-      });
-
-    } else if (this.state.label === "Do you have any pets?"){
-
-      this.setState({
-        header: "Just a few more questions...",
-        label: "What amenities do you need at your new spot?",
-        petInput: "hidden",
-        amenitiesInput: "input"
-      });
-
-    } else if (this.state.label === "What amenities do you need at your new spot?"){
-
-      var newHeader = "Awesome " + this.state.username + "!";
-      this.setState({
-        header: newHeader,
-        label: "Tell your future roommates about yourself.",
-        amenitiesInput: "hidden",
-        aboutInput: "input",
-        buttonValue: "Sign Up!"
-      });
-
-    } else if (this.state.label === "Tell your future roommates about yourself."){
-      if (this.state.about === ""){
-        this.setState({message: "You can't leave this blank."});
-        return;
-      }
-      var user = {
-        username: this.state.username,
-        password: this.state.password,
-        city: this.state.city,
-        date: this.state.date,
-        budget: this.state.budget,
-        term: this.state.term,
-        dogs: this.state.dogs,
-        cats: this.state.cats,
-        amenities: this.state.amenities,
-        about: this.state.about
-      };
-      ApiUtil.createUser(user);
-      console.log(user);
-      this.setState(this.resetState);
-    }
-  },
-
-  ageChange: function (ages) {
+  ageChange: function (age) {
     this.setState({age: parseInt(age)});
+  },
+
+  setGender: function (event) {
+    event.preventDefault;
+    this.setState({gender: event.currentTarget.innerHTML});
+  },
+
+  setOccupation: function (event) {
+    event.preventDefault;
+    this.setState({occupation: event.currentTarget.innerHTML});
   },
 
   dateChange: function (date) {
@@ -242,7 +133,151 @@ module.exports = React.createClass({
 
   handleClose: function () {
     this.setState(this.resetState);
-    ApiActions.logOut();
+    ApiActions.closeModals();
+  },
+
+  nextMessage: function () {
+    // First confirm username entry.
+    if (this.state.username === ""){
+      this.setState({message: "What's your name?", password: ""});
+      return;
+    }
+
+    // Ensure username isn't in DB.
+    if (this.usernameTaken(this.state.username)){
+      var newMessage = "Sorry, '" +
+                       this.state.username +
+                       "' has already been taken as a username.";
+
+      this.setState({
+        message: newMessage,
+        username: "",
+        password: ""
+      });
+      return;
+    }
+
+    // Confirm valid password.
+    if (this.state.password.length < 6){
+      this.setState({
+        message: "Your password must be at least 6 characters.",
+        password: ""
+      });
+      return;
+    }
+
+    // Begin signup.
+    if (this.state.label === ""){
+      newHeader = "Hey, " + this.state.username + ".";
+
+      this.setState({
+        header: newHeader,
+        message: "",
+        label: "Basic info.",
+        usernameInput: "hidden",
+        passwordInput: "hidden",
+        ageInput: "signup-filter-label",
+        genderInput: "signup-filter-label",
+        occupationInput: "signup-filter-label"
+      });
+
+    } else if (this.state.label === "Basic info."){
+      this.setState({
+        label: "Where are you moving?",
+        ageInput: "hidden",
+        genderInput: "hidden",
+        occupationInput: "hidden",
+        cityInput: "input"
+      });
+
+    } else if (this.state.label === "Where are you moving?"){
+      if (this.state.city === ""){
+        if (this.state.cityPlaceholder !== "Where are you moving?"){
+          this.setState({city: this.state.cityPlaceholder});
+        } else {
+          this.setState({
+            message: "Please enter a city to continue."
+          })
+          this.nextMessage();
+        }
+      }
+
+      this.setState({
+        label: "When will you be available to move?",
+        cityInput: "hidden",
+        calendarInput: "signup-filter-label",
+      });
+
+    } else if (this.state.label === "When will you be available to move?"){
+
+      this.setState({
+        label: "What's your budget for rent?",
+        calendarInput: "hidden",
+        budgetInput: "signup-filter-label"
+      });
+
+    } else if (this.state.label === "What's your budget for rent?"){
+
+      this.setState({
+        label: "How many months can you commit to?",
+        budgetInput: "hidden",
+        termInput: "signup-filter-label"
+      });
+
+    } else if (this.state.label === "How many months can you commit to?"){
+
+      this.setState({
+        label: "Do you have any pets?",
+        termInput: "hidden",
+        petInput: "signup-filter-label"
+      });
+
+    } else if (this.state.label === "Do you have any pets?"){
+
+      this.setState({
+        header: "Cool.",
+        label: "What amenities do you need at your new spot?",
+        petInput: "hidden",
+        amenitiesInput: "input"
+      });
+
+    } else if (this.state.label === "What amenities do you need at your new spot?"){
+
+      var newHeader = "Awesome " + this.state.username + ".";
+      this.setState({
+        header: newHeader,
+        label: "Tell your future roommates about yourself.",
+        amenitiesInput: "hidden",
+        aboutInput: "input",
+        buttonValue: "Sign Up!"
+      });
+
+    } else if (this.state.label === "Tell your future roommates about yourself."){
+      // Ensure entry.
+      if (this.state.about === ""){
+        this.setState({message: "You can't leave this blank."});
+        return;
+      }
+
+      // Create new user and push index page to url history.
+      var user = {
+        username: this.state.username,
+        password: this.state.password,
+        age: this.state.age,
+        city: this.state.city,
+        date: this.state.date,
+        budget: this.state.budget,
+        term: this.state.term,
+        dogs: this.state.dogs,
+        cats: this.state.cats,
+        amenities: this.state.amenities,
+        about: this.state.about,
+        gender: this.state.gender,
+        occupation: this.state.occupation
+      };
+      ApiUtil.createUser(user);
+      this.setState({loggingIn: true})
+    }
   },
 
   render: function () {
@@ -282,6 +317,32 @@ module.exports = React.createClass({
                     format={wNumb({decimals: 0})}
                     onChange={this.ageChange}
             />
+          </div>
+
+          <div className={this.state.genderInput}>
+            <ButtonGroup bsSize="large">
+              <Button onClick={this.setGender}
+                      active={(this.state.gender === "Female")}>
+                      Female
+              </Button>
+              <Button onClick={this.setGender}
+                      active={(this.state.gender === "Male")}>
+                      Male
+              </Button>
+            </ButtonGroup>
+          </div>
+
+          <div className={this.state.occupationInput}>
+            <ButtonGroup bsSize="large">
+              <Button onClick={this.setOccupation}
+                      active={(this.state.occupation === "Student")}>
+                      Student
+              </Button>
+              <Button onClick={this.setOccupation}
+                      active={(this.state.occupation === "Professional")}>
+                      Professional
+              </Button>
+            </ButtonGroup>
           </div>
 
           <div className={this.state.cityInput}>

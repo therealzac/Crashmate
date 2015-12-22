@@ -1,6 +1,7 @@
 var React = require('react');
 var LinkedStateMixin = require('react-addons-linked-state-mixin');
 var FilterStore = require('../stores/filters.js');
+var SessionStore = require('../stores/session.js');
 var ApiActions = require('../actions/apiActions.js');
 var ApiUtil = require('../util/apiUtil.js');
 
@@ -9,21 +10,27 @@ module.exports = React.createClass({
   mixins: [LinkedStateMixin],
 
   getInitialState: function () {
-    var filters = FilterStore.getFilters();
     return { city: "", placeholder: "Where are you moving?" }
   },
 
   componentDidMount: function () {
     this.filterListener = FilterStore.addListener(this._onChange);
-    ApiUtil.fetchCity();
+    this.sessionListener = SessionStore.addListener(this._onChange);
+    var city = SessionStore.getSession().city;
+    if (city) { return this.setState({placeholder: city})};
   },
 
   _onChange: function () {
-    this.setState({placeholder: FilterStore.getFilters().city});
+    var city = SessionStore.getSession().city;
+    if (city) { return this.setState({placeholder: city})};
+
+    var city = FilterStore.getFilters().city;
+    if (city) { return this.setState({placeholder: city})};
   },
 
   componentWillUnmount: function () {
     this.filterListener.remove();
+    this.sessionListener.remove();
   },
 
   handleButton: function (event) {

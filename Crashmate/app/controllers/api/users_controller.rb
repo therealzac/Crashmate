@@ -25,7 +25,10 @@ class Api::UsersController < ApplicationController
       :city,
       :date,
       :dogs,
-      :term
+      :term,
+      :age,
+      :gender,
+      :occupation
     )
   end
 end

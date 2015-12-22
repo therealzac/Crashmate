@@ -1,5 +1,6 @@
 var ApiActions = require('../actions/apiActions.js');
 module.exports = {
+
   fetchUsers: function () {
     $.ajax({
       url: "api/users",
@@ -60,6 +61,9 @@ module.exports = {
       method: "GET",
       success: function (session) {
         ApiActions.recieveSession(session);
+      },
+      error: function (error) {
+        console.log(error);
       }
     });
   },

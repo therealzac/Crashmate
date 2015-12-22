@@ -1,0 +1,3 @@
+module.exports = {
+  ROOMMATES_RECIEVED: "ROOMMATES_RECIEVED"
+}

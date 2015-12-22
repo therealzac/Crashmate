@@ -1,11 +1,13 @@
 var AppDispatcher = require('../dispatcher/dispatcher.js');
 var SessionConstants = require('../constants/sessionConstants.js');
 var FilterConstants = require('../constants/filterConstants.js');
+var RoommateConstants = require('../constants/RoommateConstants.js');
 
 module.exports = {
+
   recieveUsers: function (users) {
     AppDispatcher.dispatch({
-      actionType: SessionConstants.USERS_RECIEVED,
+      actionType: RoommateConstants.ROOMMATES_RECIEVED,
       users: users
     });
   },
@@ -32,6 +34,12 @@ module.exports = {
   renderSignUpModal: function () {
     AppDispatcher.dispatch({
       actionType: SessionConstants.RENDER_SIGNUP_MODAL
+    });
+  },
+
+  closeModals: function () {
+    AppDispatcher.dispatch({
+      actionType: SessionConstants.CLOSE_MODALS
     });
   },
 

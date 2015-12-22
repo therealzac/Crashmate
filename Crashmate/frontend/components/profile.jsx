@@ -1,21 +1,53 @@
 var React = require('react');
 var SessionStore = require('../stores/session.js');
+var RoommatesStore = require('../stores/roommates.js');
+var ApiUtil = require('../util/apiUtil.js');
 
 module.exports = React.createClass({
   getInitialState: function () {
-    return SessionStore.getSession();
+    return {roommates: []}
   },
 
   componentDidMount: function () {
-    this.sessionListener = SessionStore.addListener(this._onChange);
+    this.roommatesListener = RoommatesStore.addListener(this._onChange);
+    this.historyListener = this.props.history.listen(this._onChange);
+    ApiUtil.fetchUsers();
   },
 
   _onChange: function () {
-    this.setState(SessionStore.getSession());
+    roommates = RoommatesStore.getRoommates();
+    id = parseInt(this.props.params.id)
+    currentProfile = roommates.filter(function (x) {
+      return (x.id === id)
+    });
+
+    this.setState({
+      roommates: roommates,
+      id: id,
+      username: currentProfile[0].username,
+      dogs: currentProfile[0].dogs,
+      cats: currentProfile[0].cats,
+      age: currentProfile[0].age,
+      gender: currentProfile[0].gender,
+      date: currentProfile[0].date,
+      about: currentProfile[0].about,
+      budget: currentProfile[0].budget,
+      term: currentProfile[0].term,
+      occupation: currentProfile[0].occupation,
+      city: currentProfile[0].city
+    });
   },
 
   componentWillUnmount: function () {
-    this.sessionListener.remove();
+    this.roommatesListener.remove();
+  },
+
+  listPets: function () {
+    var pets = [];
+    if (this.state.dogs) { pets.push("dogs")}
+    if (this.state.cats) { pets.push("cats")}
+    if (pets = []) { return "none" };
+    return pets.join(" and ");
   },
 
   render: function () {
@@ -23,8 +55,8 @@ module.exports = React.createClass({
       <main className="show group">
         <header className="show-header">
           <h1>{this.state.username}</h1>
-            <p>25, male</p>
-            <p>Available by 1/16/2016</p>
+            <p>{this.state.age}, {this.state.gender}</p>
+            <p>Available by {this.state.date}</p>
           <button className="show-header-message-button">Message</button>
         </header>
         <section className="show-sidebar">
@@ -33,14 +65,15 @@ module.exports = React.createClass({
           </a>
 
           <div className="profile-info">
-            <p>This will be information contained by this.state.about</p>
+            <p>{this.state.about}</p>
           </div>
 
           <ul className="profile-nav">
-            <li>Budget</li>
-            <li>Minimum Months</li>
-            <li>Occupation</li>
-            <li>Pets</li>
+            <li>Budget: {this.state.budget}</li>
+            <li>Minimum Months: {this.state.term}</li>
+            <li>Occupation: {this.state.occupation}</li>
+            <li>Pets: { this.listPets() }</li>
+            <li>Looking in: {this.state.city}</li>
           </ul>
         </section>
         <section className="show-main">

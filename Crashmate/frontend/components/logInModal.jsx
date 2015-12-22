@@ -1,6 +1,7 @@
 var React = require('react');
 var LinkedStateMixin = require('react-addons-linked-state-mixin');
 var ApiUtil = require('../util/apiUtil.js');
+var ApiActions = require('../actions/apiActions.js');
 var SessionStore = require('../stores/session.js');
 
 module.exports = React.createClass({
@@ -10,11 +11,12 @@ module.exports = React.createClass({
     username: "",
     password: "",
     logInModalOpen: false,
-    message: "Welcome back."
+    message: "Welcome back.",
+    loggingIn: false
   },
 
   getInitialState: function () {
-    return { username: "", password: "", message: "Welcome back."}
+    return { username: "", password: "", message: "Welcome back.", loggingIn: false}
   },
 
   componentDidMount: function () {
@@ -23,11 +25,11 @@ module.exports = React.createClass({
 
   _onChange: function () {
     session = SessionStore.getSession();
-    this.setState({logInModalOpen: session.logInModalOpen, message: session.message});
-    if (session.id){
+    this.setState(session);
+    if (this.state.id && this.state.loggingIn){
       var userUrl = "/users/" + this.state.id;
-      this.setState(this.resetState);
       this.props.history.push(userUrl);
+      this.setState(this.resetState)
     }
   },
 
@@ -39,10 +41,11 @@ module.exports = React.createClass({
     event.preventDefault();
     var user = {username: this.state.username, password: this.state.password}
     ApiUtil.logIn(user);
+    this.setState({loggingIn: true})
   },
 
   handleClose: function () {
-    this.setState({ username: "", password: "", logInModalOpen: false });
+    ApiActions.closeModals();
   },
 
   render: function () {

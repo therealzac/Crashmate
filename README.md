@@ -13,7 +13,7 @@ React.js. Crashmate allows users to:
 
 - [x] Create an account
 - [x] Log in / Log out
-- [ ] Browse all roommates
+- [x] Browse all roommates
 - [x] Filter search results
 - [x] Access roommate show page and contact functionality
 

@@ -11,6 +11,8 @@ module.exports = React.createClass({
   componentDidMount: function () {
     this.sessionListener = SessionStore.addListener(this._onChange);
     ApiUtil.fetchSession();
+    ApiUtil.fetchUsers();
+    ApiUtil.fetchCity();
   },
 
   _onChange: function () {
@@ -25,13 +27,14 @@ module.exports = React.createClass({
     if (event.currentTarget.innerHTML === 'Log Out') {
       ApiUtil.logOut();
       this.props.history.push('/');
+      SessionStore.getSession();
     } else if (event.currentTarget.innerHTML === this.state.session.username) {
       var userUrl = "/users/" + this.state.session.id;
       this.props.history.push(userUrl);
     } else if (event.currentTarget.innerHTML === 'Log In'){
       ApiActions.renderLogInModal();
     } else if (event.currentTarget.innerHTML === 'Sign Up'){
-      ApiUtil.fetchUsers();
+      this.props.history.push('/');
       ApiActions.renderSignUpModal();
     } else if (event.currentTarget.innerHTML === 'Crashmate'){
       this.props.history.push('/');
@@ -40,13 +43,13 @@ module.exports = React.createClass({
 
   render: function () {
     var username = this.state.session.username;
-    var toggle = "Log Out"
-    var messageClass = ""
-    if (typeof username === "undefined") {
+    var toggle = "Log Out";
+    var messageClass = "";
+    if (typeof username === "undefined" || username === "") {
       username = "Sign Up";
       toggle = "Log In";
-      messageClass = "hidden"
-    }
+      messageClass = "hidden";
+    };
     return (
       <header className="header">
         <nav className="header-nav group">
@@ -57,9 +60,9 @@ module.exports = React.createClass({
                 <li className={messageClass}>
                   Messages <strong className="badge">3</strong>
                   <ul className="header-notifications">
-                    <li><a href="#">Example...</a></li>
-                    <li><a href="#">Example...</a></li>
-                    <li><a href="#">Example...</a></li>
+                    <li>Example...</li>
+                    <li>Example...</li>
+                    <li>Example...</li>
                   </ul>
                 </li>
             <li onClick={this.handleClick}>{username}</li>

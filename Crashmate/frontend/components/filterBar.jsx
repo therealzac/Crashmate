@@ -16,7 +16,6 @@ module.exports = React.createClass({
 
   componentDidMount: function () {
     this.filterListener = FilterStore.addListener(this._onChange);
-
   },
 
   _onChange: function () {
@@ -96,7 +95,7 @@ module.exports = React.createClass({
             />
           </div>
 
-          <label className="filter-label">Rent Budget</label>
+          <label className="filter-label">Minimum Rent Budget</label>
           <div className="filter-component">
             <Slider range={{min: 100, max: 3000}}
                     start={[this.state.budget]}
@@ -122,7 +121,7 @@ module.exports = React.createClass({
 
           <label className="filter-label">Maximum Group Size</label>
           <div className="filter-component">
-            <Slider range={{min: 2, max: 6}}
+            <Slider range={{min: 1, max: 6}}
                     start={[this.state.groupSize]}
                     connect="lower"
                     step={1}
