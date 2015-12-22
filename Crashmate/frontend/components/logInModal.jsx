@@ -41,7 +41,7 @@ module.exports = React.createClass({
     event.preventDefault();
     var user = {username: this.state.username, password: this.state.password}
     ApiUtil.logIn(user);
-    this.setState({loggingIn: true})
+    this.setState({loggingIn: true});
   },
 
   handleClose: function () {

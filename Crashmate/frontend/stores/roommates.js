@@ -1,7 +1,7 @@
 var Store = require('flux/utils').Store;
 var AppDispatcher = require('../dispatcher/dispatcher.js');
 var RoommatesStore = new Store(AppDispatcher);
-var RoommateConstants = require('../constants/RoommateConstants.js');
+var RoommateConstants = require('../constants/roommateConstants.js');
 
 var _roommates = [];
 

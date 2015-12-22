@@ -16,7 +16,6 @@ module.exports = React.createClass({
     this.sessionListener = SessionStore.addListener(this._onChange);
     ApiUtil.fetchSession();
     ApiUtil.fetchUsers();
-    ApiUtil.fetchCity();
   },
 
   _onChange: function () {
@@ -51,7 +50,7 @@ module.exports = React.createClass({
     } else if (event.currentTarget.innerHTML === 'Crashmate'){
 
       this.props.history.push('/');
-      
+
     }
   },
 

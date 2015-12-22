@@ -1,7 +1,7 @@
 var React = require('react');
 var LinkedStateMixin = require('react-addons-linked-state-mixin');
-var FilterStore = require('../stores/filters.js');
 var SessionStore = require('../stores/session.js');
+var FilterStore = require('../stores/filters.js');
 var ApiActions = require('../actions/apiActions.js');
 var ApiUtil = require('../util/apiUtil.js');
 
@@ -14,34 +14,41 @@ module.exports = React.createClass({
   },
 
   componentDidMount: function () {
-    this.filterListener = FilterStore.addListener(this._onChange);
     this.sessionListener = SessionStore.addListener(this._onChange);
+    this.filterListener = FilterStore.addListener(this._onChange);
     ApiUtil.fetchCity();
-    
-    var city = SessionStore.getSession().city;
-    if (city) { return this.setState({placeholder: city})};
+
+    var input = (document.getElementById('pac-input'));
+    this.autocomplete = new google.maps.places.Autocomplete(input);
   },
 
   _onChange: function () {
-    var city = SessionStore.getSession().city;
-    if (city) { return this.setState({placeholder: city})};
-
-    var city = FilterStore.getFilters().city;
-    if (city) { return this.setState({placeholder: city})};
+    if (this.state.placeholder === "Where are you moving?"){
+      placeholder = SessionStore.getSession().city;
+      if (typeof placeholder === 'undefined') {
+        placeholder = FilterStore.getFilters().city;
+      }
+      if (typeof placeholder !== 'undefined') {
+        return this.setState({placeholder: placeholder});
+      }
+    }
   },
 
   componentWillUnmount: function () {
-    this.filterListener.remove();
     this.sessionListener.remove();
+    this.filterListener.remove();
   },
 
   handleButton: function (event) {
     event.preventDefault();
-    if (this.state.city !== "") {
-      ApiActions.setFilter({city: this.state.city});
-      this.props.history.push("index");
-    } else if (this.state.placeholder !== "Where are you moving?"){
-      ApiActions.setFilter({city: this.state.placeholder});
+    var city = this.autocomplete.getPlace();
+    if (typeof city !== "undefined") {city = city.formatted_address}
+    else {city = this.state.city}
+
+    if (city === "") {city = this.state.placeholder}
+
+    if (city !== "Where are you moving?"){
+      ApiActions.setFilter({city: city});
       this.props.history.push("index");
     }
   },
@@ -51,7 +58,8 @@ module.exports = React.createClass({
       <main className="content group">
         <section className="content-main">
           <div className="city-input">
-            <input type="text"
+            <input id="pac-input"
+                   type="text"
                    valueLink={this.linkState("city")}
                    placeholder={this.state.placeholder}
             />

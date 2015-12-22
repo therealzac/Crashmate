@@ -15,6 +15,7 @@ module.exports = React.createClass({
   getInitialState: function () {
     filters = FilterStore.getFilters();
     roommates = RoommateStore.getRoommates();
+    session = SessionStore.getSession();
     return {filters: filters, roommates: roommates}
   },
 

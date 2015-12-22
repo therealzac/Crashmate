@@ -16,6 +16,7 @@ module.exports = React.createClass({
 
   resetState: {
     signUpModalOpen: false,
+    backButtonClass: "hidden",
     message: "Need a roommate? We got you.",
     header: "Crashmate",
     label: "",
@@ -24,6 +25,7 @@ module.exports = React.createClass({
     usernameInput: "input",
     usernames: [],
     password: "",
+    confirmPassword: "",
     passwordInput: "input",
     age: 25,
     ageInput: "hidden",
@@ -33,7 +35,6 @@ module.exports = React.createClass({
     occupationInput: "hidden",
     city: "",
     cityInput: "hidden",
-    cityPlaceholder: "Where are you moving?",
     calendarInput: "hidden",
     date: FilterStore.getFilters().date,
     budgetInput: "hidden",
@@ -47,7 +48,6 @@ module.exports = React.createClass({
     amenities: "",
     aboutInput: "hidden",
     about: "",
-    // loggingIn: false
   },
 
   getInitialState: function () {
@@ -56,28 +56,29 @@ module.exports = React.createClass({
 
   componentDidMount: function () {
     this.sessionListener = SessionStore.addListener(this._onChange);
-    this.filtersListener = FilterStore.addListener(this._onChange);
     this.roommatesListener = RoommatesStore.addListener(this._onChange);
   },
 
   _onChange: function () {
     var session = SessionStore.getSession();
     var roommates = RoommatesStore.getRoommates();
-    var filters = FilterStore.getFilters();
     this.setState(session);
     this.setState({roommates: roommates});
-    this.setState({city: filters.city});
   },
 
   componentWillUnmount: function () {
     this.sessionListener.remove();
-    this.filtersListener.remove();
     this.roommatesListener.remove();
   },
 
-  handleButton: function (event) {
+  nextButton: function (event) {
     event.preventDefault();
     this.nextMessage();
+  },
+
+  backButton: function (event) {
+    event.preventDefault();
+    this.previousMessage();
   },
 
   usernameTaken: function (username) {
@@ -134,7 +135,11 @@ module.exports = React.createClass({
   nextMessage: function () {
     // First confirm username entry.
     if (this.state.username === ""){
-      this.setState({message: "What's your name?", password: ""});
+      this.setState({
+        message: "What's your name?",
+        password: "",
+        confirmPassword: ""
+      });
       return;
     }
 
@@ -147,7 +152,8 @@ module.exports = React.createClass({
       this.setState({
         message: newMessage,
         username: "",
-        password: ""
+        password: "",
+        confirmPassword: ""
       });
       return;
     }
@@ -156,7 +162,18 @@ module.exports = React.createClass({
     if (this.state.password.length < 6){
       this.setState({
         message: "Your password must be at least 6 characters.",
-        password: ""
+        password: "",
+        confirmPassword: ""
+      });
+      return;
+    }
+
+    // Confirm passwords match.
+    if (this.state.password !== this.state.confirmPassword){
+      this.setState({
+        message: "Your passwords didn't match.",
+        password: "",
+        confirmPassword: ""
       });
       return;
     }
@@ -182,17 +199,20 @@ module.exports = React.createClass({
         ageInput: "hidden",
         genderInput: "hidden",
         occupationInput: "hidden",
-        cityInput: "input"
+        cityInput: "input",
+        backButtonClass: "back-button"
       });
+
+      // Setup autocomplete functionality for city input.
+      var input = (document.getElementById('autocomplete-input'));
+      this.autocomplete = new google.maps.places.Autocomplete(input);
 
     } else if (this.state.label === "Where are you moving?"){
       if (this.state.city === ""){
-        if (this.state.cityPlaceholder !== "Where are you moving?"){
-          this.setState({city: this.state.cityPlaceholder});
+        if ( this.autocomplete.getPlace() ) {
+          this.setState({ city: this.autocomplete.getPlace().formatted_address })
         } else {
-          this.setState({
-            message: "Please enter a city to continue."
-          })
+          // Rerenders this stage.
           this.nextMessage();
         }
       }
@@ -204,6 +224,7 @@ module.exports = React.createClass({
       });
 
     } else if (this.state.label === "When will you be available to move?"){
+      console.log(this.state);
 
       this.setState({
         label: "What's your budget for rent?",
@@ -271,7 +292,83 @@ module.exports = React.createClass({
         occupation: this.state.occupation
       };
       ApiUtil.createUser(user);
-      ApiActions.renderLogInModal();
+    }
+  },
+
+  previousMessage: function () {
+    if (this.state.label === "Where are you moving?") {
+        newHeader = "Hey, " + this.state.username + ".";
+
+        this.setState({
+          header: newHeader,
+          message: "",
+          label: "Basic info.",
+          usernameInput: "hidden",
+          passwordInput: "hidden",
+          ageInput: "signup-filter-label",
+          genderInput: "signup-filter-label",
+          occupationInput: "signup-filter-label",
+          cityInput: "hidden",
+          backButtonClass: "hidden"
+        });
+
+    } else if (this.state.label === "When will you be available to move?"){
+
+        this.setState({
+          label: "Where are you moving?",
+          ageInput: "hidden",
+          genderInput: "hidden",
+          occupationInput: "hidden",
+          cityInput: "input",
+          calendarInput: "hidden"
+        });
+
+    } else if (this.state.label === "What's your budget for rent?"){
+
+      this.setState({
+        label: "When will you be available to move?",
+        cityInput: "hidden",
+        calendarInput: "signup-filter-label",
+        budgetInput: "hidden"
+      });
+
+    } else if (this.state.label === "How many months can you commit to?"){
+
+      this.setState({
+        label: "What's your budget for rent?",
+        calendarInput: "hidden",
+        budgetInput: "signup-filter-label",
+        termInput: "hidden"
+      });
+
+    } else if (this.state.label === "Do you have any pets?"){
+
+      this.setState({
+        label: "How many months can you commit to?",
+        budgetInput: "hidden",
+        termInput: "signup-filter-label",
+        petInput: "hidden"
+      });
+
+    } else if (this.state.label === "What amenities do you need at your new spot?"){
+
+      this.setState({
+        label: "Do you have any pets?",
+        termInput: "hidden",
+        petInput: "signup-filter-label",
+        amenitiesInput: "hidden"
+      });
+
+    } else if (this.state.label === "Tell your future roommates about yourself."){
+
+      this.setState({
+        header: "Cool.",
+        label: "What amenities do you need at your new spot?",
+        petInput: "hidden",
+        amenitiesInput: "input",
+        aboutInput: "hidden",
+        buttonValue: "Next"
+      });
     }
   },
 
@@ -301,6 +398,11 @@ module.exports = React.createClass({
           <div className={this.state.passwordInput}>
             <label>Password</label>
             <input type="password" valueLink={this.linkState("password")}/>
+          </div>
+
+          <div className={this.state.passwordInput}>
+            <label>Confirm Password</label>
+            <input type="password" valueLink={this.linkState("confirmPassword")}/>
           </div>
 
           <div className={this.state.ageInput}>
@@ -341,9 +443,9 @@ module.exports = React.createClass({
           </div>
 
           <div className={this.state.cityInput}>
-            <input type="text"
-                   valueLink={this.linkState("city")}
-                   placeholder={this.state.cityPlaceholder}
+            <input id="autocomplete-input"
+                   type="text"
+                   placeholder="Enter a location"
             />
           </div>
 
@@ -398,7 +500,8 @@ module.exports = React.createClass({
           </div>
 
           <div className="submit">
-            <button onClick={this.handleButton}>{this.state.buttonValue}</button>
+            <button onClick={this.nextButton}>{this.state.buttonValue}</button>
+            <button onClick={this.backButton} className={this.state.backButtonClass}>Back</button>
           </div>
 
         </form>

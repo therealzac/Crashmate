@@ -11,12 +11,12 @@ module.exports = React.createClass({
 
   render: function () {
     return(
-      <li onClick={this.showProfile} className="index-item">
+      <ul onClick={this.showProfile} className="index-item">
           <img className="profile-picture" src="https://thebenclark.files.wordpress.com/2014/03/facebook-default-no-profile-pic.jpg"/>
-          <span className="index-item-detail">{this.props.name}</span>
-          <span className="index-item-detail">Age: {this.props.age}</span>
-          <span className="index-item-detail">Total Budget: ${this.props.totalBudget}</span>
-      </li>
+          <li className="index-item-detail">{this.props.name}</li>
+          <li className="index-item-detail">Age: {this.props.age}</li>
+          <li className="index-item-detail">Budget: ${this.props.totalBudget}</li>
+      </ul>
     );
   }
 });

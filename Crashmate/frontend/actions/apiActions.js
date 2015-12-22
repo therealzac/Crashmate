@@ -1,7 +1,7 @@
 var AppDispatcher = require('../dispatcher/dispatcher.js');
 var SessionConstants = require('../constants/sessionConstants.js');
 var FilterConstants = require('../constants/filterConstants.js');
-var RoommateConstants = require('../constants/RoommateConstants.js');
+var RoommateConstants = require('../constants/roommateConstants.js');
 
 module.exports = {
 

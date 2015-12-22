@@ -1,6 +1,7 @@
 var React = require('react');
 var ApiActions = require('../actions/apiActions.js');
 var FilterStore = require('../stores/filters.js');
+var SessionStore = require('../stores/session.js');
 var LinkedStateMixin = require('react-addons-linked-state-mixin');
 var Slider = require('react-nouislider');
 var Calendar = require('react-input-calendar');
@@ -11,15 +12,26 @@ module.exports = React.createClass({
   mixins: [LinkedStateMixin],
 
   getInitialState: function () {
-    return FilterStore.getFilters();
+    filters = FilterStore.getFilters();
+    session = SessionStore.getSession();
+    if (session.budget) {
+      filters.sessionBudget = session.budget
+    };
+    return filters;
   },
 
   componentDidMount: function () {
     this.filterListener = FilterStore.addListener(this._onChange);
+    this.sessionListener = SessionStore.addListener(this._onChange);
   },
 
   _onChange: function () {
-    this.setState(FilterStore.getFilters());
+    filters = FilterStore.getFilters();
+    session = SessionStore.getSession();
+    if (session.budget) {
+      filters.sessionBudget = session.budget
+    };
+    this.setState(filters);
   },
 
   componentWillUnmount: function () {

@@ -260,6 +260,10 @@ p{
   box-shadow: none;
 }
 
+.back-button {
+  float: right;
+}
+
 .button-alternative {
   padding: 0 0 0 5px;
 }
@@ -378,11 +382,15 @@ p{
   z-index: 2;
 }
 
+.pac-container{
+  z-index: 2000;
+}
+
 .modal-form {
   position: absolute;
   top: 100px;
   left: 50%;
-  margin-left: -280px;
+  margin-left: -26%;
   width: 480px;
   padding: 20px;
   background: #fff;
@@ -466,7 +474,7 @@ p{
   float: left;
   margin-top: 2%;
   margin-bottom: 10%;
-  margin-right: 20%;
+  margin-right: 21%;
 }
 
 .index-item:hover {
@@ -477,6 +485,7 @@ p{
 .index-main > h2 {
   font-size: 24px;
   font-weight: 300;
+  width: 77%;
   margin: 5%;
   text-align: center;
   border-bottom: 1px solid #ccc;
