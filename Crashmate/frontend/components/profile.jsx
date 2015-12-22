@@ -5,20 +5,26 @@ var ApiUtil = require('../util/apiUtil.js');
 
 module.exports = React.createClass({
   getInitialState: function () {
-    return {roommates: []}
+    return SessionStore.getSession();
   },
 
   componentDidMount: function () {
     this.roommatesListener = RoommatesStore.addListener(this._onChange);
+    this.sessionListener = SessionStore.addListener(this._onChange);
+
+    // Allows for transitioning back to user profile page.
     this.historyListener = this.props.history.listen(this._onChange);
+
+
     ApiUtil.fetchUsers();
   },
 
   _onChange: function () {
     roommates = RoommatesStore.getRoommates();
     id = parseInt(this.props.params.id)
-    currentProfile = roommates.filter(function (x) {
-      return (x.id === id)
+
+    currentProfile = roommates.filter(function (roommate) {
+      return (roommate.id === id)
     });
 
     this.setState({
@@ -34,19 +40,21 @@ module.exports = React.createClass({
       budget: currentProfile[0].budget,
       term: currentProfile[0].term,
       occupation: currentProfile[0].occupation,
-      city: currentProfile[0].city
+      city: currentProfile[0].city,
+      amenities: currentProfile[0].amenities
     });
   },
 
   componentWillUnmount: function () {
     this.roommatesListener.remove();
+    this.sessionListener.remove();
   },
 
   listPets: function () {
     var pets = [];
     if (this.state.dogs) { pets.push("dogs")}
     if (this.state.cats) { pets.push("cats")}
-    if (pets = []) { return "none" };
+    if ( pets.length === 0 ) { return "none" };
     return pets.join(" and ");
   },
 
@@ -74,6 +82,7 @@ module.exports = React.createClass({
             <li>Occupation: {this.state.occupation}</li>
             <li>Pets: { this.listPets() }</li>
             <li>Looking in: {this.state.city}</li>
+            <li>Amenities required: {this.state.amenities}</li>
           </ul>
         </section>
         <section className="show-main">

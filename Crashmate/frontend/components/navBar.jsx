@@ -2,8 +2,12 @@ var React = require('react');
 var SessionStore = require('../stores/session.js');
 var ApiUtil = require('../util/apiUtil.js');
 var ApiActions = require('../actions/apiActions.js');
+var History = require('react-router').History;
+
 
 module.exports = React.createClass({
+  mixins: [History],
+
   getInitialState: function () {
     return {session: SessionStore.getSession()}
   },
@@ -25,19 +29,29 @@ module.exports = React.createClass({
 
   handleClick: function (event) {
     if (event.currentTarget.innerHTML === 'Log Out') {
+
       ApiUtil.logOut();
       this.props.history.push('/');
       SessionStore.getSession();
+
     } else if (event.currentTarget.innerHTML === this.state.session.username) {
+
       var userUrl = "/users/" + this.state.session.id;
-      this.props.history.push(userUrl);
+      this.props.history.pushState(null, userUrl, {id: this.state.session.id});
+
     } else if (event.currentTarget.innerHTML === 'Log In'){
+
       ApiActions.renderLogInModal();
+
     } else if (event.currentTarget.innerHTML === 'Sign Up'){
+
       this.props.history.push('/');
       ApiActions.renderSignUpModal();
+
     } else if (event.currentTarget.innerHTML === 'Crashmate'){
+
       this.props.history.push('/');
+      
     }
   },
 

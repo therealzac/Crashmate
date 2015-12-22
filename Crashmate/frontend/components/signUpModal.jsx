@@ -47,7 +47,7 @@ module.exports = React.createClass({
     amenities: "",
     aboutInput: "hidden",
     about: "",
-    loggingIn: false
+    // loggingIn: false
   },
 
   getInitialState: function () {
@@ -67,11 +67,6 @@ module.exports = React.createClass({
     this.setState(session);
     this.setState({roommates: roommates});
     this.setState({city: filters.city});
-    if (this.state.id && this.state.loggingIn){
-      var userUrl = "/users/" + this.state.id;
-      this.props.history.push(userUrl);
-      this.setState(this.resetState)
-    }
   },
 
   componentWillUnmount: function () {
@@ -276,7 +271,7 @@ module.exports = React.createClass({
         occupation: this.state.occupation
       };
       ApiUtil.createUser(user);
-      this.setState({loggingIn: true})
+      ApiActions.renderLogInModal();
     }
   },
 

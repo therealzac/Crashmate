@@ -14,6 +14,7 @@ module.exports = React.createClass({
       <li onClick={this.showProfile} className="index-item">
           <img className="profile-picture" src="https://thebenclark.files.wordpress.com/2014/03/facebook-default-no-profile-pic.jpg"/>
           <span className="index-item-detail">{this.props.name}</span>
+          <span className="index-item-detail">Age: {this.props.age}</span>
           <span className="index-item-detail">Total Budget: ${this.props.totalBudget}</span>
       </li>
     );

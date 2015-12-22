@@ -3,6 +3,7 @@ var ApiActions = require('../actions/apiActions.js');
 var ApiUtil = require('../util/apiUtil.js');
 var FilterStore = require('../stores/filters.js');
 var RoommateStore = require('../stores/roommates.js');
+var SessionStore = require('../stores/session.js');
 var LinkedStateMixin = require('react-addons-linked-state-mixin');
 var FilterBar = require('./filterBar.jsx');
 var IndexItem = require('./indexItem.jsx');
@@ -20,6 +21,7 @@ module.exports = React.createClass({
   componentDidMount: function () {
     this.filterListener = FilterStore.addListener(this._onChange);
     this.roommateListener = RoommateStore.addListener(this._onChange);
+    this.sessionListener = SessionStore.addListener(this._onChange);
   },
 
   _onChange: function () {
@@ -28,33 +30,39 @@ module.exports = React.createClass({
     this.setState({filters: filters, roommates: roommates});
   },
 
+  componentWillUnmount: function () {
+    this.filterListener.remove();
+    this.roommateListener.remove();
+    this.sessionListener.remove();
+  },
+
   filteredRoommates: function () {
     var all = this.state.roommates;
 
     var minAge = this.state.filters.ageRange[0];
     var maxAge = this.state.filters.ageRange[1];
-    var correctAge = all.filter(function (x) {
-      return (x.age >= minAge && x.age <= maxAge)
+    var correctAge = all.filter(function (roommate) {
+      return (roommate.age >= minAge && roommate.age <= maxAge)
     });
 
     var minBudget = this.state.filters.budget;
-    var correctBudget = correctAge.filter(function (x) {
-      return (x.budget >= minBudget)
+    var correctBudget = correctAge.filter(function (roommate) {
+      return (roommate.budget >= minBudget)
     });
 
     if (this.state.filters.cats) {
       var correctCats = correctBudget;
     } else {
-      var correctCats = correctBudget.filter(function (x) {
-        return (!x.cats)
+      var correctCats = correctBudget.filter(function (roommate) {
+        return (!roommate.cats)
       });
     }
 
     if (this.state.filters.dogs) {
       var correctDogs = correctCats;
     } else {
-      var correctDogs = correctCats.filter(function (x) {
-        return (!x.dogs)
+      var correctDogs = correctCats.filter(function (roommate) {
+        return (!roommate.dogs)
       });
     }
 
@@ -62,8 +70,8 @@ module.exports = React.createClass({
     if (genderPreference === "Both") {
       var correctGender = correctDogs;
     } else {
-      var correctGender = correctDogs.filter(function (x) {
-        return (x.gender === genderPreference)
+      var correctGender = correctDogs.filter(function (roommate) {
+        return (roommate.gender === genderPreference)
       });
     }
 
@@ -71,23 +79,28 @@ module.exports = React.createClass({
     if (occupationPreference === "Both") {
       var correctOccupation = correctGender;
     } else {
-      var correctOccupation = correctGender.filter(function (x) {
-        return (x.occupation === occupationPreference)
+      var correctOccupation = correctGender.filter(function (roommate) {
+        return (roommate.occupation === occupationPreference)
       });
     }
 
     var minTerm = this.state.filters.term;
-    var correctTerm = correctOccupation.filter(function (x) {
-      return (x.term >= minTerm)
+    var correctTerm = correctOccupation.filter(function (roommate) {
+      return (roommate.term >= minTerm)
     });
 
     var minDate = new Date(this.state.filters.date);
-    var correctDate = correctTerm.filter(function(x){
-      var thisDate = new Date(x.date)
-      return(thisDate <= minDate)
+    var correctDate = correctTerm.filter(function(roommate){
+      var thisDate = new Date(roommate.date)
+      return (thisDate <= minDate)
     });
 
-    return correctDate;
+    var withoutSelf = correctTerm.filter(function (roommate) {
+      session = SessionStore.getSession();
+      return (roommate.id !== session.id)
+    });
+
+    return withoutSelf;
   },
 
   render: function () {
@@ -102,6 +115,7 @@ module.exports = React.createClass({
                   <IndexItem key={roommate.id}
                                   id={roommate.id}
                                   name={roommate.username}
+                                  age={roommate.age}
                                   totalBudget={roommate.budget}
                          />
               )

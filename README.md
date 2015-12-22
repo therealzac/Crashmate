@@ -47,15 +47,13 @@ Profile button with their profile picture, and a Log_Out button.
 Phase 2 will be spent tackling the index page. This will feature the Nav_Bar
 and a Filter_Bar component that users can interface with to update search results
 rapidly. The filter bar will have the following React components:
-- [ ] Age_Slider with 2 sliding handles,
-- [ ] Monthly_Budget_Slider with 1 handle,
-- [ ] Minimum_Stay_Slider with 1 handle,
-- [ ] Move_In_Date_Calendar interface,
-- [ ] Gender_Selector,
-- [ ] Occupation_Selector,
-- [ ] Smoker_Selector,
-- [ ] Orientation_Selector,
-- [ ] Pets_Selector.
+- [x] Age_Slider with 2 sliding handles,
+- [x] Monthly_Budget_Slider with 1 handle,
+- [x] Minimum_Stay_Slider with 1 handle,
+- [x] Move_In_Date_Calendar interface,
+- [x] Gender_Selector,
+- [x] Occupation_Selector,
+- [x] Pets_Selector.
 
 The index page will also have an Index component of all roommates that satisfy
 the search criteria detailed by the filter bar. This index will be populated by
@@ -112,10 +110,10 @@ All remaining time will be spent making sure these features work well, and that
 the user experience is as pleasant and impressive as possible.
 
 ### Bonus Features (TBD)
-- [ ] Add a 'log in with Facebook' feature.
-- [ ] Allow users to like properties.
 - [ ] Add support for couples looking for roommate(s).
 - [ ] Add support for groups of several roommates.
+- [ ] Add a 'log in with Facebook' feature.
+- [ ] Allow users to like properties.
 
 [phase-one]: ./docs/phases/phase1.md
 [phase-two]: ./docs/phases/phase2.md

@@ -24336,9 +24336,12 @@
 	var SessionStore = __webpack_require__(210);
 	var ApiUtil = __webpack_require__(232);
 	var ApiActions = __webpack_require__(233);
+	var History = __webpack_require__(159).History;
 
 	module.exports = React.createClass({
 	  displayName: 'exports',
+
+	  mixins: [History],
 
 	  getInitialState: function () {
 	    return { session: SessionStore.getSession() };
@@ -24361,18 +24364,23 @@
 
 	  handleClick: function (event) {
 	    if (event.currentTarget.innerHTML === 'Log Out') {
+
 	      ApiUtil.logOut();
 	      this.props.history.push('/');
 	      SessionStore.getSession();
 	    } else if (event.currentTarget.innerHTML === this.state.session.username) {
+
 	      var userUrl = "/users/" + this.state.session.id;
-	      this.props.history.push(userUrl);
+	      this.props.history.pushState(null, userUrl, { id: this.state.session.id });
 	    } else if (event.currentTarget.innerHTML === 'Log In') {
+
 	      ApiActions.renderLogInModal();
 	    } else if (event.currentTarget.innerHTML === 'Sign Up') {
+
 	      this.props.history.push('/');
 	      ApiActions.renderSignUpModal();
 	    } else if (event.currentTarget.innerHTML === 'Crashmate') {
+
 	      this.props.history.push('/');
 	    }
 	  },
@@ -31858,10 +31866,10 @@
 	    amenitiesInput: "hidden",
 	    amenities: "",
 	    aboutInput: "hidden",
-	    about: "",
-	    loggingIn: false
+	    about: ""
 	  },
 
+	  // loggingIn: false
 	  getInitialState: function () {
 	    return this.resetState;
 	  },
@@ -31879,11 +31887,6 @@
 	    this.setState(session);
 	    this.setState({ roommates: roommates });
 	    this.setState({ city: filters.city });
-	    if (this.state.id && this.state.loggingIn) {
-	      var userUrl = "/users/" + this.state.id;
-	      this.props.history.push(userUrl);
-	      this.setState(this.resetState);
-	    }
 	  },
 
 	  componentWillUnmount: function () {
@@ -32080,7 +32083,7 @@
 	        occupation: this.state.occupation
 	      };
 	      ApiUtil.createUser(user);
-	      this.setState({ loggingIn: true });
+	      ApiActions.renderLogInModal();
 	    }
 	  },
 
@@ -63748,6 +63751,8 @@
 	  componentDidMount: function () {
 	    this.filterListener = FilterStore.addListener(this._onChange);
 	    this.sessionListener = SessionStore.addListener(this._onChange);
+	    ApiUtil.fetchCity();
+
 	    var city = SessionStore.getSession().city;
 	    if (city) {
 	      return this.setState({ placeholder: city });
@@ -63820,6 +63825,7 @@
 	var ApiUtil = __webpack_require__(232);
 	var FilterStore = __webpack_require__(241);
 	var RoommateStore = __webpack_require__(591);
+	var SessionStore = __webpack_require__(210);
 	var LinkedStateMixin = __webpack_require__(236);
 	var FilterBar = __webpack_require__(586);
 	var IndexItem = __webpack_require__(590);
@@ -63838,6 +63844,7 @@
 	  componentDidMount: function () {
 	    this.filterListener = FilterStore.addListener(this._onChange);
 	    this.roommateListener = RoommateStore.addListener(this._onChange);
+	    this.sessionListener = SessionStore.addListener(this._onChange);
 	  },
 
 	  _onChange: function () {
@@ -63846,33 +63853,39 @@
 	    this.setState({ filters: filters, roommates: roommates });
 	  },
 
+	  componentWillUnmount: function () {
+	    this.filterListener.remove();
+	    this.roommateListener.remove();
+	    this.sessionListener.remove();
+	  },
+
 	  filteredRoommates: function () {
 	    var all = this.state.roommates;
 
 	    var minAge = this.state.filters.ageRange[0];
 	    var maxAge = this.state.filters.ageRange[1];
-	    var correctAge = all.filter(function (x) {
-	      return x.age >= minAge && x.age <= maxAge;
+	    var correctAge = all.filter(function (roommate) {
+	      return roommate.age >= minAge && roommate.age <= maxAge;
 	    });
 
 	    var minBudget = this.state.filters.budget;
-	    var correctBudget = correctAge.filter(function (x) {
-	      return x.budget >= minBudget;
+	    var correctBudget = correctAge.filter(function (roommate) {
+	      return roommate.budget >= minBudget;
 	    });
 
 	    if (this.state.filters.cats) {
 	      var correctCats = correctBudget;
 	    } else {
-	      var correctCats = correctBudget.filter(function (x) {
-	        return !x.cats;
+	      var correctCats = correctBudget.filter(function (roommate) {
+	        return !roommate.cats;
 	      });
 	    }
 
 	    if (this.state.filters.dogs) {
 	      var correctDogs = correctCats;
 	    } else {
-	      var correctDogs = correctCats.filter(function (x) {
-	        return !x.dogs;
+	      var correctDogs = correctCats.filter(function (roommate) {
+	        return !roommate.dogs;
 	      });
 	    }
 
@@ -63880,8 +63893,8 @@
 	    if (genderPreference === "Both") {
 	      var correctGender = correctDogs;
 	    } else {
-	      var correctGender = correctDogs.filter(function (x) {
-	        return x.gender === genderPreference;
+	      var correctGender = correctDogs.filter(function (roommate) {
+	        return roommate.gender === genderPreference;
 	      });
 	    }
 
@@ -63889,23 +63902,28 @@
 	    if (occupationPreference === "Both") {
 	      var correctOccupation = correctGender;
 	    } else {
-	      var correctOccupation = correctGender.filter(function (x) {
-	        return x.occupation === occupationPreference;
+	      var correctOccupation = correctGender.filter(function (roommate) {
+	        return roommate.occupation === occupationPreference;
 	      });
 	    }
 
 	    var minTerm = this.state.filters.term;
-	    var correctTerm = correctOccupation.filter(function (x) {
-	      return x.term >= minTerm;
+	    var correctTerm = correctOccupation.filter(function (roommate) {
+	      return roommate.term >= minTerm;
 	    });
 
 	    var minDate = new Date(this.state.filters.date);
-	    var correctDate = correctTerm.filter(function (x) {
-	      var thisDate = new Date(x.date);
+	    var correctDate = correctTerm.filter(function (roommate) {
+	      var thisDate = new Date(roommate.date);
 	      return thisDate <= minDate;
 	    });
 
-	    return correctDate;
+	    var withoutSelf = correctTerm.filter(function (roommate) {
+	      session = SessionStore.getSession();
+	      return roommate.id !== session.id;
+	    });
+
+	    return withoutSelf;
 	  },
 
 	  render: function () {
@@ -63929,6 +63947,7 @@
 	            return React.createElement(IndexItem, { key: roommate.id,
 	              id: roommate.id,
 	              name: roommate.username,
+	              age: roommate.age,
 	              totalBudget: roommate.budget
 	            });
 	          })
@@ -64267,20 +64286,25 @@
 	  displayName: 'exports',
 
 	  getInitialState: function () {
-	    return { roommates: [] };
+	    return SessionStore.getSession();
 	  },
 
 	  componentDidMount: function () {
 	    this.roommatesListener = RoommatesStore.addListener(this._onChange);
+	    this.sessionListener = SessionStore.addListener(this._onChange);
+
+	    // Allows for transitioning back to user profile page.
 	    this.historyListener = this.props.history.listen(this._onChange);
+
 	    ApiUtil.fetchUsers();
 	  },
 
 	  _onChange: function () {
 	    roommates = RoommatesStore.getRoommates();
 	    id = parseInt(this.props.params.id);
-	    currentProfile = roommates.filter(function (x) {
-	      return x.id === id;
+
+	    currentProfile = roommates.filter(function (roommate) {
+	      return roommate.id === id;
 	    });
 
 	    this.setState({
@@ -64296,12 +64320,14 @@
 	      budget: currentProfile[0].budget,
 	      term: currentProfile[0].term,
 	      occupation: currentProfile[0].occupation,
-	      city: currentProfile[0].city
+	      city: currentProfile[0].city,
+	      amenities: currentProfile[0].amenities
 	    });
 	  },
 
 	  componentWillUnmount: function () {
 	    this.roommatesListener.remove();
+	    this.sessionListener.remove();
 	  },
 
 	  listPets: function () {
@@ -64312,7 +64338,7 @@
 	    if (this.state.cats) {
 	      pets.push("cats");
 	    }
-	    if (pets = []) {
+	    if (pets.length === 0) {
 	      return "none";
 	    };
 	    return pets.join(" and ");
@@ -64398,6 +64424,12 @@
 	            null,
 	            'Looking in: ',
 	            this.state.city
+	          ),
+	          React.createElement(
+	            'li',
+	            null,
+	            'Amenities required: ',
+	            this.state.amenities
 	          )
 	        )
 	      ),
@@ -64449,6 +64481,12 @@
 	        'span',
 	        { className: 'index-item-detail' },
 	        this.props.name
+	      ),
+	      React.createElement(
+	        'span',
+	        { className: 'index-item-detail' },
+	        'Age: ',
+	        this.props.age
 	      ),
 	      React.createElement(
 	        'span',

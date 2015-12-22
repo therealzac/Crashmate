@@ -16,6 +16,8 @@ module.exports = React.createClass({
   componentDidMount: function () {
     this.filterListener = FilterStore.addListener(this._onChange);
     this.sessionListener = SessionStore.addListener(this._onChange);
+    ApiUtil.fetchCity();
+    
     var city = SessionStore.getSession().city;
     if (city) { return this.setState({placeholder: city})};
   },

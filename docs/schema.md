@@ -22,6 +22,27 @@ available_date  | date      | not null
 age             | integer   | not null
 gender          | boolean   | not null
 occupation      | boolean   | not null
-pets            | boolean   | not null
-dog_preference  | boolean   | not null
-cat_preference  | boolean   | not null
+dogs            | boolean   | not null
+cats            | boolean   | not null
+
+## messages, 3rd phase
+column name     | data type | details
+----------------|-----------|-----------------------
+id              | integer   | not null, primary key
+type            | string    | not null
+body            | string    |
+sender_id       | integer   | not null, foreign key
+reciever_id     | integer   | not null foreign key
+
+
+## groups, 4th phase
+column name     | data type | details
+----------------|-----------|-----------------------
+id              | integer   | not null, primary key
+
+## group memberships, 4th phase
+column name     | data type | details
+----------------|-----------|-----------------------
+id              | integer   | not null, primary key
+member_id       | integer   | not null, foreign key
+group_id        | integer   | not null, foreign key
