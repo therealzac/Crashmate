@@ -37,6 +37,24 @@ module.exports = {
     });
   },
 
+  renderMessenger: function () {
+    AppDispatcher.dispatch({
+      actionType: SessionConstants.RENDER_MESSENGER
+    });
+  },
+
+  renderOpaque: function () {
+    AppDispatcher.dispatch({
+      actionType: SessionConstants.RENDER_OPAQUE_NAV_BAR
+    });
+  },
+
+  renderTransparent: function () {
+    AppDispatcher.dispatch({
+      actionType: SessionConstants.RENDER_TRANSPARENT_NAV_BAR
+    })
+  },
+
   closeModals: function () {
     AppDispatcher.dispatch({
       actionType: SessionConstants.CLOSE_MODALS

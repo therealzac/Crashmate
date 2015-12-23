@@ -127,7 +127,8 @@ module.exports = React.createClass({
     this.setState({dogs: newState});
   },
 
-  handleClose: function () {
+  handleClose: function (event) {
+    event.preventDefault;
     this.setState(this.resetState);
     ApiActions.closeModals();
   },
@@ -224,7 +225,6 @@ module.exports = React.createClass({
       });
 
     } else if (this.state.label === "When will you be available to move?"){
-      console.log(this.state);
 
       this.setState({
         label: "What's your budget for rent?",
@@ -275,7 +275,7 @@ module.exports = React.createClass({
         return;
       }
 
-      // Create new user and push index page to url history.
+      // Create new user after signup.
       var user = {
         username: this.state.username,
         password: this.state.password,
@@ -292,6 +292,7 @@ module.exports = React.createClass({
         occupation: this.state.occupation
       };
       ApiUtil.createUser(user);
+      this.setState(this.resetState)
     }
   },
 

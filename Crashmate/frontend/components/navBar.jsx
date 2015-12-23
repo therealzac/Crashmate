@@ -46,6 +46,7 @@ module.exports = React.createClass({
 
       this.props.history.push('/');
       ApiActions.renderSignUpModal();
+      ApiUtil.fetchUsers();
 
     } else if (event.currentTarget.innerHTML === 'Crashmate'){
 
@@ -64,7 +65,7 @@ module.exports = React.createClass({
       messageClass = "hidden";
     };
     return (
-      <header className="header">
+      <header className={this.state.session.navBar}>
         <nav className="header-nav group">
 
           <h1 className="header-logo" onClick={this.handleClick}>Crashmate</h1>

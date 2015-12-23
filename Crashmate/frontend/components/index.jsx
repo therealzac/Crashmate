@@ -16,19 +16,25 @@ module.exports = React.createClass({
     filters = FilterStore.getFilters();
     roommates = RoommateStore.getRoommates();
     session = SessionStore.getSession();
-    return {filters: filters, roommates: roommates}
+    return {filters: filters, roommates: roommates, page: 0, city: session.city}
   },
 
   componentDidMount: function () {
     this.filterListener = FilterStore.addListener(this._onChange);
     this.roommateListener = RoommateStore.addListener(this._onChange);
     this.sessionListener = SessionStore.addListener(this._onChange);
+    ApiUtil.fetchCity();
+    ApiActions.renderOpaque();
   },
 
   _onChange: function () {
     filters = FilterStore.getFilters();
     roommates = RoommateStore.getRoommates();
-    this.setState({filters: filters, roommates: roommates});
+    session = SessionStore.getSession();
+
+    city  = (session.city ? session.city : filters.city);
+    this.setState({filters: filters, roommates: roommates, page: 0, city: city});
+
   },
 
   componentWillUnmount: function () {
@@ -96,7 +102,7 @@ module.exports = React.createClass({
       return (thisDate <= minDate)
     });
 
-    var withoutSelf = correctTerm.filter(function (roommate) {
+    var withoutSelf = correctDate.filter(function (roommate) {
       session = SessionStore.getSession();
       return (roommate.id !== session.id)
     });
@@ -105,11 +111,14 @@ module.exports = React.createClass({
   },
 
   render: function () {
+    all = this.filteredRoommates();
+    numPages = Math.floor(all.length / 12) + 1;
+    thisPage = all.slice(this.state.page, this.state.page + 12);
     return(
       <main className="index group">
         <FilterBar/>
         <section className="index-main">
-          <h2>Roommates in {this.state.filters.city}</h2>
+          <h2>Roommates in {this.state.city}</h2>
           <ul>
             {this.filteredRoommates().map(function (roommate) {
               return (
@@ -118,7 +127,7 @@ module.exports = React.createClass({
                                   name={roommate.username}
                                   age={roommate.age}
                                   totalBudget={roommate.budget}
-                         />
+                  />
               )
             })}
           </ul>

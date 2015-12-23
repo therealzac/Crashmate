@@ -10,12 +10,16 @@ module.exports = React.createClass({
   mixins: [LinkedStateMixin],
 
   getInitialState: function () {
-    return { city: "", placeholder: "Where are you moving?" }
+    session = SessionStore.getSession();
+    placeholder = (session.city ? session.city : "Where are you moving?")
+    return { city: "", placeholder: placeholder }
   },
 
   componentDidMount: function () {
     this.sessionListener = SessionStore.addListener(this._onChange);
     this.filterListener = FilterStore.addListener(this._onChange);
+
+    ApiActions.renderTransparent();
     ApiUtil.fetchCity();
 
     var input = (document.getElementById('pac-input'));
@@ -42,21 +46,22 @@ module.exports = React.createClass({
   handleButton: function (event) {
     event.preventDefault();
     var city = this.autocomplete.getPlace();
+
     if (typeof city !== "undefined") {city = city.formatted_address}
     else {city = this.state.city}
 
-    if (city === "") {city = this.state.placeholder}
-
-    if (city !== "Where are you moving?"){
+    if (city !== ""){
       ApiActions.setFilter({city: city});
-      this.props.history.push("index");
     }
+    this.props.history.push("index");
+
   },
 
   render: function () {
     return(
       <main className="content group">
         <section className="content-main">
+        <h1>Find Roommates Anywhere.</h1>
           <div className="city-input">
             <input id="pac-input"
                    type="text"

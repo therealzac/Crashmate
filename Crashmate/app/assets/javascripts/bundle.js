@@ -24378,6 +24378,7 @@
 
 	      this.props.history.push('/');
 	      ApiActions.renderSignUpModal();
+	      ApiUtil.fetchUsers();
 	    } else if (event.currentTarget.innerHTML === 'Crashmate') {
 
 	      this.props.history.push('/');
@@ -24395,7 +24396,7 @@
 	    };
 	    return React.createElement(
 	      'header',
-	      { className: 'header' },
+	      { className: this.state.session.navBar },
 	      React.createElement(
 	        'nav',
 	        { className: 'header-nav group' },
@@ -24477,6 +24478,7 @@
 	firstOfNextMonth = new Date().getMoveDate();
 
 	var _session = {
+	  username: "",
 	  about: "",
 	  age: 25,
 	  amenities: "",
@@ -24486,11 +24488,12 @@
 	  dogs: true,
 	  gender: "Both",
 	  id: null,
-	  logInModalOpen: false,
-	  occupation: "Both",
-	  signUpModalOpen: false,
 	  term: null,
-	  username: ""
+	  occupation: "Both",
+	  logInModalOpen: false,
+	  signUpModalOpen: false,
+	  messengerOpen: false,
+	  navBar: "header"
 	};
 
 	SessionStore.__onDispatch = function (payload) {
@@ -24516,6 +24519,20 @@
 	      SessionStore.__emitChange();
 	      break;
 
+	    case SessionConstants.RENDER_MESSENGER:
+	      openMessenger();
+	      SessionStore.__emitChange();
+	      break;
+
+	    case SessionConstants.RENDER_OPAQUE_NAV_BAR:
+	      opaqueNavBar();
+	      SessionStore.__emitChange();
+	      break;
+
+	    case SessionConstants.RENDER_TRANSPARENT_NAV_BAR:
+	      transparentNavBar();
+	      SessionStore.__emitChange();
+
 	    case SessionConstants.CLOSE_MODALS:
 	      closeModals();
 	      SessionStore.__emitChange();
@@ -24532,11 +24549,16 @@
 	closeModals = function () {
 	  _session.logInModalOpen = false;
 	  _session.signUpModalOpen = false;
+	  _session.messengerOpen = false;
 	};
 
 	setSession = function (session) {
+	  var navBars = _session.navBar;
+
 	  _session = session;
+
 	  closeModals();
+	  _session.navBar = navBars;
 	};
 
 	clearSession = function () {
@@ -24544,6 +24566,7 @@
 	    logInModalOpen: false,
 	    signUpModalOpen: false,
 	    signUpModalOpen: false,
+	    messengerOpen: false,
 	    message: "Need a roommate? We got you.",
 	    header: "Crashmate",
 	    label: "",
@@ -24589,6 +24612,18 @@
 	openSignUpModal = function () {
 	  _session.signUpModalOpen = true;
 	  _session.message = "Need a roommate? We got you.";
+	};
+
+	openMessenger = function () {
+	  _session.messengerOpen = true;
+	};
+
+	opaqueNavBar = function () {
+	  _session.navBar = "header-opaque";
+	};
+
+	transparentNavBar = function () {
+	  _session.navBar = "header";
 	};
 
 	invalidEntry = function (error) {
@@ -31289,6 +31324,9 @@
 	  SESSION_DESTROYED: "SESSION_DESTROYED",
 	  RENDER_SIGNUP_MODAL: "RENDER_SIGNUP_MODAL",
 	  RENDER_LOGIN_MODAL: "RENDER_LOGIN_MODAL",
+	  RENDER_MESSENGER: "RENDER_MESSENGER",
+	  RENDER_OPAQUE_NAV_BAR: "RENDER_OPAQUE_NAV_BAR",
+	  RENDER_TRANSPARENT_NAV_BAR: "RENDER_TRANSPARENT_NAV_BAR",
 	  CLOSE_MODALS: "CLOSE_MODALS",
 	  INVALID_ENTRY: "INVALID_ENTRY"
 	};
@@ -31396,6 +31434,7 @@
 	        ApiActions.logIn(user);
 	      },
 	      error: function (error) {
+	        console.log(error);
 	        ApiActions.invalidEntry(error);
 	      }
 	    });
@@ -31500,6 +31539,24 @@
 	    });
 	  },
 
+	  renderMessenger: function () {
+	    AppDispatcher.dispatch({
+	      actionType: SessionConstants.RENDER_MESSENGER
+	    });
+	  },
+
+	  renderOpaque: function () {
+	    AppDispatcher.dispatch({
+	      actionType: SessionConstants.RENDER_OPAQUE_NAV_BAR
+	    });
+	  },
+
+	  renderTransparent: function () {
+	    AppDispatcher.dispatch({
+	      actionType: SessionConstants.RENDER_TRANSPARENT_NAV_BAR
+	    });
+	  },
+
 	  closeModals: function () {
 	    AppDispatcher.dispatch({
 	      actionType: SessionConstants.CLOSE_MODALS
@@ -31560,7 +31617,7 @@
 	  },
 
 	  getInitialState: function () {
-	    return { username: "", password: "", message: "Welcome back.", loggingIn: false };
+	    return this.resetState;
 	  },
 
 	  componentDidMount: function () {
@@ -32019,7 +32076,8 @@
 	    this.setState({ dogs: newState });
 	  },
 
-	  handleClose: function () {
+	  handleClose: function (event) {
+	    event.preventDefault;
 	    this.setState(this.resetState);
 	    ApiActions.closeModals();
 	  },
@@ -32111,7 +32169,6 @@
 	        calendarInput: "signup-filter-label"
 	      });
 	    } else if (this.state.label === "When will you be available to move?") {
-	      console.log(this.state);
 
 	      this.setState({
 	        label: "What's your budget for rent?",
@@ -32157,7 +32214,7 @@
 	        return;
 	      }
 
-	      // Create new user and push index page to url history.
+	      // Create new user after signup.
 	      var user = {
 	        username: this.state.username,
 	        password: this.state.password,
@@ -32174,6 +32231,7 @@
 	        occupation: this.state.occupation
 	      };
 	      ApiUtil.createUser(user);
+	      this.setState(this.resetState);
 	    }
 	  },
 
@@ -63889,12 +63947,16 @@
 	  mixins: [LinkedStateMixin],
 
 	  getInitialState: function () {
-	    return { city: "", placeholder: "Where are you moving?" };
+	    session = SessionStore.getSession();
+	    placeholder = session.city ? session.city : "Where are you moving?";
+	    return { city: "", placeholder: placeholder };
 	  },
 
 	  componentDidMount: function () {
 	    this.sessionListener = SessionStore.addListener(this._onChange);
 	    this.filterListener = FilterStore.addListener(this._onChange);
+
+	    ApiActions.renderTransparent();
 	    ApiUtil.fetchCity();
 
 	    var input = document.getElementById('pac-input');
@@ -63921,20 +63983,17 @@
 	  handleButton: function (event) {
 	    event.preventDefault();
 	    var city = this.autocomplete.getPlace();
+
 	    if (typeof city !== "undefined") {
 	      city = city.formatted_address;
 	    } else {
 	      city = this.state.city;
 	    }
 
-	    if (city === "") {
-	      city = this.state.placeholder;
-	    }
-
-	    if (city !== "Where are you moving?") {
+	    if (city !== "") {
 	      ApiActions.setFilter({ city: city });
-	      this.props.history.push("index");
 	    }
+	    this.props.history.push("index");
 	  },
 
 	  render: function () {
@@ -63944,6 +64003,11 @@
 	      React.createElement(
 	        'section',
 	        { className: 'content-main' },
+	        React.createElement(
+	          'h1',
+	          null,
+	          'Find Roommates Anywhere.'
+	        ),
 	        React.createElement(
 	          'div',
 	          { className: 'city-input' },
@@ -63990,19 +64054,24 @@
 	    filters = FilterStore.getFilters();
 	    roommates = RoommateStore.getRoommates();
 	    session = SessionStore.getSession();
-	    return { filters: filters, roommates: roommates };
+	    return { filters: filters, roommates: roommates, page: 0, city: session.city };
 	  },
 
 	  componentDidMount: function () {
 	    this.filterListener = FilterStore.addListener(this._onChange);
 	    this.roommateListener = RoommateStore.addListener(this._onChange);
 	    this.sessionListener = SessionStore.addListener(this._onChange);
+	    ApiUtil.fetchCity();
+	    ApiActions.renderOpaque();
 	  },
 
 	  _onChange: function () {
 	    filters = FilterStore.getFilters();
 	    roommates = RoommateStore.getRoommates();
-	    this.setState({ filters: filters, roommates: roommates });
+	    session = SessionStore.getSession();
+
+	    city = session.city ? session.city : filters.city;
+	    this.setState({ filters: filters, roommates: roommates, page: 0, city: city });
 	  },
 
 	  componentWillUnmount: function () {
@@ -64070,7 +64139,7 @@
 	      return thisDate <= minDate;
 	    });
 
-	    var withoutSelf = correctTerm.filter(function (roommate) {
+	    var withoutSelf = correctDate.filter(function (roommate) {
 	      session = SessionStore.getSession();
 	      return roommate.id !== session.id;
 	    });
@@ -64079,6 +64148,9 @@
 	  },
 
 	  render: function () {
+	    all = this.filteredRoommates();
+	    numPages = Math.floor(all.length / 12) + 1;
+	    thisPage = all.slice(this.state.page, this.state.page + 12);
 	    return React.createElement(
 	      'main',
 	      { className: 'index group' },
@@ -64090,7 +64162,7 @@
 	          'h2',
 	          null,
 	          'Roommates in ',
-	          this.state.filters.city
+	          this.state.city
 	        ),
 	        React.createElement(
 	          'ul',
@@ -64116,7 +64188,6 @@
 	var React = __webpack_require__(1);
 	var ApiActions = __webpack_require__(235);
 	var FilterStore = __webpack_require__(232);
-	var SessionStore = __webpack_require__(210);
 	var LinkedStateMixin = __webpack_require__(238);
 	var Slider = __webpack_require__(244);
 	var Calendar = __webpack_require__(246);
@@ -64130,24 +64201,17 @@
 
 	  getInitialState: function () {
 	    filters = FilterStore.getFilters();
-	    session = SessionStore.getSession();
-	    if (session.budget) {
-	      filters.sessionBudget = session.budget;
-	    };
+
 	    return filters;
 	  },
 
 	  componentDidMount: function () {
 	    this.filterListener = FilterStore.addListener(this._onChange);
-	    this.sessionListener = SessionStore.addListener(this._onChange);
 	  },
 
 	  _onChange: function () {
 	    filters = FilterStore.getFilters();
-	    session = SessionStore.getSession();
-	    if (session.budget) {
-	      filters.sessionBudget = session.budget;
-	    };
+
 	    this.setState(filters);
 	  },
 
@@ -64488,6 +64552,8 @@
 	var SessionStore = __webpack_require__(210);
 	var RoommatesStore = __webpack_require__(243);
 	var ApiUtil = __webpack_require__(234);
+	var ApiActions = __webpack_require__(235);
+	var Messenger = __webpack_require__(592);
 
 	module.exports = React.createClass({
 	  displayName: 'exports',
@@ -64503,6 +64569,7 @@
 	    // Allows for transitioning back to user profile page.
 	    this.historyListener = this.props.history.listen(this._onChange);
 
+	    ApiActions.renderOpaque();
 	    ApiUtil.fetchUsers();
 	  },
 
@@ -64514,27 +64581,33 @@
 	      return roommate.id === id;
 	    });
 
-	    this.setState({
-	      roommates: roommates,
-	      id: id,
-	      username: currentProfile[0].username,
-	      dogs: currentProfile[0].dogs,
-	      cats: currentProfile[0].cats,
-	      age: currentProfile[0].age,
-	      gender: currentProfile[0].gender,
-	      date: currentProfile[0].date,
-	      about: currentProfile[0].about,
-	      budget: currentProfile[0].budget,
-	      term: currentProfile[0].term,
-	      occupation: currentProfile[0].occupation,
-	      city: currentProfile[0].city,
-	      amenities: currentProfile[0].amenities
-	    });
+	    if (currentProfile[0]) {
+	      this.setState({
+	        roommates: roommates,
+	        id: id,
+	        username: currentProfile[0].username,
+	        dogs: currentProfile[0].dogs,
+	        cats: currentProfile[0].cats,
+	        age: currentProfile[0].age,
+	        gender: currentProfile[0].gender,
+	        date: currentProfile[0].date,
+	        about: currentProfile[0].about,
+	        budget: currentProfile[0].budget,
+	        term: currentProfile[0].term,
+	        occupation: currentProfile[0].occupation,
+	        city: currentProfile[0].city,
+	        amenities: currentProfile[0].amenities
+	      });
+	    }
 	  },
 
 	  componentWillUnmount: function () {
 	    this.roommatesListener.remove();
 	    this.sessionListener.remove();
+	  },
+
+	  openMessenger: function () {
+	    ApiActions.renderMessenger();
 	  },
 
 	  listPets: function () {
@@ -64546,7 +64619,7 @@
 	      pets.push("cats");
 	    }
 	    if (pets.length === 0) {
-	      return "none";
+	      return "no pets";
 	    };
 	    return pets.join(" and ");
 	  },
@@ -64555,6 +64628,7 @@
 	    return React.createElement(
 	      'main',
 	      { className: 'show group' },
+	      React.createElement(Messenger, { profileId: this.props.params.id }),
 	      React.createElement(
 	        'header',
 	        { className: 'show-header' },
@@ -64578,7 +64652,8 @@
 	        ),
 	        React.createElement(
 	          'button',
-	          { className: 'show-header-message-button' },
+	          { onClick: this.openMessenger,
+	            className: 'show-header-message-button' },
 	          'Message'
 	        )
 	      ),
@@ -64605,32 +64680,39 @@
 	          React.createElement(
 	            'li',
 	            null,
-	            'Budget: ',
-	            this.state.budget
+	            'Looking in ',
+	            this.state.city,
+	            '.'
 	          ),
 	          React.createElement(
 	            'li',
 	            null,
-	            'Minimum Months: ',
-	            this.state.term
+	            this.state.username,
+	            ' can spend $',
+	            this.state.budget,
+	            ' on rent per month.'
+	          ),
+	          React.createElement(
+	            'li',
+	            null,
+	            this.state.username,
+	            ' can commit to ',
+	            this.state.term,
+	            ' months.'
+	          ),
+	          React.createElement(
+	            'li',
+	            null,
+	            this.state.username,
+	            ' has ',
+	            this.listPets(),
+	            '.'
 	          ),
 	          React.createElement(
 	            'li',
 	            null,
 	            'Occupation: ',
 	            this.state.occupation
-	          ),
-	          React.createElement(
-	            'li',
-	            null,
-	            'Pets: ',
-	            this.listPets()
-	          ),
-	          React.createElement(
-	            'li',
-	            null,
-	            'Looking in: ',
-	            this.state.city
 	          ),
 	          React.createElement(
 	            'li',
@@ -64658,6 +64740,149 @@
 	        )
 	      )
 	    );
+	  }
+	});
+
+/***/ },
+/* 592 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var React = __webpack_require__(1);
+	var LinkedStateMixin = __webpack_require__(238);
+	var SessionStore = __webpack_require__(210);
+	var RoommatesStore = __webpack_require__(243);
+	var Button = __webpack_require__(345).Button;
+	var ButtonGroup = __webpack_require__(345).ButtonGroup;
+	var ApiActions = __webpack_require__(235);
+
+	module.exports = React.createClass({
+	  displayName: 'exports',
+
+	  mixins: [LinkedStateMixin],
+
+	  resetState: {
+	    type: "Message",
+	    body: "",
+	    bodyInput: "input",
+	    messengerOpen: false
+	  },
+
+	  getInitialState: function () {
+	    return this.resetState;
+	  },
+
+	  componentDidMount: function () {
+	    this.sessionListener = SessionStore.addListener(this._onChange);
+	  },
+
+	  _onChange: function () {
+	    session = SessionStore.getSession();
+	    this.setState({ messengerOpen: session.messengerOpen });
+
+	    roommates = RoommatesStore.getRoommates();
+	    id = parseInt(this.props.profileId);
+
+	    currentProfile = roommates.filter(function (roommate) {
+	      return roommate.id === id;
+	    });
+
+	    if (currentProfile[0]) {
+	      this.setState({
+	        id: id,
+	        username: currentProfile[0].username
+	      });
+	    }
+	  },
+
+	  componentWillUnmount: function () {
+	    this.sessionListener.remove();
+	  },
+
+	  handleClose: function (event) {
+	    event.preventDefault;
+	    this.setState(this.resetState);
+	    ApiActions.closeModals();
+	  },
+
+	  setType: function (event) {
+	    event.preventDefault;
+	    type = event.currentTarget.innerHTML;
+	    if (type === "Message") {
+	      this.setState({ type: type, bodyInput: "input" });
+	    } else {
+	      this.setState({ type: type, bodyInput: "hidden" });
+	    }
+	  },
+
+	  render: function () {
+	    if (this.state.type === "Message") {
+	      var message = "Send " + this.state.username + " a message.";
+	    } else {
+	      var message = "Ask " + this.state.username + " to be your roommate.";
+	    }
+
+	    if (!this.state.messengerOpen) {
+	      return React.createElement('div', null);
+	    } else {
+	      return React.createElement(
+	        'div',
+	        { className: 'modal is-open' },
+	        React.createElement(
+	          'form',
+	          { className: 'modal-form' },
+	          React.createElement(
+	            'span',
+	            { className: 'modal-close js-modal-close', onClick: this.handleClose },
+	            '×'
+	          ),
+	          React.createElement(
+	            'h1',
+	            null,
+	            'Messenger'
+	          ),
+	          React.createElement(
+	            'p',
+	            null,
+	            message
+	          ),
+	          React.createElement(
+	            'div',
+	            { className: 'messenger-type-selector' },
+	            React.createElement(
+	              ButtonGroup,
+	              { bsSize: 'large' },
+	              React.createElement(
+	                Button,
+	                { onClick: this.setType,
+	                  active: this.state.type === "Message" },
+	                'Message'
+	              ),
+	              React.createElement(
+	                Button,
+	                { onClick: this.setType,
+	                  active: this.state.type === "Request" },
+	                'Request'
+	              )
+	            )
+	          ),
+	          React.createElement(
+	            'div',
+	            { className: this.state.bodyInput },
+	            React.createElement('textarea', { valueLink: this.linkState("body") })
+	          ),
+	          React.createElement(
+	            'div',
+	            { className: 'submit' },
+	            React.createElement(
+	              'button',
+	              { onClick: this.handleButton },
+	              'Send'
+	            )
+	          )
+	        ),
+	        React.createElement('div', { className: 'modal-screen js-modal-close' })
+	      );
+	    }
 	  }
 	});
 

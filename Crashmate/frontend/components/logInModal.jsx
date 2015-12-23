@@ -16,7 +16,7 @@ module.exports = React.createClass({
   },
 
   getInitialState: function () {
-    return { username: "", password: "", message: "Welcome back.", loggingIn: false}
+    return this.resetState;
   },
 
   componentDidMount: function () {

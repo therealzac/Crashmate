@@ -23,6 +23,7 @@ module.exports = {
         ApiActions.logIn(user);
       },
       error: function (error) {
+        console.log(error);
         ApiActions.invalidEntry(error);
       }
     });

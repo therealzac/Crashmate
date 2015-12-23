@@ -19,6 +19,7 @@ Date.prototype.getMoveDate = function() {
 firstOfNextMonth = new Date().getMoveDate();
 
 var _session = {
+  username: "",
   about: "",
   age: 25,
   amenities: "",
@@ -28,11 +29,12 @@ var _session = {
   dogs: true,
   gender: "Both",
   id: null,
-  logInModalOpen: false,
-  occupation: "Both",
-  signUpModalOpen: false,
   term: null,
-  username: ""
+  occupation: "Both",
+  logInModalOpen: false,
+  signUpModalOpen: false,
+  messengerOpen: false,
+  navBar: "header"
   };
 
 SessionStore.__onDispatch = function (payload) {
@@ -58,6 +60,20 @@ SessionStore.__onDispatch = function (payload) {
       SessionStore.__emitChange();
       break;
 
+    case SessionConstants.RENDER_MESSENGER:
+      openMessenger();
+      SessionStore.__emitChange();
+      break;
+
+    case SessionConstants.RENDER_OPAQUE_NAV_BAR:
+      opaqueNavBar();
+      SessionStore.__emitChange();
+      break;
+
+    case SessionConstants.RENDER_TRANSPARENT_NAV_BAR:
+      transparentNavBar();
+      SessionStore.__emitChange();
+
     case SessionConstants.CLOSE_MODALS:
       closeModals();
       SessionStore.__emitChange();
@@ -74,11 +90,16 @@ SessionStore.__onDispatch = function (payload) {
 closeModals = function () {
   _session.logInModalOpen = false;
   _session.signUpModalOpen = false;
+  _session.messengerOpen = false;
 };
 
 setSession = function (session) {
+  var navBars = _session.navBar;
+
   _session = session;
+
   closeModals();
+  _session.navBar = navBars;
 };
 
 clearSession = function () {
@@ -86,6 +107,7 @@ clearSession = function () {
     logInModalOpen: false,
     signUpModalOpen: false,
     signUpModalOpen: false,
+    messengerOpen: false,
     message: "Need a roommate? We got you.",
     header: "Crashmate",
     label: "",
@@ -131,6 +153,18 @@ openLoginModal = function () {
 openSignUpModal = function () {
   _session.signUpModalOpen = true;
   _session.message = "Need a roommate? We got you."
+};
+
+openMessenger = function () {
+  _session.messengerOpen = true;
+};
+
+opaqueNavBar = function () {
+  _session.navBar = "header-opaque";
+};
+
+transparentNavBar = function () {
+  _session.navBar = "header";
 };
 
 invalidEntry = function (error) {

@@ -78,13 +78,17 @@ p{
    font-family: "Roboto", sans-serif;
    font-size: 16px;
    font-weight: 400;
-   background: #eee;
+   background-image: url(background.png);
  }
 
  .header {
+   background: transparent;
+   color: #000;
+ }
+
+ .header-opaque {
    background: #001f3f;
    color: #fff;
-   border-bottom: 1px solid #ccc;
  }
 
  .header a {
@@ -287,7 +291,6 @@ p{
 .content {
   position: relative;
   margin: 0 auto;
-  background-image: url(background.png);
   width: 100%;
   height: 1500px;
   border-left: 1px solid #ccc;
@@ -302,9 +305,17 @@ p{
   padding: 20px;
 }
 
+.content-main > h1 {
+  text-align: center;
+  margin-top: 7%;
+  font-weight: 300;
+  font-size: 36px;
+  margin-left: 8%;
+}
+
 .city-input {
   display: block;
-  margin-top: 37%;
+  margin-top: 20%;
   width: 108.5%;
   margin-left: -2%;
   height: 40px;
@@ -325,7 +336,7 @@ p{
   display: block;
   float: left;
   background: #fff;
-  margin-left: calc(50% - 262px);
+  margin-left: calc(50% - 250px);
   border: 1px solid #ccc;
   padding: 10px;
   width: 300px;
@@ -390,7 +401,7 @@ p{
   position: absolute;
   top: 100px;
   left: 50%;
-  margin-left: -26%;
+  margin-left: -280px;
   width: 480px;
   padding: 20px;
   background: #fff;
@@ -471,7 +482,6 @@ p{
 }
 
 .index-item-detail {
-  float: left;
   margin-top: 2%;
   margin-bottom: 10%;
   margin-right: 21%;
@@ -546,14 +556,19 @@ p{
   border-left: 1px solid #ccc;
 }
 
+.page-selector{
+
+}
+
 /*Show*/
 
 .show {
   position: relative;
   margin: 0 auto;
-  background: #fff;
+  background: transparent;
   min-width: 1080px;
   width: 61.8%;
+  color: #000;
   border-left: 1px solid #ccc;
   border-right: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
@@ -561,10 +576,10 @@ p{
 
 .show-header {
   position: relative;
+  background: rgba(0, 0, 0, 0.2);
   height: 200px;
-  background: url(background.png);
   background-size: cover;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #fff;
 }
 
 .show-header > p {
@@ -605,24 +620,36 @@ p{
 .show-sidebar {
   padding: 2%;
   float: left;
-  width: 14.6%;
-  min-height: 600px;
+  width: 14.64%;
+  min-height: 601px;
   border-right: 1px solid #ccc;
+  background: #fff;
 }
 
 .show-main {
-  float: left;
-  width: 75%;
-  min-height: 600px;
+  background: #fff;
+  min-height: 644px;
+  float: right;
+  width: 81.25%;
+}
+
+.show-main > h2:first-child {
+  font-size: 24px;
+  font-weight: 300;
+  width: 100%;
+  min-height: 320px;
+  text-align: center;
+  border-bottom: 1px solid #000;
+  background: #fff;
 }
 
 .show-main > h2 {
   font-size: 24px;
   font-weight: 300;
   width: 100%;
-  margin: 5%;
+  min-height: 320px;
   text-align: center;
-  border-bottom: 1px solid #ccc;
+  background: #fff;
 }
 
 .profile-picture {
@@ -654,12 +681,12 @@ p{
 }
 
 .profile-nav > li {
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #fff;
   padding: 4%;
 }
 
 .profile-nav > li:first-child {
-  border-top: 1px solid #ccc;
+  border-top: 1px solid #fff;
   padding: 4%;
 }
 
@@ -671,6 +698,15 @@ p{
 
 .profile-nav a:hover {
   background: #eee;
+}
+
+.messenger-type-selector{
+  position: relative;
+  font-size: 16px;
+  margin: 5%;
+  margin-left: 0%;
+  font-weight: 300;
+  color: #AAAAAA;
 }
 
 /*Footer*/

@@ -2,6 +2,8 @@ var React = require('react');
 var SessionStore = require('../stores/session.js');
 var RoommatesStore = require('../stores/roommates.js');
 var ApiUtil = require('../util/apiUtil.js');
+var ApiActions = require('../actions/apiActions.js');
+var Messenger = require('./messengerModal.jsx');
 
 module.exports = React.createClass({
   getInitialState: function () {
@@ -15,7 +17,7 @@ module.exports = React.createClass({
     // Allows for transitioning back to user profile page.
     this.historyListener = this.props.history.listen(this._onChange);
 
-
+    ApiActions.renderOpaque();
     ApiUtil.fetchUsers();
   },
 
@@ -27,22 +29,24 @@ module.exports = React.createClass({
       return (roommate.id === id)
     });
 
-    this.setState({
-      roommates: roommates,
-      id: id,
-      username: currentProfile[0].username,
-      dogs: currentProfile[0].dogs,
-      cats: currentProfile[0].cats,
-      age: currentProfile[0].age,
-      gender: currentProfile[0].gender,
-      date: currentProfile[0].date,
-      about: currentProfile[0].about,
-      budget: currentProfile[0].budget,
-      term: currentProfile[0].term,
-      occupation: currentProfile[0].occupation,
-      city: currentProfile[0].city,
-      amenities: currentProfile[0].amenities
-    });
+    if (currentProfile[0]){
+      this.setState({
+        roommates: roommates,
+        id: id,
+        username: currentProfile[0].username,
+        dogs: currentProfile[0].dogs,
+        cats: currentProfile[0].cats,
+        age: currentProfile[0].age,
+        gender: currentProfile[0].gender,
+        date: currentProfile[0].date,
+        about: currentProfile[0].about,
+        budget: currentProfile[0].budget,
+        term: currentProfile[0].term,
+        occupation: currentProfile[0].occupation,
+        city: currentProfile[0].city,
+        amenities: currentProfile[0].amenities
+      });
+    }
   },
 
   componentWillUnmount: function () {
@@ -50,22 +54,30 @@ module.exports = React.createClass({
     this.sessionListener.remove();
   },
 
+  openMessenger: function () {
+    ApiActions.renderMessenger();
+  },
+
   listPets: function () {
     var pets = [];
     if (this.state.dogs) { pets.push("dogs")}
     if (this.state.cats) { pets.push("cats")}
-    if ( pets.length === 0 ) { return "none" };
+    if ( pets.length === 0 ) { return "no pets" };
     return pets.join(" and ");
   },
 
   render: function () {
     return(
       <main className="show group">
+      <Messenger profileId={this.props.params.id}/>
         <header className="show-header">
           <h1>{this.state.username}</h1>
             <p>{this.state.age}, {this.state.gender}</p>
             <p>Available by {this.state.date}</p>
-          <button className="show-header-message-button">Message</button>
+          <button onClick={this.openMessenger}
+                  className="show-header-message-button">
+                  Message
+          </button>
         </header>
         <section className="show-sidebar">
           <a href="#" className="profile-picture">
@@ -77,11 +89,11 @@ module.exports = React.createClass({
           </div>
 
           <ul className="profile-nav">
-            <li>Budget: {this.state.budget}</li>
-            <li>Minimum Months: {this.state.term}</li>
+            <li>Looking in {this.state.city}.</li>
+            <li>{this.state.username} can spend ${this.state.budget} on rent per month.</li>
+            <li>{this.state.username} can commit to {this.state.term} months.</li>
+            <li>{this.state.username} has { this.listPets() }.</li>
             <li>Occupation: {this.state.occupation}</li>
-            <li>Pets: { this.listPets() }</li>
-            <li>Looking in: {this.state.city}</li>
             <li>Amenities required: {this.state.amenities}</li>
           </ul>
         </section>
