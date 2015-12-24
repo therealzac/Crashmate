@@ -15,6 +15,8 @@ module.exports = React.createClass({
   mixins: [LinkedStateMixin],
 
   resetState: {
+    pageNum: "1/8",
+    pageClass: "hidden",
     signUpModalOpen: false,
     backButtonClass: "hidden",
     message: "Need a roommate? We got you.",
@@ -186,7 +188,9 @@ module.exports = React.createClass({
       this.setState({
         header: newHeader,
         message: "",
-        label: "Basic info.",
+        pageNum: "1/8",
+        pageClass: "pageNum",
+        label: "First we need some basic info.",
         usernameInput: "hidden",
         passwordInput: "hidden",
         ageInput: "signup-filter-label",
@@ -194,10 +198,11 @@ module.exports = React.createClass({
         occupationInput: "signup-filter-label"
       });
 
-    } else if (this.state.label === "Basic info."){
+    } else if (this.state.label === "First we need some basic info."){
       this.setState({
         label: "Where are you moving?",
         ageInput: "hidden",
+        pageNum: "2/8",
         genderInput: "hidden",
         occupationInput: "hidden",
         cityInput: "input",
@@ -213,7 +218,7 @@ module.exports = React.createClass({
         if ( this.autocomplete.getPlace() ) {
           this.setState({ city: this.autocomplete.getPlace().formatted_address })
         } else {
-          // Rerenders this stage.
+          // Re-renders this stage.
           this.nextMessage();
         }
       }
@@ -221,14 +226,16 @@ module.exports = React.createClass({
       this.setState({
         label: "When will you be available to move?",
         cityInput: "hidden",
+        pageNum: "3/8",
         calendarInput: "signup-filter-label",
       });
 
     } else if (this.state.label === "When will you be available to move?"){
-
+      console.log(this.state);
       this.setState({
         label: "What's your budget for rent?",
         calendarInput: "hidden",
+        pageNum: "4/8",
         budgetInput: "signup-filter-label"
       });
 
@@ -237,6 +244,7 @@ module.exports = React.createClass({
       this.setState({
         label: "How many months can you commit to?",
         budgetInput: "hidden",
+        pageNum: "5/8",
         termInput: "signup-filter-label"
       });
 
@@ -245,6 +253,7 @@ module.exports = React.createClass({
       this.setState({
         label: "Do you have any pets?",
         termInput: "hidden",
+        pageNum: "6/8",
         petInput: "signup-filter-label"
       });
 
@@ -254,6 +263,7 @@ module.exports = React.createClass({
         header: "Cool.",
         label: "What amenities do you need at your new spot?",
         petInput: "hidden",
+        pageNum: "7/8",
         amenitiesInput: "input"
       });
 
@@ -264,6 +274,7 @@ module.exports = React.createClass({
         header: newHeader,
         label: "Tell your future roommates about yourself.",
         amenitiesInput: "hidden",
+        pageNum: "8/8",
         aboutInput: "input",
         buttonValue: "Sign Up!"
       });
@@ -303,7 +314,7 @@ module.exports = React.createClass({
         this.setState({
           header: newHeader,
           message: "",
-          label: "Basic info.",
+          label: "First we need some basic info.",
           usernameInput: "hidden",
           passwordInput: "hidden",
           ageInput: "signup-filter-label",
@@ -380,7 +391,7 @@ module.exports = React.createClass({
       return(
       <div className="modal is-open">
         <form className="modal-form">
-
+          <label className={this.state.pageClass}>{this.state.pageNum}</label>
           <span className="modal-close js-modal-close" onClick={this.handleClose}>
             &times;
           </span>
@@ -407,6 +418,7 @@ module.exports = React.createClass({
           </div>
 
           <div className={this.state.ageInput}>
+            <div className="age-label">Age</div>
             <Slider range={{min: 18, max: 65}}
                     start={[this.state.age]}
                     step={1}
@@ -418,6 +430,8 @@ module.exports = React.createClass({
           </div>
 
           <div className={this.state.genderInput}>
+            <div>Gender</div>
+            <br/>
             <ButtonGroup bsSize="large">
               <Button onClick={this.setGender}
                       active={(this.state.gender === "Female")}>
@@ -431,6 +445,8 @@ module.exports = React.createClass({
           </div>
 
           <div className={this.state.occupationInput}>
+            <div>Occupation</div>
+            <br/>
             <ButtonGroup bsSize="large">
               <Button onClick={this.setOccupation}
                       active={(this.state.occupation === "Student")}>
@@ -501,7 +517,7 @@ module.exports = React.createClass({
           </div>
 
           <div className="submit">
-            <button onClick={this.nextButton}>{this.state.buttonValue}</button>
+            <button onClick={this.nextButton} className="next-button">{this.state.buttonValue}</button>
             <button onClick={this.backButton} className={this.state.backButtonClass}>Back</button>
           </div>
 

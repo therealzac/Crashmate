@@ -29,6 +29,20 @@ module.exports = {
     });
   },
 
+  createMessage: function (message) {
+    $.ajax({
+      url: "api/messages",
+      method: "POST",
+      data: {message: message},
+      success: function (message) {
+        // Send confirmation modal to session store.
+      },
+      error: function (error) {
+        console.log(error);
+      }
+    });
+  },
+
   logIn: function (user) {
     $.ajax({
       url: "session",
@@ -62,6 +76,35 @@ module.exports = {
       method: "GET",
       success: function (session) {
         ApiActions.recieveSession(session);
+      },
+      error: function (error) {
+        console.log(error);
+      }
+    });
+  },
+
+  fetchMessages: function (id) {
+    if (typeof id === 'undefined') {return}
+    $.ajax({
+      url: "api/messages",
+      method: "GET",
+      data: {id: id},
+      success: function (messages) {
+        ApiActions.recieveMessages(messages);
+      },
+      error: function (error) {
+        console.log(error);
+      }
+    });
+  },
+
+  markAsRead: function (id) {
+    $.ajax({
+      url: "api/messages/" + id,
+      method: "PATCH",
+      data: {id: id},
+      success: function (message) {
+        console.log(message);
       },
       error: function (error) {
         console.log(error);

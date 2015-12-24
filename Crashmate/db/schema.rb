@@ -11,10 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151219061956) do
+ActiveRecord::Schema.define(version: 20151224180221) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "messages", force: :cascade do |t|
+    t.integer  "sender_id",                    null: false
+    t.integer  "recipient_id",                 null: false
+    t.string   "type",                         null: false
+    t.string   "body"
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
+    t.boolean  "read",         default: false
+  end
+
+  add_index "messages", ["recipient_id"], name: "index_messages_on_recipient_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "username",        null: false

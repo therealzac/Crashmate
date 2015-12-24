@@ -32,7 +32,7 @@ module.exports = React.createClass({
     roommates = RoommateStore.getRoommates();
     session = SessionStore.getSession();
 
-    city  = (session.city ? session.city : filters.city);
+    city  = (filters.city ? filters.city : session.city);
     this.setState({filters: filters, roommates: roommates, page: 0, city: city});
 
   },

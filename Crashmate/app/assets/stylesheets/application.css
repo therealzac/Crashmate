@@ -163,6 +163,7 @@ p{
    position: absolute;
    margin-top: 16px;
    left: -1px;
+   min-width: 200px;
    font-size: 14px;
    white-space: nowrap;
    background: #fff;
@@ -172,6 +173,7 @@ p{
    border-bottom-left-radius: 5px;
    border-bottom-right-radius: 5px;
    overflow: hidden;
+   z-index: 1000;
  }
 
  li:hover .header-notifications {
@@ -181,12 +183,16 @@ p{
  .header-notifications > li {
    border-top: 1px solid #ccc;
    color: #000;
-   width: 120px;
+   min-width: 200px;
    padding: 5%;
  }
 
  .header-notifications > li:hover {
    background: #eee;
+ }
+
+ .recieved-message {
+   margin: 5%;
  }
 
 
@@ -265,6 +271,10 @@ p{
 }
 
 .back-button {
+  float: left;
+}
+
+.next-button {
   float: right;
 }
 
@@ -284,6 +294,7 @@ p{
 
 .signup-label{
   font-weight: 300;
+  margin-left: 4.5%;
 }
 
 /*Splash*/
@@ -315,7 +326,7 @@ p{
 
 .city-input {
   display: block;
-  margin-top: 20%;
+  margin-top: 400px;
   width: 108.5%;
   margin-left: -2%;
   height: 40px;
@@ -405,6 +416,7 @@ p{
   width: 480px;
   padding: 20px;
   background: #fff;
+  color: #000;
   z-index: 3;
   border-radius: 5px;
   border: 1px solid #000;
@@ -451,14 +463,16 @@ p{
   padding: 2%;
   float: left;
   width: 20%;
-  min-height: 600px;
+  height: 700px;
+  overflow: scroll;
   border-right: 1px solid #ccc;
 }
 
 .index-main {
   float: left;
   width: 75%;
-  min-height: 600px;
+  height: 700px;
+  overflow: scroll;
 }
 
 
@@ -470,19 +484,20 @@ p{
   height: 140px;
   width: 14%;
   background: #f5f5f5;
-  padding: 15%;
+  padding-top: 15%;
   padding-left: 2%;
   padding-right: 2%;
-  padding-bottom: 1%;
+  font: message-box;
+  padding-bottom: 0%;
   cursor: pointer;
   list-style: none;
   float: left;
   color: #000;
-  font-weight: 400;
+  font-weight: 300;
 }
 
 .index-item-detail {
-  margin-top: 2%;
+  margin-top: 12%;
   margin-bottom: 10%;
   margin-right: 21%;
 }
@@ -508,6 +523,10 @@ p{
   color: #AAAAAA;
 }
 
+.pageNum{
+
+}
+
 .signup-filter-label{
   position: relative;
   font-size: 16px;
@@ -516,10 +535,14 @@ p{
   color: #AAAAAA;
 }
 
+.age-label {
+  margin-bottom: 5%;
+}
+
 .filter-component{
   width: 85.4%;
   padding: 10px;
-  padding-bottom: 30%;
+  padding-bottom: 25%;
   z-index: 1;
   border-top: 1px solid #ccc;
 }
@@ -569,17 +592,16 @@ p{
   min-width: 1080px;
   width: 61.8%;
   color: #000;
-  border-left: 1px solid #ccc;
-  border-right: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
 }
 
 .show-header {
   position: relative;
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.05);
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
   height: 200px;
   background-size: cover;
-  border-bottom: 1px solid #fff;
 }
 
 .show-header > p {
@@ -588,7 +610,8 @@ p{
   top: 72%;
   left: 20%;
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 300;
+  text-shadow: #000 0 0 10px;
 }
 
 .show-header > h1 {
@@ -620,9 +643,9 @@ p{
 .show-sidebar {
   padding: 2%;
   float: left;
-  width: 14.64%;
+  width: 14.6%;
   min-height: 601px;
-  border-right: 1px solid #ccc;
+  border: 1px solid #ccc;
   background: #fff;
 }
 
@@ -630,14 +653,15 @@ p{
   background: #fff;
   min-height: 644px;
   float: right;
-  width: 81.25%;
+  width: 81%;
+  border: 1px solid #ccc;
 }
 
 .show-main > h2:first-child {
   font-size: 24px;
   font-weight: 300;
-  width: 100%;
-  min-height: 320px;
+  margin: 10%;
+  width: 80%;
   text-align: center;
   border-bottom: 1px solid #000;
   background: #fff;
@@ -646,8 +670,9 @@ p{
 .show-main > h2 {
   font-size: 24px;
   font-weight: 300;
-  width: 100%;
-  min-height: 320px;
+  margin: 10%;
+  width: 80%;
+  border-bottom: 1px solid #000;
   text-align: center;
   background: #fff;
 }
@@ -677,7 +702,7 @@ p{
 
 .profile-nav {
   margin: 20px 0;
-  font-size: 14px;
+  font-size: 12px;
 }
 
 .profile-nav > li {
@@ -686,7 +711,7 @@ p{
 }
 
 .profile-nav > li:first-child {
-  border-top: 1px solid #fff;
+  margin-top: 33%;
   padding: 4%;
 }
 
@@ -707,6 +732,14 @@ p{
   margin-left: 0%;
   font-weight: 300;
   color: #AAAAAA;
+}
+
+.crashmates {
+  min-height: 10%;
+}
+
+.properties {
+  min-height: 10%;
 }
 
 /*Footer*/

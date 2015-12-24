@@ -12,6 +12,13 @@ module.exports = {
     });
   },
 
+  recieveMessages: function (messages) {
+    AppDispatcher.dispatch({
+      actionType: SessionConstants.MESSAGES_RECIEVED,
+      messages: messages
+    })
+  },
+
   logIn: function (user) {
     AppDispatcher.dispatch({
       actionType: SessionConstants.SESSION_RECIEVED,
@@ -41,6 +48,13 @@ module.exports = {
     AppDispatcher.dispatch({
       actionType: SessionConstants.RENDER_MESSENGER
     });
+  },
+
+  renderMessage: function (message) {
+    AppDispatcher.dispatch({
+      actionType: SessionConstants.RENDER_MESSAGE,
+      message: message
+    })
   },
 
   renderOpaque: function () {

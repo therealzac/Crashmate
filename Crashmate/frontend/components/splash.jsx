@@ -50,10 +50,12 @@ module.exports = React.createClass({
     if (typeof city !== "undefined") {city = city.formatted_address}
     else {city = this.state.city}
 
-    if (city !== ""){
+    if (city === "") {city = this.state.placeholder}
+
+    if (city !== "Where are you moving?"){
       ApiActions.setFilter({city: city});
+      this.props.history.push("index");
     }
-    this.props.history.push("index");
 
   },
 

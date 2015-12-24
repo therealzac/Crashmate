@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
       sign_in(@user)
       render :show
     else
-      render json: ["Invalid username or password :("], status: 422
+      render json: ["Invalid username or password."], status: 422
     end
   end
 

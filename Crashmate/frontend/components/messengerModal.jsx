@@ -5,6 +5,7 @@ var RoommatesStore = require('../stores/roommates.js');
 var Button = require('react-bootstrap').Button;
 var ButtonGroup = require('react-bootstrap').ButtonGroup;
 var ApiActions = require('../actions/apiActions.js');
+var ApiUtil = require('../util/apiUtil.js');
 
 module.exports = React.createClass({
   mixins: [LinkedStateMixin],
@@ -63,12 +64,26 @@ module.exports = React.createClass({
     }
   },
 
+  handleButton: function (event) {
+    event.preventDefault;
+
+    var message = {
+      type: this.state.type,
+      recipient_id: this.state.id,
+      sender_id: SessionStore.getSession().id
+    }
+    if (message.type === "Message") {message.body = this.state.body}
+
+    ApiUtil.createMessage(message);
+    ApiActions.closeModals();
+  },
+
 
   render: function () {
     if (this.state.type === "Message") {
       var message = "Send " + this.state.username + " a message.";
-    } else {
-      var message = "Ask " + this.state.username + " to be your roommate."
+    } else if (this.state.type === "Request") {
+      var message = "Ask " + this.state.username + " to be your roommate.";
     }
 
     if (!this.state.messengerOpen){

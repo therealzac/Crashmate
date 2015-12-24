@@ -361,3 +361,51 @@
 [2015-12-23 08:55:23 -0800 Zacharys-MacBook-Pro.local (18562)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-103.newrelic.com:443 after 0.017308 seconds: getaddrinfo: nodename nor servname provided, or not known
 [2015-12-23 08:55:24 -0800 Zacharys-MacBook-Pro.local (5219)] ERROR : 1 error(s) running task for event 'report_event_data' in Agent Event Loop:
 [2015-12-23 08:55:24 -0800 Zacharys-MacBook-Pro.local (5219)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-103.newrelic.com:443 after 0.015937 seconds: getaddrinfo: nodename nor servname provided, or not known
+[2015-12-23 10:00:30 -0800 Zacharys-MacBook-Pro.local (23310)] INFO : Starting Agent shutdown
+[2015-12-23 10:00:41 -0800 Zacharys-MacBook-Pro.local (23349)] INFO : Starting Agent shutdown
+[2015-12-23 10:00:53 -0800 Zacharys-MacBook-Pro.local (23387)] INFO : Starting Agent shutdown
+[2015-12-23 10:01:03 -0800 Zacharys-MacBook-Pro.local (23425)] INFO : Starting Agent shutdown
+[2015-12-23 10:01:17 -0800 Zacharys-MacBook-Pro.local (23464)] INFO : Starting Agent shutdown
+[2015-12-23 10:01:43 -0800 Zacharys-MacBook-Pro.local (23507)] INFO : Starting Agent shutdown
+[2015-12-23 10:01:48 -0800 Zacharys-MacBook-Pro.local (23545)] INFO : Starting Agent shutdown
+[2015-12-23 10:01:56 -0800 Zacharys-MacBook-Pro.local (23582)] INFO : Starting Agent shutdown
+[2015-12-23 14:46:27 -0800 Zacharys-MacBook-Pro.local (5219)] INFO : Starting Agent shutdown
+[2015-12-23 14:46:32 -0800 Zacharys-MacBook-Pro.local (26281)] INFO : Starting the New Relic agent in "development" environment.
+[2015-12-23 14:46:32 -0800 Zacharys-MacBook-Pro.local (26281)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[2015-12-23 14:46:32 -0800 Zacharys-MacBook-Pro.local (26281)] INFO : Reading configuration from config/newrelic.yml (/Users/Zac/Desktop/Crashmate)
+[2015-12-23 14:46:32 -0800 Zacharys-MacBook-Pro.local (26281)] INFO : New Relic Agent Developer Mode enabled.
+[2015-12-23 14:46:32 -0800 Zacharys-MacBook-Pro.local (26281)] INFO : Environment: development
+[2015-12-23 14:46:32 -0800 Zacharys-MacBook-Pro.local (26281)] INFO : Dispatcher: webrick
+[2015-12-23 14:46:32 -0800 Zacharys-MacBook-Pro.local (26281)] INFO : Application: My Application (Development)
+[2015-12-23 14:46:32 -0800 Zacharys-MacBook-Pro.local (26281)] INFO : Installing ActiveJob instrumentation
+[2015-12-23 14:46:32 -0800 Zacharys-MacBook-Pro.local (26281)] INFO : Installing ActiveRecord 4 instrumentation
+[2015-12-23 14:46:32 -0800 Zacharys-MacBook-Pro.local (26281)] INFO : Installing Net instrumentation
+[2015-12-23 14:46:32 -0800 Zacharys-MacBook-Pro.local (26281)] INFO : Installing deferred Rack::Builder instrumentation
+[2015-12-23 14:46:32 -0800 Zacharys-MacBook-Pro.local (26281)] INFO : Installing Rack::Builder middleware instrumentation
+[2015-12-23 14:46:32 -0800 Zacharys-MacBook-Pro.local (26281)] INFO : Installing Rails 3+ middleware instrumentation
+[2015-12-23 14:46:32 -0800 Zacharys-MacBook-Pro.local (26281)] INFO : Installing Rails 4 Controller instrumentation
+[2015-12-23 14:46:32 -0800 Zacharys-MacBook-Pro.local (26281)] INFO : Installing Rails 4 view instrumentation
+[2015-12-23 14:46:32 -0800 Zacharys-MacBook-Pro.local (26281)] INFO : Installing Rails 4 Error instrumentation
+[2015-12-23 14:46:32 -0800 Zacharys-MacBook-Pro.local (26281)] INFO : Finished instrumentation
+[2015-12-23 14:46:32 -0800 Zacharys-MacBook-Pro.local (26281)] INFO : Doing deferred dependency-detection before Rack startup
+[2015-12-23 14:46:33 -0800 Zacharys-MacBook-Pro.local (26281)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1182867/applications/13229347
+[2015-12-23 16:42:48 -0800 Zacharys-MacBook-Pro.local (18562)] INFO : Starting Agent shutdown
+[2015-12-24 10:02:20 -0800 Zacharys-MacBook-Pro.local (31162)] INFO : Starting the New Relic agent in "development" environment.
+[2015-12-24 10:02:20 -0800 Zacharys-MacBook-Pro.local (31162)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[2015-12-24 10:02:20 -0800 Zacharys-MacBook-Pro.local (31162)] INFO : Reading configuration from config/newrelic.yml (/Users/Zac/Desktop/Crashmate)
+[2015-12-24 10:02:20 -0800 Zacharys-MacBook-Pro.local (31162)] INFO : New Relic Agent Developer Mode enabled.
+[2015-12-24 10:02:20 -0800 Zacharys-MacBook-Pro.local (31162)] INFO : Environment: development
+[2015-12-24 10:02:20 -0800 Zacharys-MacBook-Pro.local (31162)] INFO : No known dispatcher detected.
+[2015-12-24 10:02:20 -0800 Zacharys-MacBook-Pro.local (31162)] INFO : Application: My Application (Development)
+[2015-12-24 10:02:21 -0800 Zacharys-MacBook-Pro.local (31162)] INFO : Installing ActiveJob instrumentation
+[2015-12-24 10:02:21 -0800 Zacharys-MacBook-Pro.local (31162)] INFO : Installing ActiveRecord 4 instrumentation
+[2015-12-24 10:02:21 -0800 Zacharys-MacBook-Pro.local (31162)] INFO : Installing Net instrumentation
+[2015-12-24 10:02:21 -0800 Zacharys-MacBook-Pro.local (31162)] INFO : Installing deferred Rack::Builder instrumentation
+[2015-12-24 10:02:21 -0800 Zacharys-MacBook-Pro.local (31162)] INFO : Installing Rack::Builder middleware instrumentation
+[2015-12-24 10:02:21 -0800 Zacharys-MacBook-Pro.local (31162)] INFO : Installing Rails 3+ middleware instrumentation
+[2015-12-24 10:02:21 -0800 Zacharys-MacBook-Pro.local (31162)] INFO : Installing Rails 4 Controller instrumentation
+[2015-12-24 10:02:21 -0800 Zacharys-MacBook-Pro.local (31162)] INFO : Installing Rails 4 view instrumentation
+[2015-12-24 10:02:21 -0800 Zacharys-MacBook-Pro.local (31162)] INFO : Installing Rails 4 Error instrumentation
+[2015-12-24 10:02:21 -0800 Zacharys-MacBook-Pro.local (31162)] INFO : Finished instrumentation
+[2015-12-24 10:02:21 -0800 Zacharys-MacBook-Pro.local (31178)] INFO : Starting Agent shutdown
+[2015-12-24 10:02:22 -0800 Zacharys-MacBook-Pro.local (31162)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1182867/applications/13229347

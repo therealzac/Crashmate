@@ -3,6 +3,9 @@ var AppDispatcher = require('../dispatcher/dispatcher.js');
 var SessionStore = new Store(AppDispatcher);
 var SessionConstants = require('../constants/sessionConstants.js');
 var FilterStore = require('./filters.js');
+var ApiUtil = require('../util/apiUtil.js');
+var History = require('react-router').History;
+
 
 Date.prototype.getMoveDate = function() {
   var year = this.getFullYear();
@@ -19,22 +22,22 @@ Date.prototype.getMoveDate = function() {
 firstOfNextMonth = new Date().getMoveDate();
 
 var _session = {
-  username: "",
   about: "",
   age: 25,
   amenities: "",
   budget: 500,
-  cats: true,
+  cats: false,
   date: firstOfNextMonth,
-  dogs: true,
-  gender: "Both",
-  id: null,
-  term: null,
-  occupation: "Both",
+  dogs: false,
+  gender: "Female",
+  term: 3,
+  occupation: "Student",
   logInModalOpen: false,
   signUpModalOpen: false,
   messengerOpen: false,
-  navBar: "header"
+  messageOpen: false,
+  navBar: "header",
+  messages: []
   };
 
 SessionStore.__onDispatch = function (payload) {
@@ -42,6 +45,11 @@ SessionStore.__onDispatch = function (payload) {
 
     case SessionConstants.SESSION_RECIEVED:
       setSession(payload.session);
+      SessionStore.__emitChange();
+      break;
+
+    case SessionConstants.MESSAGES_RECIEVED:
+      setMessages(payload.messages);
       SessionStore.__emitChange();
       break;
 
@@ -65,6 +73,12 @@ SessionStore.__onDispatch = function (payload) {
       SessionStore.__emitChange();
       break;
 
+    case SessionConstants.RENDER_MESSAGE:
+      openMessage(payload.message);
+      SessionStore.__emitChange();
+      SessionStore.__emitChange();
+      break;
+
     case SessionConstants.RENDER_OPAQUE_NAV_BAR:
       opaqueNavBar();
       SessionStore.__emitChange();
@@ -73,6 +87,7 @@ SessionStore.__onDispatch = function (payload) {
     case SessionConstants.RENDER_TRANSPARENT_NAV_BAR:
       transparentNavBar();
       SessionStore.__emitChange();
+      break;
 
     case SessionConstants.CLOSE_MODALS:
       closeModals();
@@ -91,6 +106,7 @@ closeModals = function () {
   _session.logInModalOpen = false;
   _session.signUpModalOpen = false;
   _session.messengerOpen = false;
+  _session.messageOpen = false;
 };
 
 setSession = function (session) {
@@ -100,6 +116,12 @@ setSession = function (session) {
 
   closeModals();
   _session.navBar = navBars;
+  _session.messages = [];
+  ApiUtil.fetchMessages(_session.id);
+};
+
+setMessages = function (messages) {
+  _session.messages = messages;
 };
 
 clearSession = function () {
@@ -108,11 +130,12 @@ clearSession = function () {
     signUpModalOpen: false,
     signUpModalOpen: false,
     messengerOpen: false,
+    messageOpen: false,
     message: "Need a roommate? We got you.",
     header: "Crashmate",
     label: "",
-    buttonValue: "Next",
     username: "",
+    buttonValue: "Next",
     usernameInput: "input",
     usernames: [],
     password: "",
@@ -137,7 +160,8 @@ clearSession = function () {
     amenitiesInput: "hidden",
     amenities: "",
     aboutInput: "hidden",
-    about: ""
+    about: "",
+    messages: []
     };
 };
 
@@ -156,8 +180,20 @@ openSignUpModal = function () {
 };
 
 openMessenger = function () {
+  _session.messageOpen = false;
   _session.messengerOpen = true;
 };
+
+openMessage = function (message) {
+  _session.messageOpen = true;
+  _session.sender_id = message.sender_id;
+  _session.recievedMessage = message.body;
+
+  messageIndex = _session.messages.indexOf(message);
+  _session.messages.splice(messageIndex, 1);
+
+  ApiUtil.markAsRead(message.id);
+}
 
 opaqueNavBar = function () {
   _session.navBar = "header-opaque";

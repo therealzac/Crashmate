@@ -11,8 +11,7 @@ module.exports = React.createClass({
     username: "",
     password: "",
     logInModalOpen: false,
-    message: "Welcome back.",
-    loggingIn: false
+    message: "Welcome back."
   },
 
   getInitialState: function () {
@@ -26,11 +25,6 @@ module.exports = React.createClass({
   _onChange: function () {
     session = SessionStore.getSession();
     this.setState(session);
-    if (this.state.id && this.state.loggingIn){
-      var userUrl = "/users/" + this.state.id;
-      this.props.history.push(userUrl);
-      this.setState(this.resetState)
-    }
   },
 
   componentWillUnmount: function () {
@@ -41,7 +35,6 @@ module.exports = React.createClass({
     event.preventDefault();
     var user = {username: this.state.username, password: this.state.password}
     ApiUtil.logIn(user);
-    this.setState({loggingIn: true});
   },
 
   handleClose: function () {
