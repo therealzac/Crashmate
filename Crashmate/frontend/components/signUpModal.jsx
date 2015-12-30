@@ -59,6 +59,7 @@ module.exports = React.createClass({
   componentDidMount: function () {
     this.sessionListener = SessionStore.addListener(this._onChange);
     this.roommatesListener = RoommatesStore.addListener(this._onChange);
+    ApiUtil.fetchUsers();
   },
 
   _onChange: function () {

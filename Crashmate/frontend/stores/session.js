@@ -187,7 +187,9 @@ openMessenger = function () {
 openMessage = function (message) {
   _session.messageOpen = true;
   _session.sender_id = message.sender_id;
+  _session.sender_group_id = message.sender.group_id;
   _session.recievedMessage = message.body;
+  _session.messageType = message.type;
 
   messageIndex = _session.messages.indexOf(message);
   _session.messages.splice(messageIndex, 1);

@@ -13,6 +13,13 @@ class Api::UsersController < ApplicationController
     @users = User.all
   end
 
+  def update
+    @user = User.find(params[:id])
+    @user.group_id = params[:group_id]
+    @user.save!
+    render :show
+  end
+
   private
   def user_params
     params.require(:user).permit(

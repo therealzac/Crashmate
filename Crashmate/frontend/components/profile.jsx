@@ -4,6 +4,7 @@ var RoommatesStore = require('../stores/roommates.js');
 var ApiUtil = require('../util/apiUtil.js');
 var ApiActions = require('../actions/apiActions.js');
 var Messenger = require('./messengerModal.jsx');
+var IndexItem = require('./indexItem.jsx');
 
 var Profile = React.createClass({
   getInitialState: function () {
@@ -41,7 +42,8 @@ var Profile = React.createClass({
         term: currentProfile[0].term,
         occupation: currentProfile[0].occupation,
         city: currentProfile[0].city,
-        amenities: currentProfile[0].amenities
+        amenities: currentProfile[0].amenities,
+        group_id: currentProfile[0].group_id
       });
     }
   },
@@ -68,7 +70,8 @@ var Profile = React.createClass({
         term: currentProfile[0].term,
         occupation: currentProfile[0].occupation,
         city: currentProfile[0].city,
-        amenities: currentProfile[0].amenities
+        amenities: currentProfile[0].amenities,
+        group_id: currentProfile[0].group_id
       });
     }
   },
@@ -78,7 +81,7 @@ var Profile = React.createClass({
     this.sessionListener.remove();
   },
 
-  openMessenger: function () {
+  handleButton: function () {
     ApiActions.renderMessenger();
   },
 
@@ -90,7 +93,22 @@ var Profile = React.createClass({
     return pets.join(" and ");
   },
 
+  getRoommates: function () {
+    self = this;
+    var all = RoommatesStore.getRoommates();
+    var roommates = all.filter(function(roommate){
+      return (roommate.group_id === self.state.group_id)
+    });
+
+    var withoutSelf = roommates.filter(function (roommate) {
+      return (roommate.id !== self.state.id)
+    });
+
+    return withoutSelf;
+  },
+
   render: function () {
+
     return(
       <main className="show group">
       <Messenger profileId={this.props.params.id}/>
@@ -98,7 +116,7 @@ var Profile = React.createClass({
           <h1>{this.state.username}</h1>
             <p>{this.state.age}, {this.state.gender}</p>
             <p>Available by {this.state.date}</p>
-          <button onClick={this.openMessenger}
+          <button onClick={this.handleButton}
                   className="show-header-message-button">
                   Message
           </button>
@@ -123,9 +141,19 @@ var Profile = React.createClass({
         </section>
         <section className="show-main">
           <h2>{this.state.username}'s Crashmates</h2>
-          <div className='crashmates'/>
-          <h2>Places {this.state.username} Likes</h2>
-          <div className='properties'/>
+          <ul className='crashmates'>
+            {this.getRoommates().map(function (roommate){
+              return (
+                <IndexItem key={roommate.id}
+                           id={roommate.id}
+                           name={roommate.username}
+                           age={roommate.age}
+                           totalBudget={roommate.budget}
+                  />
+                );
+              })
+            }
+          </ul>
         </section>
       </main>
     )

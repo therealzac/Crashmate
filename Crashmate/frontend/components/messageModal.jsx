@@ -2,6 +2,7 @@ var React = require('react');
 var RoommatesStore = require('../stores/roommates.js');
 var SessionStore = require('../stores/session.js');
 var ApiActions = require('../actions/apiActions.js');
+var ApiUtil = require('../util/apiUtil.js');
 
 module.exports = React.createClass({
   getInitialState: function () {
@@ -10,6 +11,7 @@ module.exports = React.createClass({
     return {
       messageOpen: false,
       sender_id: session.sender_id,
+      messageType: session.messageType,
       recievedMessage: session.recievedMessage,
       roommates: roommates
     }
@@ -23,8 +25,12 @@ module.exports = React.createClass({
     roommates = RoommatesStore.getRoommates();
     session = SessionStore.getSession();
     this.setState({
+      my_id: session.id,
+      my_group_id: session.group_id,
       sender_id: session.sender_id,
+      sender_group_id: session.sender_group_id,
       messageOpen: session.messageOpen,
+      messageType: session.messageType,
       recievedMessage: session.recievedMessage,
       roommates: roommates
     });
@@ -49,8 +55,18 @@ module.exports = React.createClass({
 
   handleButton: function (event) {
     event.preventDefault;
-    var userUrl = "/users/" + this.state.sender_id
-    this.props.history.push(userUrl);
+    if (event.currentTarget.innerHTML === "Reply"){
+      var userUrl = "/users/" + this.state.sender_id
+      this.props.history.push(userUrl);
+    } else {
+      if (this.state.my_group_id){
+        ApiUtil.addUserToGroup(this.state.sender_id, this.state.my_group_id);
+      } else if (this.state.sender_group_id){
+          ApiUtil.addUserToGroup(this.state.my_id, this.state.sender_group_id);
+      } else {
+        ApiUtil.groupUsers(this.state.my_id, this.state.sender_id);
+      }
+    }
     ApiActions.closeModals();
   },
 
@@ -58,8 +74,12 @@ module.exports = React.createClass({
     if (!this.state.messageOpen){
       return (<div/>);
     } else {
-
-      sender = this.getSender();
+      if (this.state.messageType === "Request"){
+        var buttonValue = "Confirm"
+      } else {
+        var buttonValue = "Reply"
+      }
+      var sender = this.getSender();
       return(
         <div className="modal is-open">
           <form className="modal-form">
@@ -74,7 +94,7 @@ module.exports = React.createClass({
             <div className="recieved-message">{this.state.recievedMessage}</div>
 
             <div className="submit">
-              <button onClick={this.handleButton}>Reply</button>
+              <button onClick={this.handleButton}>{buttonValue}</button>
             </div>
 
           </form>

@@ -11,5 +11,6 @@ json.extract!(
         :amenities,
         :about,
         :gender,
-        :occupation
+        :occupation,
+        :group_id
 )

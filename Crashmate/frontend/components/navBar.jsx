@@ -56,7 +56,6 @@ var Navbar = module.exports = React.createClass({
 
       this.props.history.push('/');
       ApiActions.renderSignUpModal();
-      ApiUtil.fetchUsers();
 
     } else if (event.currentTarget.innerHTML === 'Crashmate'){
 

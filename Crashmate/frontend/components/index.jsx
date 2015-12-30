@@ -123,13 +123,14 @@ module.exports = React.createClass({
             {this.filteredRoommates().map(function (roommate) {
               return (
                   <IndexItem key={roommate.id}
-                                  id={roommate.id}
-                                  name={roommate.username}
-                                  age={roommate.age}
-                                  totalBudget={roommate.budget}
+                             id={roommate.id}
+                             name={roommate.username}
+                             age={roommate.age}
+                             totalBudget={roommate.budget}
                   />
-              )
-            })}
+                );
+              })
+            }
           </ul>
         </section>
       </main>

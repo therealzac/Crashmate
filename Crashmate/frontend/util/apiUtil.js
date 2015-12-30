@@ -29,6 +29,35 @@ module.exports = {
     });
   },
 
+  groupUsers: function (id1, id2) {
+    $.ajax({
+      url: "api/groups",
+      method: "POST",
+      data: {id1: id1, id2: id2},
+      success: function (payload) {
+        console.log(payload);
+      },
+      error: function (error) {
+        console.log(error);
+      }
+    });
+  },
+
+  addUserToGroup: function (id, group_id) {
+    $.ajax({
+      url: "api/users/" + id,
+      method: "PATCH",
+      data: {group_id: group_id},
+      success: function (payload) {
+        console.log("Success");
+        console.log(payload);
+      },
+      error: function (error) {
+        console.log(error);
+      },
+    });
+  },
+
   createMessage: function (message) {
     $.ajax({
       url: "api/messages",
