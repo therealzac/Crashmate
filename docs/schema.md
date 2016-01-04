@@ -39,10 +39,3 @@ reciever_id     | integer   | not null foreign key
 column name     | data type | details
 ----------------|-----------|-----------------------
 id              | integer   | not null, primary key
-
-## group memberships, 4th phase
-column name     | data type | details
-----------------|-----------|-----------------------
-id              | integer   | not null, primary key
-member_id       | integer   | not null, foreign key
-group_id        | integer   | not null, foreign key
