@@ -15,7 +15,24 @@ class Api::UsersController < ApplicationController
 
   def update
     @user = User.find(params[:id])
-    @user.group_id = params[:group_id]
+    if params[:user]
+      @user.age = params[:user][:age]
+      @user.city = params[:user][:city]
+      @user.date = params[:user][:date]
+      @user.budget = params[:user][:budget]
+      @user.term = params[:user][:term]
+      @user.dogs = params[:user][:dogs]
+      @user.cats = params[:user][:cats]
+      @user.amenities = params[:user][:amenities]
+      @user.about = params[:user][:about]
+      @user.gender = params[:user][:gender]
+      @user.occupation = params[:user][:occupation]
+      @user.group_id = params[:user][:group_id]
+      @user.profile_pic = params[:user][:profile_pic]
+    else
+      @user.group_id = params[:group_id]
+    end
+
     @user.save!
     render :show
   end
@@ -35,7 +52,9 @@ class Api::UsersController < ApplicationController
       :term,
       :age,
       :gender,
-      :occupation
+      :occupation,
+      :group_id,
+      :profile_pic
     )
   end
 end

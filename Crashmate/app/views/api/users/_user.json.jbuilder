@@ -12,5 +12,6 @@ json.extract!(
         :about,
         :gender,
         :occupation,
-        :group_id
+        :group_id,
+        :profile_pic
 )

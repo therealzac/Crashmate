@@ -55,7 +55,6 @@ module.exports = React.createClass({
   },
 
   selectGender: function (event) {
-    event.preventDefault;
     var gender = event.currentTarget.innerHTML;
     if (gender === this.state.gender) {
       ApiActions.setFilter({gender: "Both"});
@@ -65,19 +64,16 @@ module.exports = React.createClass({
   },
 
   toggleCat: function (event) {
-    event.preventDefault;
     newState = !this.state.cats;
     ApiActions.setFilter({cats: newState})
   },
 
   toggleDog: function (event) {
-    event.preventDefault;
     newState = !this.state.dogs;
     ApiActions.setFilter({dogs: newState})
   },
 
   occupationChange: function (event) {
-    event.preventDefault;
     var occupation = event.currentTarget.innerHTML;
     if (occupation === this.state.occupation) {
       ApiActions.setFilter({occupation: "Both"});
@@ -120,18 +116,6 @@ module.exports = React.createClass({
                     tooltips
                     format={wNumb({decimals: 0})}
                     onChange={this.termChange}
-            />
-          </div>
-
-          <label className="filter-label">Maximum Group Size</label>
-          <div className="filter-component">
-            <Slider range={{min: 1, max: 6}}
-                    start={[this.state.groupSize]}
-                    connect="lower"
-                    step={1}
-                    tooltips
-                    format={wNumb({decimals: 0})}
-                    onChange={this.groupChange}
             />
           </div>
 

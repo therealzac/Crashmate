@@ -16,14 +16,13 @@ module.exports = React.createClass({
     filters = FilterStore.getFilters();
     roommates = RoommateStore.getRoommates();
     session = SessionStore.getSession();
-    return {filters: filters, roommates: roommates, page: 0, city: session.city}
+    return {filters: filters, roommates: roommates, city: filters.city}
   },
 
   componentDidMount: function () {
     this.filterListener = FilterStore.addListener(this._onChange);
     this.roommateListener = RoommateStore.addListener(this._onChange);
     this.sessionListener = SessionStore.addListener(this._onChange);
-    ApiUtil.fetchCity();
     ApiActions.renderOpaque();
   },
 
@@ -32,9 +31,7 @@ module.exports = React.createClass({
     roommates = RoommateStore.getRoommates();
     session = SessionStore.getSession();
 
-    city  = (filters.city ? filters.city : session.city);
-    this.setState({filters: filters, roommates: roommates, page: 0, city: city});
-
+    this.setState({filters: filters, roommates: roommates});
   },
 
   componentWillUnmount: function () {
@@ -111,14 +108,17 @@ module.exports = React.createClass({
   },
 
   render: function () {
-    all = this.filteredRoommates();
-    numPages = Math.floor(all.length / 12) + 1;
-    thisPage = all.slice(this.state.page, this.state.page + 12);
+    if (this.state.city) {
+      var header = "Roommates in " + this.state.city;
+    } else {
+      var header = "";
+    }
+
     return(
       <main className="index group">
         <FilterBar/>
         <section className="index-main">
-          <h2>Roommates in {this.state.city}</h2>
+          <h2>{header}</h2>
           <ul>
             {this.filteredRoommates().map(function (roommate) {
               return (
@@ -127,6 +127,7 @@ module.exports = React.createClass({
                              name={roommate.username}
                              age={roommate.age}
                              totalBudget={roommate.budget}
+                             profile_pic={roommate.profile_pic}
                   />
                 );
               })

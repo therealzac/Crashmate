@@ -7,7 +7,7 @@ var ButtonGroup = require('react-bootstrap').ButtonGroup;
 var ApiActions = require('../actions/apiActions.js');
 var ApiUtil = require('../util/apiUtil.js');
 
-module.exports = React.createClass({
+MessengerModal = React.createClass({
   mixins: [LinkedStateMixin],
 
   resetState: {
@@ -129,3 +129,5 @@ module.exports = React.createClass({
     }
   }
 });
+
+module.exports = MessengerModal;

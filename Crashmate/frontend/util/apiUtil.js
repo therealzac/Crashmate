@@ -1,5 +1,5 @@
 var ApiActions = require('../actions/apiActions.js');
-module.exports = {
+ApiUtil = {
 
   fetchUsers: function () {
     $.ajax({
@@ -29,13 +29,28 @@ module.exports = {
     });
   },
 
+  updateUser: function (user) {
+    $.ajax({
+      url: "api/users/" + user.id,
+      method: "PATCH",
+      data: {user: user},
+      success: function (user) {
+        ApiActions.closeModals();
+        ApiUtil.fetchUsers();
+      },
+      error: function (error) {
+        console.log(error);
+      }
+    });
+  },
+
   groupUsers: function (id1, id2) {
     $.ajax({
       url: "api/groups",
       method: "POST",
       data: {id1: id1, id2: id2},
       success: function (payload) {
-        console.log(payload);
+        ApiUtil.fetchUsers();
       },
       error: function (error) {
         console.log(error);
@@ -49,8 +64,7 @@ module.exports = {
       method: "PATCH",
       data: {group_id: group_id},
       success: function (payload) {
-        console.log("Success");
-        console.log(payload);
+        ApiUtil.fetchUsers();
       },
       error: function (error) {
         console.log(error);
@@ -132,27 +146,11 @@ module.exports = {
       url: "api/messages/" + id,
       method: "PATCH",
       data: {id: id},
-      success: function (message) {
-        console.log(message);
-      },
       error: function (error) {
         console.log(error);
       }
     });
-  },
-
-  fetchCity: function () {
-    var geocoder = new google.maps.Geocoder();
-
-    navigator.geolocation.getCurrentPosition(function (position) {
-      getCity(position.coords.latitude, position.coords.longitude)
-    });
-
-    function getCity(lat, lng) {
-      var latlng = new google.maps.LatLng(lat, lng);
-      geocoder.geocode({'latLng': latlng}, function(results) {
-        ApiActions.setFilter({city: results[4].formatted_address});
-      });
-    }
   }
 }
+
+module.exports = ApiUtil;

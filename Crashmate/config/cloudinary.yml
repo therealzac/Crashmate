@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: crashmate
+  api_key: '738225563179742'
+  api_secret: EOIGsdm6DtTMdVozQK6Ccx25TOk
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: crashmate
+  api_key: '738225563179742'
+  api_secret: EOIGsdm6DtTMdVozQK6Ccx25TOk
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: crashmate
+  api_key: '738225563179742'
+  api_secret: EOIGsdm6DtTMdVozQK6Ccx25TOk
+  enhance_image_tag: true
+  static_image_support: false

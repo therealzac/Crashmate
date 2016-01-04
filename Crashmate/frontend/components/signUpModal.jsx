@@ -232,7 +232,6 @@ module.exports = React.createClass({
       });
 
     } else if (this.state.label === "When will you be available to move?"){
-      console.log(this.state);
       this.setState({
         label: "What's your budget for rent?",
         calendarInput: "hidden",
@@ -301,7 +300,8 @@ module.exports = React.createClass({
         amenities: this.state.amenities,
         about: this.state.about,
         gender: this.state.gender,
-        occupation: this.state.occupation
+        occupation: this.state.occupation,
+        profile_pic: "https://thebenclark.files.wordpress.com/2014/03/facebook-default-no-profile-pic.jpg"
       };
       ApiUtil.createUser(user);
       this.setState(this.resetState)
@@ -316,6 +316,7 @@ module.exports = React.createClass({
           header: newHeader,
           message: "",
           label: "First we need some basic info.",
+          pageNum: "1/8",
           usernameInput: "hidden",
           passwordInput: "hidden",
           ageInput: "signup-filter-label",
@@ -329,6 +330,7 @@ module.exports = React.createClass({
 
         this.setState({
           label: "Where are you moving?",
+          pageNum: "2/8",
           ageInput: "hidden",
           genderInput: "hidden",
           occupationInput: "hidden",
@@ -340,6 +342,7 @@ module.exports = React.createClass({
 
       this.setState({
         label: "When will you be available to move?",
+        pageNum: "3/8",
         cityInput: "hidden",
         calendarInput: "signup-filter-label",
         budgetInput: "hidden"
@@ -349,6 +352,7 @@ module.exports = React.createClass({
 
       this.setState({
         label: "What's your budget for rent?",
+        pageNum: "4/8",
         calendarInput: "hidden",
         budgetInput: "signup-filter-label",
         termInput: "hidden"
@@ -358,6 +362,7 @@ module.exports = React.createClass({
 
       this.setState({
         label: "How many months can you commit to?",
+        pageNum: "5/8",
         budgetInput: "hidden",
         termInput: "signup-filter-label",
         petInput: "hidden"
@@ -367,6 +372,7 @@ module.exports = React.createClass({
 
       this.setState({
         label: "Do you have any pets?",
+        pageNum: "6/8",
         termInput: "hidden",
         petInput: "signup-filter-label",
         amenitiesInput: "hidden"
@@ -377,6 +383,7 @@ module.exports = React.createClass({
       this.setState({
         header: "Cool.",
         label: "What amenities do you need at your new spot?",
+        pageNum: "7/8",
         petInput: "hidden",
         amenitiesInput: "input",
         aboutInput: "hidden",

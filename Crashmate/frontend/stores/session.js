@@ -36,6 +36,7 @@ var _session = {
   signUpModalOpen: false,
   messengerOpen: false,
   messageOpen: false,
+  editOpen: false,
   navBar: "header",
   messages: []
   };
@@ -68,6 +69,11 @@ SessionStore.__onDispatch = function (payload) {
       SessionStore.__emitChange();
       break;
 
+    case SessionConstants.REQUIRE_LOG_IN:
+      requireLogin();
+      SessionStore.__emitChange();
+      break;
+
     case SessionConstants.RENDER_MESSENGER:
       openMessenger();
       SessionStore.__emitChange();
@@ -76,6 +82,11 @@ SessionStore.__onDispatch = function (payload) {
     case SessionConstants.RENDER_MESSAGE:
       openMessage(payload.message);
       SessionStore.__emitChange();
+      SessionStore.__emitChange();
+      break;
+
+    case SessionConstants.RENDER_EDIT:
+      openEdit();
       SessionStore.__emitChange();
       break;
 
@@ -107,6 +118,7 @@ closeModals = function () {
   _session.signUpModalOpen = false;
   _session.messengerOpen = false;
   _session.messageOpen = false;
+  _session.editOpen = false;
 };
 
 setSession = function (session) {
@@ -131,6 +143,7 @@ clearSession = function () {
     signUpModalOpen: false,
     messengerOpen: false,
     messageOpen: false,
+    editOpen: false,
     message: "Need a roommate? We got you.",
     header: "Crashmate",
     label: "",
@@ -174,6 +187,11 @@ openLoginModal = function () {
   _session.message = "Welcome back."
 };
 
+requireLogin = function () {
+  _session.logInModalOpen = true;
+  _session.message = "Please log in to continue."
+};
+
 openSignUpModal = function () {
   _session.signUpModalOpen = true;
   _session.message = "Need a roommate? We got you."
@@ -195,6 +213,10 @@ openMessage = function (message) {
   _session.messages.splice(messageIndex, 1);
 
   ApiUtil.markAsRead(message.id);
+}
+
+openEdit = function () {
+  _session.editOpen = true;
 }
 
 opaqueNavBar = function () {

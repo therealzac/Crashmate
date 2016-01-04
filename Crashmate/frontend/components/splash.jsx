@@ -20,7 +20,6 @@ module.exports = React.createClass({
     this.filterListener = FilterStore.addListener(this._onChange);
 
     ApiActions.renderTransparent();
-    ApiUtil.fetchCity();
 
     var input = (document.getElementById('pac-input'));
     this.autocomplete = new google.maps.places.Autocomplete(input);
@@ -52,9 +51,13 @@ module.exports = React.createClass({
 
     if (city === "") {city = this.state.placeholder}
 
-    if (city !== "Where are you moving?"){
+    if (city !== "Where are you moving?"
+        && city !== "Please enter a city to continue."){
+          
       ApiActions.setFilter({city: city});
-      this.props.history.push("index");
+      this.props.history.pushState(null, "index");
+    } else {
+      this.setState({placeholder: "Please enter a city to continue."})
     }
 
   },

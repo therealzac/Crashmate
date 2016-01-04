@@ -57,6 +57,12 @@ module.exports = {
     })
   },
 
+  renderEdit: function () {
+    AppDispatcher.dispatch({
+      actionType: SessionConstants.RENDER_EDIT
+    });
+  },
+
   renderOpaque: function () {
     AppDispatcher.dispatch({
       actionType: SessionConstants.RENDER_OPAQUE_NAV_BAR
@@ -67,6 +73,12 @@ module.exports = {
     AppDispatcher.dispatch({
       actionType: SessionConstants.RENDER_TRANSPARENT_NAV_BAR
     })
+  },
+
+  requireLogIn: function () {
+    AppDispatcher.dispatch({
+      actionType: SessionConstants.REQUIRE_LOG_IN
+    });
   },
 
   closeModals: function () {

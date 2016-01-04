@@ -37,7 +37,8 @@ module.exports = React.createClass({
     ApiUtil.logIn(user);
   },
 
-  handleClose: function () {
+  handleClose: function (event) {
+    event.preventDefault();
     ApiActions.closeModals();
   },
 

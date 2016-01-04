@@ -34,6 +34,11 @@
    background: transparent;
  }
 
+ #root{
+   max-width: 100%;
+   overflow-x: hidden;
+ }
+
  ul {
    list-style: none;
  }
@@ -163,7 +168,6 @@ p{
    position: absolute;
    margin-top: 16px;
    left: -1px;
-   min-width: 200px;
    font-size: 14px;
    white-space: nowrap;
    background: #fff;
@@ -183,8 +187,7 @@ p{
  .header-notifications > li {
    border-top: 1px solid #ccc;
    color: #000;
-   min-width: 200px;
-   padding: 5%;
+   padding: 10px;
  }
 
  .header-notifications > li:hover {
@@ -250,6 +253,12 @@ p{
   padding: 0 0 3px 0;
 }
 
+.edit-submit {
+  margin: 20px 0 0 0;
+  padding: 0 0 3px 0;
+  padding-bottom: 50px;
+}
+
 .submit > button {
   position: relative;
   padding: 10px 20px;
@@ -265,6 +274,51 @@ p{
 }
 
 .submit > button:active {
+  top: 3px;
+  background: #0a0;
+  box-shadow: none;
+}
+
+.edit-submit > button {
+  position: relative;
+  padding: 10px 20px;
+  color: #fff;
+  background: #3D9970;
+  font-weight: 400;
+  border-radius: 5px;
+  box-shadow: 0 1px 0 0 #001f3f;
+}
+
+.edit-submit > button:hover {
+  background: #39CCCC;
+}
+
+.edit-submit > button:active {
+  top: 3px;
+  background: #0a0;
+  box-shadow: none;
+}
+
+.leave-group {
+  margin: 20px 0 0 0;
+  padding: 0 0 3px 0;
+}
+
+.leave-group > button {
+  position: relative;
+  padding: 10px 20px;
+  color: #fff;
+  background: #FF4136;
+  font-weight: 400;
+  border-radius: 5px;
+  box-shadow: 0 1px 0 0 #001f3f;
+}
+
+.leave-group > button:hover {
+  background: #FF4148;
+}
+
+.leave-group > button:active {
   top: 3px;
   background: #0a0;
   box-shadow: none;
@@ -325,15 +379,15 @@ p{
 }
 
 .city-input {
+  position: absolute;
   display: block;
   margin-top: 400px;
-  width: 108.5%;
+  width: 100%;
   margin-left: -2%;
   height: 40px;
   background: rgba(0, 0, 0, 0.7);
   padding: 20px;
   border: 1px solid #ccc;
-  float: left;
 }
 
 .city-input > label {
@@ -347,7 +401,7 @@ p{
   display: block;
   float: left;
   background: #fff;
-  margin-left: calc(50% - 250px);
+  margin-left: calc(50% - 265px);
   border: 1px solid #ccc;
   padding: 10px;
   width: 300px;
@@ -422,6 +476,18 @@ p{
   border: 1px solid #000;
 }
 
+.edit-modal-form{
+  position: absolute;
+  background: #fff;
+  padding: 20px;
+  float: left;
+  width: 300px;
+  height: 100%;
+  z-index: 3;
+  overflow: scroll;
+  border-right: 1px solid #ccc;
+}
+
 .modal-close {
   position: absolute;
   top: 10px;
@@ -452,7 +518,7 @@ p{
 .index {
   position: relative;
   margin: 0 auto;
-  background: #fff;
+  background: rgba(0, 0, 0, 0.7);
   width: 100%;
   border-left: 1px solid #ccc;
   border-right: 1px solid #ccc;
@@ -466,6 +532,7 @@ p{
   height: 700px;
   overflow: scroll;
   border-right: 1px solid #ccc;
+  background: #fff;
 }
 
 .index-main {
@@ -514,6 +581,7 @@ p{
   margin: 5%;
   text-align: center;
   border-bottom: 1px solid #ccc;
+  color: #fff;
 }
 
 .filter-label{
@@ -524,13 +592,23 @@ p{
 }
 
 .pageNum{
-
+  font-weight: 100;
+  color: #ccc;
 }
 
 .signup-filter-label{
   position: relative;
   font-size: 16px;
   margin: 9%;
+  font-weight: 300;
+  color: #AAAAAA;
+}
+
+.edit-filter-label{
+  position: relative;
+  font-size: 16px;
+  margin: 9%;
+  margin-bottom: 13%;
   font-weight: 300;
   color: #AAAAAA;
 }
@@ -597,7 +675,7 @@ p{
 
 .show-header {
   position: relative;
-  background: rgba(0, 0, 0, 0.05);
+  background: rgba(0, 0, 0, 0.7);
   border-left: 1px solid #ccc;
   border-right: 1px solid #ccc;
   height: 200px;
@@ -612,6 +690,7 @@ p{
   font-size: 16px;
   font-weight: 300;
   text-shadow: #000 0 0 10px;
+  color: #fff;
 }
 
 .show-header > h1 {
@@ -622,6 +701,7 @@ p{
   line-height: 1;
   font-weight: 300;
   text-shadow: #000 0 0 10px;
+  color: #fff;
 }
 
 .show-header-message-button {
@@ -644,17 +724,21 @@ p{
   padding: 2%;
   float: left;
   width: 14.6%;
-  min-height: 601px;
+  max-height: 657px;
+  min-height: 657px;
   border: 1px solid #ccc;
   background: #fff;
+  overflow-x: visible;
 }
 
 .show-main {
   background: #fff;
-  min-height: 644px;
+  min-height: 700px;
+  max-height: 700px;
   float: right;
-  width: 81%;
+  width: 80.99%;
   border: 1px solid #ccc;
+  overflow-y: scroll;
 }
 
 .show-main > h2:first-child {
@@ -757,6 +841,8 @@ p{
   border-bottom: 1px solid #ccc;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
+  max-height: 56px;
+  overflow: hidden;
 }
 
 .footer-copy {
