@@ -110,8 +110,8 @@ All remaining time will be spent making sure these features work well, and that
 the user experience is as pleasant and impressive as possible.
 
 ### Bonus Features (TBD)
-- [ ] Add support for couples looking for roommate(s).
-- [ ] Add support for groups of several roommates.
+- [x] Add support for couples looking for roommate(s).
+- [x] Add support for groups of several roommates.
 - [ ] Add a 'log in with Facebook' feature.
 - [ ] Allow users to like properties.
 
