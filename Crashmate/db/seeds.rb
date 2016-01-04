@@ -39,7 +39,7 @@ occupations = ["Student", "Professional"]
 
 def newdate
   year = Date.today.year.to_s
-  month = (rand(12) + 1).to_s
+  month = (Date.today.month + 1).to_s
   month.insert(0, "0") if month.length < 2
   month + "-01-" + year
 end

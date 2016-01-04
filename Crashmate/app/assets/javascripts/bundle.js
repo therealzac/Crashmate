@@ -67621,7 +67621,6 @@
 	  },
 
 	  leaveGroup: function (event) {
-	    event.preventDefault();
 	    var user = {
 	      id: this.state.id,
 	      username: this.state.username,
@@ -67643,7 +67642,6 @@
 	  },
 
 	  handleSubmit: function (event) {
-	    event.preventDefault();
 	    var user = {
 	      id: this.state.id,
 	      username: this.state.username,
@@ -67758,7 +67756,7 @@
 	            { className: 'input' },
 	            React.createElement(
 	              'div',
-	              null,
+	              { className: 'edit-title' },
 	              'Moving to'
 	            ),
 	            React.createElement('input', { id: 'autocomplete-input',
@@ -67771,7 +67769,7 @@
 	            { className: 'edit-filter-label' },
 	            React.createElement(
 	              'div',
-	              null,
+	              { className: 'edit-title' },
 	              'Budget'
 	            ),
 	            React.createElement(Slider, { range: { min: 100, max: 3000 },
@@ -67788,7 +67786,7 @@
 	            { className: 'edit-filter-label' },
 	            React.createElement(
 	              'div',
-	              null,
+	              { className: 'edit-title' },
 	              'Available by'
 	            ),
 	            React.createElement(Calendar, { format: 'MM/DD/YYYY',
@@ -67801,7 +67799,7 @@
 	            { className: 'edit-filter-label' },
 	            React.createElement(
 	              'div',
-	              null,
+	              { className: 'edit-title' },
 	              'Minimum Months'
 	            ),
 	            React.createElement(Slider, { range: { min: 1, max: 12 },
@@ -67818,7 +67816,7 @@
 	            { className: 'edit-filter-label' },
 	            React.createElement(
 	              'div',
-	              null,
+	              { className: 'edit-title' },
 	              'Pets'
 	            ),
 	            React.createElement(
@@ -67843,7 +67841,7 @@
 	            { className: 'input' },
 	            React.createElement(
 	              'div',
-	              null,
+	              { className: 'edit-title' },
 	              'Amenities'
 	            ),
 	            React.createElement('textarea', { valueLink: this.linkState("amenities") })
@@ -67853,7 +67851,7 @@
 	            { className: 'input' },
 	            React.createElement(
 	              'div',
-	              null,
+	              { className: 'edit-title' },
 	              'About'
 	            ),
 	            React.createElement('textarea', { valueLink: this.linkState("about") })

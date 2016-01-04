@@ -73,7 +73,6 @@ EditModal = React.createClass({
   },
 
   leaveGroup: function (event) {
-    event.preventDefault();
     var user = {
       id: this.state.id,
       username: this.state.username,
@@ -95,7 +94,6 @@ EditModal = React.createClass({
   },
 
   handleSubmit: function (event) {
-    event.preventDefault();
     var user = {
       id: this.state.id,
       username: this.state.username,
@@ -176,7 +174,7 @@ EditModal = React.createClass({
             </div>
 
             <div className="input">
-            <div>Moving to</div>
+            <div className="edit-title">Moving to</div>
               <input id="autocomplete-input"
                      type="text"
                      placeholder={this.state.city}
@@ -184,7 +182,7 @@ EditModal = React.createClass({
             </div>
 
             <div className="edit-filter-label">
-            <div>Budget</div>
+            <div className="edit-title">Budget</div>
               <Slider range={{min: 100, max: 3000}}
                       start={[this.state.budget]}
                       connect="lower"
@@ -196,7 +194,7 @@ EditModal = React.createClass({
             </div>
 
             <div className="edit-filter-label">
-            <div>Available by</div>
+            <div className="edit-title">Available by</div>
               <Calendar format="MM/DD/YYYY"
                         date={this.state.date}
                         onChange={this.dateChange}
@@ -204,7 +202,7 @@ EditModal = React.createClass({
             </div>
 
             <div className="edit-filter-label">
-            <div>Minimum Months</div>
+            <div className="edit-title">Minimum Months</div>
               <Slider range={{min: 1, max: 12}}
                       start={[this.state.term]}
                       connect={"lower"}
@@ -216,7 +214,7 @@ EditModal = React.createClass({
             </div>
 
             <div className="edit-filter-label">
-            <div>Pets</div>
+            <div className="edit-title">Pets</div>
               <ButtonGroup bsSize="large">
                 <Button onClick={this.toggleCat}
                         active={this.state.cats}>
@@ -230,12 +228,12 @@ EditModal = React.createClass({
             </div>
 
             <div className="input">
-              <div>Amenities</div>
+              <div className="edit-title">Amenities</div>
               <textarea valueLink={this.linkState("amenities")}/>
             </div>
 
             <div className="input">
-              <div>About</div>
+              <div className="edit-title">About</div>
               <textarea valueLink={this.linkState("about")}/>
             </div>
 

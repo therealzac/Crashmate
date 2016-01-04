@@ -237,6 +237,7 @@ p{
   padding: 10px;
   width: calc(100% - 22px);
   border-radius: 5px;
+  color: #000;
 }
 
 .input > input:focus,
@@ -297,6 +298,10 @@ p{
   top: 3px;
   background: #0a0;
   box-shadow: none;
+}
+
+.edit-title {
+  margin-bottom: 10px;
 }
 
 .leave-group {
@@ -486,6 +491,7 @@ p{
   z-index: 3;
   overflow: scroll;
   border-right: 1px solid #ccc;
+  color: #ccc;
 }
 
 .modal-close {
